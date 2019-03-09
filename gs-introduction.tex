@@ -1,0 +1,166 @@
+%% -*- coding:utf-8 -*-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%   $RCSfile: hpsg-satz-struktur-lb.tex,v $
+%%  $Revision: 1.7 $
+%%      $Date: 2009/03/27 16:28:44 $
+%%     Author: Stefan Mueller (DFKI)
+%%    Purpose: 
+%%   Language: LaTeX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\chapter{Introduction}
+\label{chapter-introduction}
+
+The German sentence can be adequately described using the topological model of (\citealp*{Reis80a}; \citealp*{Hoehle86}; \citealp{Askedal86}).
+In the sentence (\mex{1}), the verbs \emph{hat} `has' and \emph{gegeben} `given' form a `frame'
+around the rest the of the sentence. The finite verb \emph{hat} `has' occupies the left sentence bracket and the
+infinitive \emph{gegeben} `given' the right one. 
+\ea
+\gll Der Mann hat der Frau das Buch gegeben, das wir alle kennen.\\
+     the man  has the woman the book given   that we all  know\\
+\glt `The man gave the woman the book that we all know.'
+\z
+Situated between the sentence brackets is the so-called `middle-field' (\emph{Mittelfeld}). The prefield (\emph{Vorfeld}) precedes
+the left bracket, and the postfield (\emph{Nachfeld}) follows the right bracket. 
+
+In subordinate clauses introduced by a conjunction, the conjunction takes the left sentence bracket
+and the finite verb is located with the rest of the non-finite verb forms in the right bracket:
+\ea
+\label{ex-gegeben-hat}
+\gll dass der Mann der Frau das Buch gegegben hat\\
+     that the man  the woman the book given has\\
+\glt `that the man gave the woman the book'
+\z
+In this book I develop an analysis which -- like many analyses of German clause structure before -- establishes a link between verb-first and verb-final sentences.
+
+
+Constituents in the middle-field exhibit a relatively free ordering:
+\eal
+\label{bsp-GPSG-anordnung}
+\ex 
+\gll {}[weil] der Mann der Frau das Buch gibt\\
+     {}\spacebr{}because the.\nom{} man the.\dat{} woman the.\acc{} book gives\\
+\glt `because the man gives the book to the woman'
+\ex 
+\gll {}[weil] der Mann das Buch der Frau gibt\\
+     {}\spacebr{}because the man.\nom{} the book.\acc{} the woman.\dat{} gives\\
+\ex 
+\gll {}[weil]          das        Buch der        Mann der        Frau gibt\\
+     \spacebr{}because the.\acc{} book the.\nom{} man  the.\dat{} woman gives\\
+\ex 
+\gll {}[weil] das Buch der Frau der Mann gibt\\
+{}\spacebr{}because the.\acc{} book the.\dat{} woman the.\nom{} man gives\\
+\ex 
+\gll {}[weil] der Frau der Mann das Buch gibt\\
+{}\spacebr{}because the.\dat{} woman the.\nom{} man the.\acc{} book gives\\
+\ex 
+\gll {}[weil] der Frau das Buch der Mann gibt\\
+{}\spacebr{}because the.\dat{} woman the.\acc{} book the.\nom{} man gives\\
+\zl
+This is accounted for by assuming that a head may combine with its arguments in any order. Of course
+there are restrictions, but these restrictions are represented independently of the general
+combinatory mechanism.
+
+The prefield can be occupied by one constituent (an adjunct, subject or complement), which is why German is
+viewed as a verb-second language (\citealp[Chapter~2.4]{Erdmann1886a};
+\citealp[\page 69, \page 77]{Paul1919a}). Examples such as (\mex{1}) show that occupation of the prefield cannot simply be explained as an ordering variety of an element dependent on 
+the finite verb (in analogy to reorderings in the middle field):
+
+\ea
+\gll{}[Um zwei Millionen Mark]$_i$ soll er versucht haben, [eine Versicherung \_$_i$ zu betrügen].\footnotemark\\
+      \spacebr{}around two million Deutschmarks should he tried have \spacebr{}an insurance.company
+              {} to defraud\\
+\footnotetext{
+         taz, 04.05.2001, p.\,20.
+}
+\glt `He supposedly tried to defraud an insurance company of two million Deutschmarks.'
+
+\z
+%
+The head that governs the PP (\emph{betrügen} `defraud') is located inside of the infinitive clause. The PP as such is not directly dependent on the finite
+verb and can therefore not have reached the prefield by means of a simple local reordering operation. This
+shows that the dependency between \emph{betrügen} and \emph{um zwei Millionen} `around two million
+Deutschmarks' is a long distance dependency: an element belonging to a deeply embedded head has been fronted over several phrasal borders.
+
+\citet{Thiersch78a}, \citet[\page 55]{denBesten83a}, \citet{Uszkoreit87a}\ia{Uszkoreit} and others have suggested 
+a connection between verb-second and verb-first sentences, and that verb-second sentences should be
+analyzed as verb-first sentences with an extracted constituent placed in the prefield.
+
+\eal
+\ex 
+\gll Kennt er das Buch?\\
+	knows he the book\\
+\glt `Does he know the book?'
+\ex 
+\gll Das Buch kennt er.\\
+	the book knows he\\
+\glt `He knows the book.'
+\zl 
+This is also the approach that I assume in this book.
+
+
+The elements in the right bracket form a complex. I assume that such complexes are formed first and
+are then combined with the arguments that depend on the elements in the complex. For instance, \emph{gegeben} `given' and
+\emph{hat} `has' in (\ref{ex-gegeben-hat}) form one unit, which is then combined with \emph{das
+  Buch} `the book', \emph{der Frau} `the woman', and  \emph{der Mann} `the man' in later steps. 
+
+The left peripheral elements of this verbal complex can (in some cases together with the adjacent material
+from the middle field) be moved into the prefield:
+\eal
+\ex
+\gll Gegeben hat er der Frau das Buch.\\
+     given has he the woman the book\\
+\glt `He gave the woman the book.'
+\ex
+\gll Das Buch gegeben hat er der Frau.\\
+     the book given   has he the woman\\
+\ex
+\gll Der Frau gegeben hat er das Buch.\\
+     the woman given  has he the book\\
+\ex
+\gll Der Frau  das Buch gegeben hat er.\\
+     the woman the book given   has he\\
+\zl
+Since the fronted verbal projections in (\mex{0}a--c) are partial, such frontings are called \emph{partial verb
+phrase frontings}.
+
+While there is a broad consensus among reasearchers from various frameworks that German is a V2
+language, some challenging examples can be found that seem to contradict the V2 characteristic
+of German (see \citew{Mueller2003b,Bildhauer2011a} and the literature discussed there). Some examples are given in
+(\mex{1}) and further examples are discussed in Section~\ref{sec-phenomenon-mult-front}.
+
+\eal
+\label{bsp-smvfb}
+\ex 
+\gll {}[Dauerhaft] [mehr Arbeitsplätze] gebe es erst, wenn sich eine Wachstumsrate von  mindestens 2,5 Prozent über einen Zeitraum von drei oder vier Jahren halten lasse.\footnotemark\\ 
+       \spacebr{}constantly \spacebr{}more jobs give it first when REFL a growth.rate of  at.least 2.5 percent over a time.period of three or four years hold lets\\
+\footnotetext{
+        taz, 19.04.2000, p.\,5. %taz Nr. 6123 vom 19.4.2000 Seite 5
+} 
+\glt `In the long run, there will only be more jobs available, when a growth rate of at least 2.5 percent 
+can be maintained over a period of three of four years.'	      
+\ex 
+\gll [Unverhohlen verärgert] [auf Kronewetters Vorwurf] reagierte Silke Fischer.\footnotemark\\
+     \spacebr{}Blatantly annoyed \spacebr{}by Kronewetter's reproach reacted Silke Fischer\\
+\footnotetext{
+    taz berlin, 23.04.2004, p.\,21.
+}
+\glt `Blatantly annoyed, Silke Fischer reacted to Kronewetter's reproach.'
+\ex 
+\gll {}[Hart] [ins Gericht] ging Klug mit dem Studienkontenmodell der Landesregierung.\footnotemark\\
+       \spacebr{}hard \spacebr{}in.the court went Klug with the tuition.account.model. of.the
+       state.government\\
+\footnotetext{
+  taz nord, 19.02.2004, p.\,24.
+  }
+\glt `Klug roasted the state government's tuition account model.'
+\zl
+In Chapter~\ref{chapter-mult-front} I show how these examples can be analyzed using a special variant
+of the lexical rule that is suggested for the analysis of verb-initial sentences in combination with verbal
+complex formation and partial verb phrase fronting.
+
+
+
+

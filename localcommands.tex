@@ -1,0 +1,48 @@
+%% -*- coding:utf-8 -*-
+
+
+
+%\usepackage{ogonek}        % For Ewa Dabrowska
+
+
+%\newcommand{\tag}{TAG\indextag} % has to be here, conflict with latexbeamer
+
+% mit der Index-Version geht die Silbentrennung nicht
+\renewcommand{\word}[1]{\emph{#1}}
+
+\newcommand{\dom}{\textsc{dom}\xspace}
+
+\renewcommand{\relation}[1]{\textit{#1}}
+
+
+%% \newcommand{\iw}[1]{}
+%% \newcommand{\iaf}[1]{}
+%% \newcommand{\iadata}[1]{}
+%% \newcommand{\iawrong}[1]{}
+
+
+\iftoggle{draft}{
+\proofmodetrue
+}
+
+
+
+\newcommand{\page}{}
+
+
+
+\let\mc=\multicolumn
+
+
+
+\setcounter{secnumdepth}{4}
+
+\provideboolean{hpsg-buch}
+\setboolean{hpsg-buch}{false}
+
+
+
+
+\newcommand{\sigle}[1]{#1}
+\newcommand{\lindex}[1]{$_{#1}$}
+

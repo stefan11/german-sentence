@@ -1,0 +1,2324 @@
+%% -*- coding:utf-8 -*-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%   $RCSfile: grammatiktheorie-include.tex,v $
+%%  $Revision: 1.13 $
+%%      $Date: 2010/11/16 08:40:32 $
+%%     Author: Stefan Mueller (CL Uni-Bremen)
+%%    Purpose: 
+%%   Language: LaTeX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\chapter{German clause structure}
+\label{chap-german-sentence-structure}
+
+This chapter deals with the basic sentence structure of German. Section~\ref{sec-german-order}
+introduces the phenomena that have to be covered. As Brigitta Haftka formulated it in the title of
+her paper, German is a verb second language with verb last order and free constituent order
+\citep{Haftka96a}. This first sounds contradictory, but as will be shown in the following section,
+these three properties are indeed independent. I first motivate the categorization of German as
+an SOV language in Section~\ref{sec-german-sov}, then I discuss the free constituent order (Section~\ref{sec-free-order-phen}) and the V2
+property (Section~\ref{sec-v2-phen}). Verbal complexes interact with free constituent order and are discussed in
+Section~\ref{sec-vc-phen}. Frontings of parts of the verbal complex and non-verbal arguments are discussed in
+Section~\ref{sec-pvp-phen}.
+
+Section~\ref{sec-analysis-v1-v2} provides the analysis of these phenomena.
+
+
+\section{The phenomenon}
+\label{sec-german-order}
+
+
+
+(\mex{1}) provides examples of the main clause types in German: (\mex{1}a) is a verb last (VL) sentence,
+(\mex{1}b) is a verb first (V1) sentence, and (\mex{1}c) a verb second (V2) sentence:
+\eal
+\ex 
+\gll dass Peter Maria ein Buch gibt\\
+     that Peter Maria a book gives\\
+\glt `that Peter gives a book to Maria'
+\ex
+\gll Gibt Peter Maria ein Buch?\\
+     gives Peter Maria a book\\
+\glt `Does Peter give a book to Maria?'
+\ex
+\gll Peter gibt Maria ein Buch.\\
+     Peter gives Maria a book\\
+\glt `Peter gives a book to Maria.'
+\zl
+The following subsections deal with all these sentences types and address the question whether one
+of them is basic.
+
+
+\subsection{German as a SOV language}
+\label{sec-german-sov}
+
+It is assumed by many researchers that German is an SOV language, although this order is only
+visible in embedded clauses like (\mex{0}a) and not in yes/no questions like (\mex{0}b) and
+declarative main clauses like (\mex{0}c). The reason for this assumption is that German patterns
+with many SOV languages and differs from SVO languages (for example Scandinavian languages). The
+analysis of German as an SOV language is almost as old as Transformational Grammar: it was first
+suggested by \citet*[\page34]{Bierwisch63}.
+	Bierwisch attributes the assumption of an underlying verb"=final order to \citet{Fourquet57a}. A German translation of the
+	French manuscript cited by Bierwisch can be found in \citew[\page117--135]{Fourquet70a}. For other proposals, see \citew{Bach62a},
+\citew{Reis74a}, \citew{Koster75a}, and \citew[Chapter~1]{Thiersch78a}. 
+%, \citet{denBesten83a} wohl angeblich schon 77 am MIT
+Analyses which assume that
+German has an underlying SOV pattern were also suggested in \gpsg \citep[\page110]{Jacobs86a}, 
+LFG \citep[Section~2.1.4]{Berman96a-u} and HPSG   (\citealp*[Section~4.7]{KW91a}; \citealp{Oliva92a}; \citealp*{Netter92};   
+\citealp*{Kiss93}; \citealp*{Frank94}; \citealp*{Kiss95a}; \citealp{Feldhaus97},
+\citealp{Meurers2000b}; \citealp{Mueller2005c}). 
+
+The assumption of verb"=final order\label{page-verbletzt} as the base order is motivated by the following observations:\footnote{
+	For points 1 and 2, see \citew[\page34--36]{Bierwisch63}. For point~\ref{SOV-Skopus} see \citew[Section~2.3]{Netter92}.%
+}
+
+
+\begin{enumerate}
+\item Verb particles form a close unit with the verb.
+\eal
+\ex 
+\gll weil er morgen an-fängt\\
+	 beause he tomorrow \textsc{prt}-starts\\
+\glt `because he is starting tomorrow'
+\ex 
+\gll Er fängt morgen an.\\
+	 he starts tomorrow \textsc{prt}\\
+\glt `He is starting tomorrow.'
+\zl
+This unit can only be seen in verb"=final structures, which speaks for the fact that this structure reflects the base order.
+
+\item Verbs formed by backformation often cannot be separated.
+
+Verbs which are derived from a noun by back-formation\is{back-formation} (\eg \emph{uraufführen} 
+`to perform something for the first time', can often not be divided into their component parts and
+V2 clauses are therefore ruled out (This was first mentioned by \citet{Hoehle91b} in unpublished
+work. The first published source is \citew[\page 62]{Haider93a}):
+\eal
+\ex[]{
+\gll weil sie das Stück heute urauf-führen\\
+	 because they the play today \textsc{prt}-lead\\
+\glt `because they are performing the play for the first time today'
+}
+\ex[*]{
+\gll Sie urauf"|führen heute das Stück.\\
+	 they \textsc{prt}-lead today the play\\
+}
+\ex[*]{
+\gll Sie führen heute das Stück urauf.\\
+	 they lead today the play \textsc{prt}\\
+}
+\zl
+The examples show that there is only one possible position for the verb. This order is the one that
+is assumed to be the base order.
+
+\item Some constructions allow SOV order only.
+
+Similarly, it is sometimes impossible to realize the verb in initial position when elements like
+\emph{mehr als} `more than' are present in the clause \citep{Haider97c,Meinunger2001a}: 
+\eal
+\ex[]{
+\gll dass Hans seinen Profit letztes Jahr mehr als verdreifachte\\
+     that Hans his         profit last       year more than tripled\\
+\glt `that Hans increased his profit last year by a factor greater than three'
+}
+\ex[]{
+\gll Hans hat seinen Profit letztes Jahr mehr als verdreifacht.\\
+     Hans has his    profit last    year more than tripled\\
+\glt `Hans increased his profit last year by a factor greater than three.'
+}
+\ex[*]{
+\gll Hans verdreifachte seinen Profit letztes Jahr mehr als.\\
+     Hans tripled       his    profit last year more than\\
+}
+\zl
+So, it is possible to realize the adjunct together with the verb in final position, but there are
+constraints regarding the placement of the finite verb in initial position.
+
+
+\item Verbs in non"=finite clauses and in finite subordinate clauses with a conjunction are
+always in final position (I am ignoring the possibility of extraposing constituents):
+\eal
+\ex 
+\gll Der Clown versucht, Kurt-Martin die Ware zu geben.\\
+     the clown tries Kurt-Martin the goods to give\\
+\glt `The clown is trying to give Kurt-Martin the goods.'
+\ex 
+\gll dass der Clown Kurt-Martin die Ware gibt\\
+	 that the clown Kurt-Martin the goods gives\\
+\glt `that the clown gives Kurt-Martin the goods'
+\zl
+The English translation shows that English has VO order where German has an OV order.
+
+\item If one compares the position of the verb in German to Danish\is{Danish} (Danish is an SVO language
+like English), then one can clearly see that the verbs in German form a cluster at the end of the sentence,
+whereas they occur before any objects in Danish \citep{Oersnes2009b}:
+\eal
+\label{ex-VO-OV}
+\ex 
+\gll dass er ihn gesehen$_3$ haben$_2$ muss$_1$\\
+	 that he him seen have must\\
+\ex 
+\gll at han må$_1$ have$_2$ set$_3$ ham\\
+     that he must have seen him\\
+\glt `that he must have seen him'
+\zl
+
+
+\item\label{SOV-Skopus}\is{scope|(} The scope relations of the adverbs in (\ref{bsp-absichtlich-nicht-anal}) depend on their order:
+the left"=most adverb has scope over the two following elements.\footnote{%
+At this point, it should be mentioned that there seem to be exceptions from the rule that modifiers to the left take scope over those to
+their right. \citet*[\page47]{Kasper94a} discusses examples such as (i), which go back to \citet*[\page137]{BV72}.
+\eal
+\label{bsp-peter-liest-gut-wegen}
+\ex 
+\gll Peter liest gut wegen der Nachhilfestunden.\\
+	 Peter reads well because.of the tutoring\\
+\glt `Peter can read well thanks to the tutoring.'
+\ex 
+\gll Peter liest wegen der Nachhilfestunden gut.\\
+	 Peter reads because.of the tutoring well\\
+\zl
+% Kiss95b:212
+	As \citet[Section~6]{Koster75a} and \citet*[\page67]{Reis80a} have shown, these are not particularly convincing counter"=examples
+	as the right sentence bracket is not filled in these examples and it must therefore not necessarily constitute normal reordering inside
+	of the middle field, but could instead be a case of extraposition\is{extraposition}.
+	As noted by Koster and Reis, these examples become ungrammatical if one fills the right bracket and does not extrapose the causal adjunct:
+\eal
+\ex[*]{
+\gll Hans hat gut  wegen      der Nachhilfestunden gelesen.\\
+     Hans has well because.of the tutoring read\\
+}
+\ex[]{
+\gll Hans hat gut gelesen wegen der Nachhilfestunden.\\
+	 Hans has well read because.of the tutoring\\
+\glt `Hans has been reading well because of the tutoring.'
+}
+\zl
+However, the following example from \citet[\page 383]{Crysmann2004a} shows that, even with the right bracket occupied, one can still have an
+order where an adjunct to the right has scope over one to the left:
+\ea
+\gll Da muß es schon erhebliche Probleme mit der Ausrüstung gegeben haben, da wegen schlechten
+  Wetters ein Reinhold Messmer niemals aufgäbe.\\
+  there must it already serious problems with the equipment given have since because.of bad weather a Reinhold Messmer never
+  would.give.up\\
+ \glt `There really must have been some serious problems with the equipment because someone like Reinhold Messmer would never give
+  up just because of some bad weather.'
+%\ex Stefan  ist wohl deshalb krank geworden, weil er äußerst hart wegen der Konferenz in Bremen gearbeitet hat.
+\z
+Nevertheless, this does not change anything regarding the fact that the corresponding cases in (\ref{bsp-absichtlich-nicht-anal}) 
+and (\ref{bsp-absichtlich-nicht-anal-v1}) have the same meaning regardless of the position of the verb. The general means of semantic
+composition may well have to be implemented in the way suggested by Crysmann.
+
+Another word of caution is in order here: There are SVO languages like French that also have a left
+to right scoping of adjuncts \citep[\page 156--161]{BGK2004a-u}. So, the argumentation above should not be seen as the only
+fact supporting the SOV status of German. In any case the analyses of German that were
+worked out in various frameworks can explain the facts nicely.
+}
+This was explained with the following structure:
+\eal
+\label{bsp-absichtlich-nicht-anal}
+\ex 
+\gll weil er [absichtlich [nicht lacht]]\\
+	 because he \spacebr{}intentionally \spacebr{}not laughs\\
+\glt `because he is intentionally not laughing'
+\ex 
+\gll weil er [nicht [absichtlich lacht]]\\
+     because he \spacebr{}not \spacebr{}intentionally laughs\\
+\glt `because he is not laughing intentionally'
+\zl
+If one compares (\mex{0}) and (\mex{1}) one can see that scope relations are not affected by verb
+position. If one assumes that sentences with verb"=second order have the underlying structure in
+(\mex{0}), then this fact requires no further explanation. (\mex{1}) shows the structure for (\mex{0}):
+\eal
+\label{bsp-absichtlich-nicht-anal-v1}
+\ex 
+\gll Er lacht$_i$ [absichtlich [nicht \_$_i$]].\\
+     he laughs \spacebr{}intentionally \spacebr{}not\\
+\glt `He is intentionally not laughing.'
+\ex 
+\gll Er lacht$_i$  [nicht [absichtlich \_$_i$]].\\
+     he laughs \spacebr{}not \spacebr{}intentionally\\
+\glt `He is not laughing intentionally.'
+\zl\is{scope}
+%\item Verum-Fokus
+\nocite{Hoehle88a,Hoehle97a}
+\end{enumerate}\is{verb final language}\is{scope|)}
+
+These properties have been taken as evidence for an underlying SOV order of German. That is, V1 and
+V2 sentences are assumed to be derived from or to be somehow related to SOV sentences. It is
+possible though to represent the clause types on their own right without relating them. Respective
+proposals will be discussed in Chapter~\ref{chap-alternatives}. I assumed such an analysis for ten
+years and I think the basic sentence structures can be explained quite well. However, the apparent
+multiple frontings, which will be discussed in the next chapter, do not integrate nicely into the
+alternative analyses. This caused me to drop my analysis and to revise my grammar in a way that is
+inspired by early transformational analyses.
+
+\subsection{German as a language with free constituent order}
+\label{sec-free-order-phen}
+
+As was already mentioned in the introduction, German is a language with rather free constituent
+order. For example, a verb with three arguments allows for six different orders of the
+arguments. This is exemplified with the ditransitive verb \emph{geben} in (\mex{1}):
+\eal
+\label{ex-free-order}
+\ex 
+\gll {}[weil] der Mann der Frau das Buch gibt\\
+     {}\spacebr{}because the.\nom{} man the.\dat{} woman the.\acc{} book gives\\
+\glt `because the man gives the book to the woman'
+\ex 
+\gll {}[weil] der Mann das Buch der Frau gibt\\
+     {}\spacebr{}because the.\nom{} man the.\acc{} book the.\dat{} woman gives\\
+\ex 
+\gll {}[weil] das Buch der Mann der Frau gibt\\
+{}\spacebr{}because the.\acc{} book the.\nom{} man the.\dat{} woman gives\\
+\ex 
+\gll {}[weil] das Buch der Frau der Mann gibt\\
+{}\spacebr{}because the.\acc{} book the.\dat{} woman the.\nom{} man gives\\
+\ex 
+\gll {}[weil] der Frau der Mann das Buch gibt\\
+{}\spacebr{}because the.\dat{} woman the.\nom{} man the.\acc{} book gives\\
+\ex 
+\gll {}[weil] der Frau das Buch der Mann gibt\\
+{}\spacebr{}because the.\dat{} woman the.\acc{} book the.\nom{} man gives\\
+\zl
+
+Adjuncts can be placed anywhere between the arguments as the examples in (\mex{1}) show.
+\eal
+\ex
+\gll {}[weil] jetzt der Mann der Frau das Buch gibt\\
+     {}\spacebr{}because now the.\nom{} man the.\dat{} woman the.\acc{} book gives\\
+\glt `because the man gives the book to the woman now'
+\ex
+\gll {}[weil] der Mann jetzt der Frau das Buch gibt\\
+     {}\spacebr{}because the.\nom{} man now the.\dat{} woman the.\acc{} book gives\\
+\glt `because the man gives the book to the woman now'
+\ex
+\gll {}[weil] der Mann der Frau jetzt das Buch gibt\\
+     {}\spacebr{}because the.\nom{} man the.\dat{} woman now the.\acc{} book gives\\
+\glt `because the man gives the book to the woman now'
+\ex
+\gll {}[weil] der Mann der Frau das Buch jetzt gibt\\
+     {}\spacebr{}because the.\nom{} man the.\dat{} woman the.\acc{} book now gives\\
+\glt `because the man gives the book to the woman now'
+\zl
+(\mex{0}) is the result of inserting the adverb \emph{jetzt} `now' into every possible position in
+(\mex{-1}a). Of course adverbs can be inserted into each of the other sentences in (\mex{-1}) in the
+same way and it is also possible to have several adjuncts per clause in all the positions. (\mex{1})
+is an example by \citet[\page 145]{Uszkoreit87a} that illustrates this point:
+\ea
+\gll \emph{Gestern} hatte \emph{in} \emph{der} \emph{Mittagspause} der Vorarbeiter \emph{in} \emph{der} \emph{Werkzeugkammer} dem Lehrling \emph{aus
+Boshaftigkeit} \emph{langsam} zehn schmierige Gußeisenscheiben \emph{unbemerkt} in die Hosentasche gesteckt. \\
+yesterday had during the lunch.break the foreman in the tool.shop the apprentice maliciously slowly ten
+greasy cast.iron.disks unnoticed in the pocket put\\
+\glt `Yesterday during lunch break, the foreman maliciously and
+unnoticed, put ten greasy cast iron disks slowly into the
+apprentice's pocket.'
+\z
+
+In transformational theories it is sometimes assumed that there is a base configuration from which
+all other orders are derived. For instance, there could be a VP including the verb and the two
+objects and this VP is combined with the subject to form a complete sentence. For all orders in
+which one of the objects preceedes the subject it is assumed that there is a movement process that
+takes the object out of the VP and attaches it to the left of the sentence.
+
+An argument that has often been used to support this analysis is the fact that scope ambiguities
+exist in sentences with reorderings which are not present in the base order. The explanation of such
+ambiguities comes from the assumption that the scope of quantifiers
+can be derived from their position before movement as well as their position after movement. When
+there has not been any movement, then there is only one reading possible. If movement has taken
+place, however, then there are two possible readings \citep[\page ]{Frey93a}:
+\eal
+\ex 
+\gll Es ist nicht der Fall, daß er mindestens einem Verleger fast jedes Gedicht anbot.\\
+     it is not the case that he at.least one publisher almost every poem offered\\
+\glt `It is not the case that he offered at least one publisher almost every poem.'
+\ex 
+\gll Es ist nicht der Fall, daß er fast jedes Gedicht$_i$ mindestens einem Verleger \_$_i$ anbot.\\
+	 it is not the case that he almost every poem at.least one publisher {} offered\\
+\glt `It is not the case that he offered almost every poem to at least one publisher.'
+\zl
+The position from which the NP \emph{jedes Gedicht} `every poem' is supposed to be moved is marked
+by a trace (\_$_i$) in the example above. 
+
+It turns out that approaches assuming traces run into problems as they predict certain readings for sentences with multiple traces, which
+do not exist (see \citealp[\page 146]{Kiss2001a} and \citealp[Section~2.6]{Fanselow2001a}). 
+For instance in an example such as (\mex{1}), it should be possible to interpret \emph{mindestens einem Verleger} `at least one publisher' at
+the position of \_$_i$, which would lead to a reading where \emph{fast jedes Gedicht} `almost every poem' has scope over \emph{mindestens einem Verleger} 
+`at least one publisher'.
+\ea
+\gll Ich glaube, dass mindestens einem Verleger$_i$ fast jedes Gedicht$_j$ nur dieser Dichter \_$_i$ \_$_j$ angeboten hat.\\
+	 I believe that at.least one publisher almost every poem only this poet {} {} offered has\\
+\glt `I think that only this poet offered almost every poem to at least one publisher.'
+\z
+This reading does not exist, however.
+\is{scope|)}
+
+The alternative to a movement analysis is called \emph{base generation}\is{base generation} in
+transformational frameworks. The possible orders are not derived by movement but are licensed by
+grammar rules directly. Such a base-generation analysis, that is the direct licensing of orders without
+any additional mechanisms, is the most common analysis in non-transformational frameworks like HPSG \citep{Pollard90a},
+LFG \citep{Berman2003a}, Construction Grammar \citep{Micelli2012a} and Dependency Grammar \citep{Eroms2000a,GO2009a} and I provide such an analysis in Section~\ref{sec-scrambling-analysis}.
+\is{constituent order|)}
+
+\subsection{German as a verb second language}
+\label{sec-v2-phen}
+
+German is a verb second (V2) language (\citealp[Chapter~2.4]{Erdmann1886a};
+\citealp[\page 69, \page 77]{Paul1919a}), that is, (almost) any constituent (an adjunct, subject or
+complement) can be placed infront of the finite verb. (\mex{1}) shows some prototypical examples again involving the ditransitive verb
+\emph{geben} `to give':
+\eal
+\ex[]{
+\gll Der Mann gibt der Frau das Buch.\\
+    the man gives the woman the book\\
+\glt `The man gives the woman the book.'
+}
+\ex[]{
+\gll Der Frau gibt der Mann das Buch.\\
+    the woman gives the man the book\\
+\glt `The man gives the woman the book.'
+}
+\ex[]{
+\gll Das Buch gibt der Mann der Frau.\\
+    the book gives the man the woman\\
+\glt `The man gives the woman the book.'
+}
+\ex[]{
+\gll Jetzt gibt der Mann der Frau das Buch.\\
+    now gives the man the woman the book\\
+\glt `The man gives the woman the book now.'
+}
+\zl
+If this is compared with English, one sees that English has XP SVO order, that is the basic SVO
+order stays intact and one constituent is placed infront of the sentence into which it belongs:
+\eal
+\ex The woman, the man gives the book.
+\ex The book, the man gives the woman.
+\ex Now, the man gives the woman the book.
+\zl
+Languages like Danish on the other hand are V2 languages like German but nevertheless SVO languages
+(see the discussion of (\ref{ex-VO-OV}) on page~\pageref{ex-VO-OV}). Although the verb in embedded
+sentences like (\ref{ex-VO-OV}) precedes the object and follows the subject, the finite verb appears
+initially and one of the constituents is fronted. The resulting orders are identical to the ones we
+see in German. 
+
+
+
+Examples such as (\mex{1}) show that occupation of the prefield cannot simply be explained as an ordering variant of an element dependent on 
+the finite verb (in analogy to reorderings in the middle field):
+
+\ea
+\gll{}[Um zwei Millionen Mark]$_i$ soll er versucht haben, [eine Versicherung \_$_i$ zu betrügen].\footnotemark\\
+      \spacebr{}around two million Deutschmarks should he tried have \spacebr{}an insurance.company
+              {} to defraud\\
+\footnotetext{
+         taz, 04.05.2001, p.\,20.
+}
+\glt `He supposedly tried to defraud an insurance company of two million Deutschmarks.'
+\z
+%
+The head that governs the PP (\emph{betrügen} `defraud') is located inside of the infinitive clause. The PP as such is not directly dependent on the finite
+verb and can therefore not have reached the prefield by means of a simple local reordering operation. This
+shows that the dependency between \emph{betrügen} and \emph{um zwei Millionen} `around two million
+Deutschmarks' is a long distance dependency: an element belonging to a deeply embedded head has been fronted over several phrasal borders.
+
+Such long distance dependencies are often modeled by devices that assume that there is a position in
+the local domain where one would expect the fronted constituent. This is indicated by the \_$_i$,
+which is called a gap or a trace. The gap is related to the filler. The alternative to assuming such a gap is
+to establish some dependency between the filler and the head on which the filler is dependent. This
+is done in Dependency Grammar \citep{Hudson2000a} and in traceless approaches in HPSG
+\citep*{BMS2001a} and LFG \citep{KZ89a}. The question is whether
+it is reasonable to assume that even simple V2 sentences, that is sentences in which the filler does
+not belong to a deeply embedded head, also involve a filler-gap dependency. Approaches that assume
+that sentences like (\mex{1}a) are just a possible linearization variant of the verb and its
+dependents will have problems in explaining the ambiguity of this sentence. (\mex{1}a) has two
+readings, which correspond to the readings of (\mex{1}b) and (\mex{1}c):\todostefan{If reordering in
+  the MF can have this effect, this argument is void. Vorfeldbesetzung then would be just a formal
+  reordering. The only argument would then be uniformity.}
+\eal
+\ex\label{ex-oft-liest-er-das-buch-nicht} 
+\gll Oft liest er das Buch nicht.\\
+     often reads he the book not\\
+\glt `It is often that he does not read the book.' or `It is not the case that he reads the book
+often.'
+\ex
+\gll dass er das Buch nicht oft liest\\
+     that he the book not often reads\\
+\glt `It is not the case that he reads the book often.'
+\ex
+\gll dass er das Buch oft nicht liest\\
+     that he the book often not reads\\
+\glt `It is often that he does not read the book.'
+\zl
+If one assumes that there is a filler-gap dependency in (\mex{0}a), one can assume that the
+dependency can be introduced before the negation is combined with the verb or after the
+combination. This would immedeatly explain the two readings that exist for (\mex{0}a). Approaches
+that assume that the order is a simple ordering variant of the involved constituents would predict
+that (\mex{0}a) has the reading of (\mex{0}c) since (\mex{0}a) and (\mex{0}c) have the same order of
+\emph{oft} `often' and \emph{nicht} `not' and the order is important for scope determination in German.
+
+\subsection{Distribution of complementizer and finite verb}
+
+
+\subsection{Verbal complexes}
+\label{sec-vc-phen}
+
+It is common to assume that verb and objects form a phrase in VO languages like English. However,
+for languages like German, it seems more appropriate to assume that verbs in the right sentence
+bracket form a verbal complex and that this verbal complex acts like one complex predicate when it
+is combined with the nonverbal arguments. The following examples support this view. If one would
+assume a structure like the one in (\mex{1}a), it is difficult to explain the ordering of
+(\ref{ex-of}) because the auxiliary \emph{wird} `will' is located between two elements
+of the verb phrase.
+
+\eal
+\ex
+\label{ex-uf}
+\gll dass Karl [[das Buch lesen] können] wird]\\
+     that Karl \hspaceThis{[[}the book read can will\\
+\glt `that Karl will be able to read the book'
+\ex
+\label{ex-of}
+\gll dass Karl das Buch wird lesen können\\
+     that Karl the book will read can\\
+\glt `that Karl will be able to the read the book.'
+\zl
+
+Furthermore, the sentences in (\mex{1}) are not ruled out by such an analysis since \emph{das Buch
+  lesen} `the book read' forms a phrase which would be predicted to be able to scramble left in the
+middle-field as in (\mex{1}a) or appear in a so-called pied-piping construction with a relative
+clause as in (\mex{1}b).
+\eal
+\ex[*]{
+\gll dass [das Buch lesen] Karl wird\\
+     that \spacebr{}the book read Karl will\\
+}
+\ex[*]{
+\gll das Buch, [das lesen] Karl wird\\
+	 the book \spacebr{}that read Karl will\\
+}
+\zl
+%
+\citet*{HN94a}\ia{Hinrichs}\ia{Nakazawa} therefore suggest that (certain) verbal complements are
+saturated before non-verbal ones. This means that, in the analysis of (\ref{ex-uf}) and
+(\ref{ex-of}), \emph{lesen} `to read' is first combined with \emph{können} `can' and the resulting
+verbal complex is then combined with \emph{wird} `will':
+\ea
+\gll dass Karl das Buch [[lesen können] wird]\\
+     that Karl the book \hspaceThis{[[}read can will\\
+\z
+\emph{wird} `will' can be placed to the right of the embedded verbal complex (as in {\mex{0})), or indeed to the left as
+in \pref{ex-of}. After the construction of the verbal complex \emph{lesen können wird}, it is then combined with the 
+arguments of the involved verbs, that is with \emph{Karl} and \emph{das Buch} `the book'.\footnote{
+		This kind of structure has already been suggested 
+		by \citet*{Johnson86a} in connection with an analysis of partial verb phrase fronting.
+}
+
+There are also coordination data, such as the example in (\mex{1}), which support this kind of approach.
+\ea
+\gll Ich liebte ihn, und ich fühlte, daß er mich auch geliebt hat oder doch, daß er mich hätte lieben wollen oder lieben müssen.\footnotemark\\
+     I   loved  him and I felt that he me also loved had or PRT that he me   would.have love want or love must.\\
+\footnotetext{
+        \citep*[\page 36]{Hoberg81a}
+}
+\iw{müssen}
+\glt `I loved him and felt that he loved me too, or at least he would have wanted to love me or would have had to.'
+\z
+If one assumes that modal verbs form a verbal complex, \emph{lieben wollen} `love want' and
+\emph{lieben müssen} `love must' are constituents and as such they can be coordinated in a symmetric
+coordination. The result of the coordination can then function as the argument of \emph{hätte}
+`had'.
+
+Arguments of the verbs that are part of a verbal complex may be scrambled as the following example
+from \citet{Haider90b} shows:
+\ea\label{ex-weil-es-ihm-jemand-zu-lesen-versprochen-hat}
+\gll weil es ihm jemand zu lesen versprochen hat\\
+     because it.\acc{} him.\dat{} somebody.\nom{} to read promised has\\
+\glt `because somebody promised him to read it'
+\z
+\emph{jemand} `somebody' depends on \emph{hat} `has', \emph{ihm} `him' depends on \emph{versprochen}
+`promised' and \emph{es} `it' depends on \emph{zu lesen} `to read'. In principle all six
+permutations of these arguments are possible again and hence the verbal complex acts like a simplex
+ditransitive verb.
+
+\subsection{Partial verb phrase fronting}
+\label{sec-pvp-phen}
+
+The left peripheral elements of this verbal complex can (in some cases together with the adjacent material
+from the middle field) be moved into the prefield:
+\eal
+\ex
+\gll Gegeben hat er der Frau das Buch.\\
+     given has he the woman the book\\
+\glt `He gave the woman the book.'
+\ex
+\gll Das Buch gegeben hat er der Frau.\\
+     the book given   has he the woman\\
+\ex
+\gll Der Frau gegeben hat er das Buch.\\
+     the woman given  has he the book\\
+\ex
+\gll Der Frau  das Buch gegeben hat er.\\
+     the woman the book given   has he\\
+\zl
+Since the verbal projections in (\mex{1}a--c) are partial, such frontings are called \emph{partial verb
+phrase frontings}.
+
+
+
+\section{The analysis}
+\label{sec-analysis-v1-v2}
+
+The following analysis uses Head-driven Phrase Structure Grammar (HPSG) as its main framework \citep{ps2}. It is, of course,
+not possible to provide a comprehensive introduction to HPSG here, so a certain acquaintance with the general assumptions and mechanisms is
+assumed for the following argumentation. The interested reader may refer to
+\citew{MuellerLehrbuch3,MuellerHPSGHandbook} for introductions that are
+compatible with what is presented here. In Section~\ref{sec-annahmen}, I will go over some basic assumptions to aid the understanding of the analysis, and
+will also show how the relatively free ordering of constituents in the German \emph{Mittelfeld} can be analyzed. In Section~\ref{sec-v1}, I will recapitulate a 
+verb-movement analysis for verb-first word orderings and in Section~\ref{sec-v2} I discuss the analysis of verb-second sentences. Section~\ref{sec-pred-compl}
+will deal with the analysis of predicate complexes and the fronting of partial projections.  
+
+
+\subsection{Background assumptions}
+\label{sec-annahmen}
+\label{sec-scrambling-analysis}
+
+Every modern linguistic theory makes use of features in order to describe linguistic objects. In HPSG grammars, features are
+systematically organized into `bundles'. These bundles correspond to certain characteristics of a linguistic object: for example, syntactic features
+form one feature bundle, and semantic features form another. HPSG is a theory about linguistic signs in the sense of Saussure \citeyearpar{Saussure16a}\ia{Saussure}.
+The modelled linguistic signs are pairs of form and meaning.
+
+(\mex{1}) shows the feature geometry of signs that I will assume in the
+following:
+\ea
+\ms[sign]
+{ phonology   & \type{list~of~phoneme~strings}\\
+  synsem & \onems[synsem]{ local \ms[local]{ category & \ms{ head   & \type{head} \\% maj & maj\/ \\} \\
+                                                             spr    & \type{list of synsem-objects} \\ 
+                                                             comps  & \type{list of synsem-objects} \\ 
+                                                             arg-st & \type{list of synsem-objects} \\ 
+                                                           } \\
+                                             content & \type{cont} \\
+                                           } \\
+                            nonlocal  \type{nonloc} \\ 
+                            lex \type{boolean}\\
+             } \\
+}
+\z
+The value of \textsc{phonology}\is{phonology} is a list of phonological forms.
+Usually, the orthographic form is used to improve readability.
+
+\textsc{synsem}\is{feature!synsem@\textsc{synsem}} contains syntactic and semantic information.
+The feature \textsc{local}\is{feature!loc@\textsc{loc}} (\textsc{loc}) is called as such because syntactic and semantic
+information in this path are those which are relevant in local contexts. In contrast,
+there is, of course, also non-local information.
+Such information is contained in the path \textsc{synsem$|$\-nonloc}\is{feature!nonloc@\textsc{nonloc}}. I will expand
+on this in Section~\ref{sec-v2}.
+%
+Information about the syntactic category of a sign (\textsc{category})\is{feature!cat@\textsc{cat}} and information about its
+semantic content (\textsc{content})\is{feature!cont@\textsc{cont}} are `local information'.
+\textsc{head}\is{feature!head@\textsc{head}}, \spr, \comps,\isfeat{comps} and \argst\isfeat{arg-st} belong to the features which are
+included in the path \textsc{synsem$|$\-loc$|$\-cat} in the feature description.
+%
+The value of \textsc{head} is a feature structure which specifies the syntactic characteristics that a certain lexical sign 
+shares with its projections, that is, with phrasal signs whose head is the corresponding lexical sign.
+%
+The \textsc{arg-st} feature provides information about the argument structure\is{valence} of a particular sign. Its value is a list which 
+includes the elements (possibly only partially specified) with which the sign has to be combined to produce a grammatically
+complete phrase. The elements are mapped to valence features like \spr and \comps. I follow
+\citet{Pollard90a} in assuming that finite verbs have all their arguments on the \compsl, that is,
+there is no difference between subjects and complements as far as finite verbs are concerned. In SVO
+languages like English and Danish, the subject is represented under \spr and all other arguments under \comps.
+
+The \lexv has the value + with lexical signs and predicate complexes and $-$ with phrasal projections.\footnote{
+		\citet{Muysken82a} suggests a \textsc{min} feature in \xbart which corresponds to the
+		\textsc{lex} feature. A \textsc{max} feature, in the way that Muysken uses it, is not needed since the
+		maximality of a projection can be ascertained by the number of elements in its valence list: maximal 
+		projections are completely saturated and therefore have empty valence lists.%
+}
+The lexical item in (\mex{1}) is an example of the finite form of the verb \emph{kennen} `to know'.
+
+%\begin{figure}[htb]
+\eas
+Lexical item for \emph{kennt} `knows':\\
+\label{le-kennt}
+\ms[word]{
+phon & \phonliste{ kennt }\\
+synsem & \onems{ loc \ms{ cat & \ms{ head  & \ms[verb]{ vform & fin \\} \\
+                                     spr   & \eliste\\
+                                     comps & \sliste{ NP[\type{nom}]\ind{1}, NP[\type{acc}]\ind{2}  } \\
+                                   } \\
+                          cont & \onems{ hook|index \ibox{3}\\
+                                         rels \liste{ \ms[kennen]{
+                                                       arg0 & \ibox{3}\\
+                                                       arg1 & \ibox{1}\\
+                                                       arg2 & \ibox{2}\\
+                                                       } }\\
+                                    }\\
+                        }\\
+                 nonlocal \ms{ inherited$|$slash & \eliste \\
+                               to-bind$|$slash & \eliste \\ 
+                           } \\ 
+                 lex $+$\\
+             } \\
+ }
+\zs
+%\vspace{-\baselineskip}\end{figure}
+%
+\emph{kennen} `to know' requires a subject (NP[\type{nom}]) and an accusative object (NP[\type{acc}]).
+NP[\type{nom}] and NP[\type{acc}] are abbreviations for feature descriptions which are similar to
+(\mex{0}). This requirement is represented on the \argstl, but since this list is identical to the
+\compsl for finite verbs, it is not given here. It is in the lexical entry that the syntactic
+information is linked to the semantic information. The subscript box on the NPs indicates the
+referential index of that particular NP. This is identified with an argument role of the
+\emph{kennen} relation. The semantic contribution of signs consist of an index and a list of
+relations that are contributed by the sign. The index corresponds to a referential variable for
+nouns and for an event variable for verbs. The referential index of a sign is usually linked to its
+\textsc{arg0}. I assume Minimal Recursion Semantics (MRS; \citealp*{CFPS2005a}) as the format of the
+representation of semantic information. This choice is not important for the analysis of the syntax
+of the German clause that is discussed in this chapter and for the analysis of apparent multiple
+frontings that is discussed in the following chapter. So the semantic representations are
+abbreviated in the following. However, the semantic representation is important when it comes to the
+representation of information structure and hence there will be a brief introduction to MRS in
+Section~\ref{sec-intro-MRS}. 
+
+Heads are combined with their required elements by means of a very general rule, which (when applied to the
+conventions for writing phrase structure rules) can be represented as follows:
+\ea
+\label{h-c-regel}
+H[\comps \ibox{1} $\oplus$ \ibox{3}] $\to$ H[\comps \ibox{1} $\oplus$ \sliste{ \ibox{2} } $\oplus$ \ibox{3} ]~~~ \ibox{2}
+\z
+The rule in (\mex{0}) combines an element \iboxb{2} from the \compsl of a head with the head itself.
+The \compsl of the head is split into three lists using the relation append ($\oplus$), which splits
+a list in two parts (or combines two lists into a new one). The first list is \ibox{1}, the second
+list is the list containing \ibox{2} and the third list is \ibox{3}. If the \compsl of the head
+contains just one element, \ibox{1} and \ibox{3} will be the empty list and since the \compsl of the mother is the concatenation of \ibox{1} and \ibox{3}, the \compsl of the mother node will be the empty list. The H in the rule stands for `Head'. Depending on which syntactic category a rule is instantiated by, the 
+H can stand for noun, adjective, verb, preposition or another syntactic category. 
+Figure~\vref{abb-weil-er-das-buch-kennt} is an example analysis for the sentence in (\mex{1}).\footnote{
+		In the following figures, H stands for `head', C for `complement', A for `adjunct', F for `filler'
+		and CL for `cluster'.
+}
+
+\ea
+\gll weil er das Buch kennt\\
+	 because he the book knows\\
+\glt `because he knows the book'
+\z
+
+\begin{figure}
+\centering
+\begin{forest}
+sm edges
+[V{[\textit{fin}, \comps \eliste]}
+	[\ibox{1} NP{[\textit{nom}]}
+		[er;he]]
+	[V{[\textit{fin}, \comps \sliste{ \ibox{1} }]}
+		[\ibox{2} NP{[\textit{acc}]}
+			[das Buch;the book ,roof]]
+		[V{[\textit{fin}, \comps \sliste{ \ibox{1}, \ibox{2} }]}
+			[kennt;knows]]]]
+\end{forest}
+\caption{Analysis of \emph{weil er das Buch kennt} `because he knows the book'}\label{abb-weil-er-das-buch-kennt}
+\end{figure}
+Grammatical rules in HPSG are also described using feature descriptions. The rule in (\ref{h-c-regel})
+corresponds to Schema~\ref{schema-bin}:
+
+\begin{samepage}
+\begin{schema}[Head-Complement Schema]
+%~\\*
+\label{schema-bin}
+\type{head-complement-phrase} \impl\\
+\ms{
+      synsem & \onems{ loc$|$cat$|$comps \ibox{1} $\oplus$ \ibox{3}\\
+                       lex $-$\\
+                     }\\
+      head-dtr & \onems{ synsem$|$loc$|$cat$|$comps \ibox{1} $\oplus$ \sliste{ \ibox{2} } $\oplus$ \ibox{3} \\
+                       }\\
+      non-head-dtrs & \liste{\onems{ synsem \ibox{2}  \\ }}\\[2mm]
+}
+\end{schema}
+\end{samepage}
+%
+In this schema, the head daughter as well as the non-head daughters are represented as values of features  
+(as value of \textsc{head-dtr} and as element in the list under \textsc{non-head-dtrs}). Since there are
+also rules with more than one non-head daughters in HPSG grammars, the value of \textsc{non-head-dtrs} is a
+list. The surface ordering of the daughters in signs licensed by these kinds of 
+schemata is not in any sense determined by the schemata themselves. Special linearization rules, which
+are factored out from the dominance schemata, ensure the correct serialization of
+constituents. Therefore, Schema~\ref{schema-bin} allows both head-complement as well as complement-head orderings. 
+The sequence in which the arguments are combined with their head is not specified by the schema. The
+splitting of the lists with append allows the combination of any element of the \compsl with the head. The only condition for the possibility of combining a head and an complement is the adjacency of the
+respective constituents. It is possible then to analyze (\mex{1}) using Schema~\ref{schema-bin}.   
+\ea
+\gll	weil das Buch jeder kennt\\
+	because the book everyone knows\\
+\glt	'because everyone knows the book'
+\z
+This is shown in Figure~\vref{abb-weil-das-buch-jeder-kennt}.
+\begin{figure}
+\centering
+\begin{forest}
+sm edges
+[V{[\textit{fin}, \comps \eliste]}
+	[\ibox{2} NP{[\textit{acc}]}
+		[das Buch;the book, roof]]
+	[V{[\textit{fin}, \comps \sliste{ \ibox{2} }]}
+		[\ibox{1} NP{[\textit{nom}]}
+			[jeder;everyone]]
+		[V{[\textit{fin}, \comps \sliste{ \ibox{1}, \ibox{2} }]}
+			[kennt;knows]]]]
+\end{forest}
+\caption{Analysis of \emph{weil das Buch jeder kennt} `because everybody knows the book'}\label{abb-weil-das-buch-jeder-kennt}
+\end{figure}
+\iboxt{1} and \ibox{3} can be lists containing elements or they can be the empty list. For languages
+that do not allow for scrambling either \ibox{1} or \ibox{3} will always be the empty list. For
+instance English and Danish combine the head with the complements in the order the elements are
+given in the \compsl. Since \ibox{1} is assumed to be the empty list for such languages, Schema~\ref{schema-bin} delivers the right result. The nice effect of this analysis is that
+languages that do not allow for scrambling have more constraints in their grammar (namely the additional
+constraint that \ibox{1} = \eliste), while languages with less constrained constituent order have
+fewer constraints in their grammar. This should be compared with movment"=based analyses where less
+restrictive constituent order results in more complex analyses.
+
+This analysis resembles Gunji's analysis for Japanese \citeyearpar{Gunji86a}. Gunji suggests the use of a set-valued
+valence feature, which also results in a variable order of argument saturation. For a similar analysis in the terms
+of the Minimalist Program, see \citew{Fanselow2001a}.  \citet[Section~3.1]{Hoffmann95a-u} and
+\citet{SB2006a-u} suggest respective Categorial Grammar analyses.
+
+In the lexical item for \emph{kennt} `knows' in (\ref{le-kennt}), the meaning of \emph{kennt} is represented as the
+value of \textsc{cont}. The Semantics Principle \citep[\page 56]{ps2} ensures that, in Head"=Complement structures, the semantic contribution
+of the head is identified with the semantic contribution of the mother. In this way, it is ensured that the meaning of \emph{er das Buch kennt}
+is present on the highest node in Figure~\vref{abb-weil-er-das-buch-kennt-semp}. The association with the various arguments is already ensured by
+the corresponding co-indexation in the lexical entry of the verb.\footnote{
+		The formula $kennen(er, buch)$ is a radical simplification. It is not possible to go into
+		the semantic contribution of definite NPs or the analysis of quantifiers here. See
+                \citew*{CFPS2005a} for an analysis of scope phenomena in Minimal Recursion Semantics.%
+}
+
+
+\begin{figure}
+\centering
+\begin{forest}
+sm edges
+[V{[\textsc{cont} \ibox{1}]}
+	[NP{[\textit{nom}]}
+		[er;he]]
+	[V{[\textsc{cont} \ibox{1}]}
+		[NP{[\textit{acc}]}
+			[das Buch;the book, roof]]
+		[V{[\textsc{cont}\,\ibox{1}\,kennen{(er, buch)}]}
+			[kennt;knows]]]]
+\end{forest}
+\caption{Analysis of \emph{weil er das Buch kennt} `becaue he knows the book'}\label{abb-weil-er-das-buch-kennt-semp}
+\end{figure}
+
+
+After considering the syntactic and semantic analysis of Head"=Complement structures, I now turn to adjunct
+structures.
+%
+Modifiers are treated as functors in HPSG. They select the head that they modify via the feature \textsc{mod}. The
+adjunct can therefore determine the syntactic characteristics of the head that it modifies. Furthermore, it can access
+the semantic content of the head and embed this under its own. The analysis of adjuncts will be made clearer by examining
+the following example (\mex{1}):
+
+\ea
+\gll weil er das Buch nicht kennt\\
+	 because he the book not knows\\
+\glt `because he doesn't know the book'
+\z
+%
+\emph{nicht} `not' modifies \emph{kennt} `knows' and embeds the relation $kennen(er, buch)$ under the
+negation. The semantic contribution of \emph{nicht kennt} `not knows' is therefore $\neg kennen(er, buch)$.
+The lexical entry for \emph{nicht} is shown in (\mex{1}).
+\ea
+Lexical entry for \emph{nicht} `not':\\
+\ms{
+cat & \ms{ head & \ms[adv]{ mod & \onems{ loc \onems{ cat$|$head \type{verb}\\
+                                                      cont \ibox{1}\\
+                                                    }\\
+                                     }\\
+                          }\\
+           spr   & \eliste\\
+           comps & \eliste\\
+         }\\
+cont & $\neg$ \ibox{1}\\
+}
+\z
+This entry can modify a verb in head-adjunct structures which are licensed by Schema~\ref{ha-schema}.
+
+\begin{samepage}
+\begin{schema}[Head-Adjunct Schema]
+\label{ha-schema}
+\type{head-adjunct-phrase} \impl\\
+\ms{
+head-dtr      & \ms{ synsem & \ibox{2}\\
+                   }\\[2mm]
+non-head-dtrs & \liste{ \ms{ synsem$|$loc & \ms{ cat & \ms{ head$|$mod & \ibox{2}\\
+                                                            spr & \eliste\\
+                                                            comps   & \eliste\\
+                                                          }\\
+                                               }\\
+                           }}\\
+}
+\end{schema}
+\end{samepage}
+
+
+Pollard and Sag's Semantics Principle ensures that the semantic content in head-adjunct structures 
+is contributed by the adjunct daughter. Figure~\vref{abb-weil-er-das-buch-nicht-kennt-semp} shows
+this analysis in detail.\todostefan{Add tree labels to all figures}
+\begin{figure}
+\centering
+\begin{forest}
+sm edges
+[V{[\textsc{cont} \ibox{1}]}
+	[NP{[\textit{nom}]}
+		[er;he]]
+	[V{[\textsc{cont} \ibox{1}]}
+		[NP{[\textit{acc}]}, fit=band
+			[das Buch;the book, roof]]
+		[V{[\textsc{cont} \ibox{1}]}
+			[Adv\feattab{\textsc{mod} \ibox{2} \textsc{cont} \ibox{3},\\
+                                     \textsc{cont} \ibox{1} $\neg$ \ibox{3}}
+				[nicht;not]]
+			[\ibox{2} V{[\textsc{cont} \ibox{3} kennen{(er, buch)}]}
+				[kennt;know]]]]]
+\end{forest}
+\caption{Analysis of \emph{weil er das Buch nicht kennt} `because he does not know the book'}\label{abb-weil-er-das-buch-nicht-kennt-semp}
+\end{figure}
+
+The \textsc{mod} value of the adjunct and the \synsemv of the verb are co-indexed by the Head"=Adjunct Schema \iboxb{2}.
+Inside the lexical entry for \emph{nicht}, the \contv of the modified verb (\iboxt{3} in Figure~\ref{abb-weil-er-das-buch-nicht-kennt-semp})
+is co-indexed with the argument of $\neg$. The semantic content of \emph{nicht} (\ibox{1} $\neg kennen(er, buch)$) becomes the semantic
+content of the entire Head"=Adjunct structure and is passed along the head path until it reaches the highest node.
+
+After this recapitulation of some basic assumptions, the following section will present a verb-movement analysis for 
+verb-initial word order in German.
+
+\subsection{V1}
+\label{sec-v1}
+
+
+As is common practice in Transformational Grammar and its successive models (\citealp*[\page 34]{Bierwisch63}; \citealp{Bach62a}; \citealp{Reis74a}; 
+\citealp[Chapter~1]{Thiersch78a}), I will assume that verb-first sentences have a structure that is
+parallel to the one of verb-final sentences and that an empty element fills the position occupied by
+the verb in verb-last sentences.\footnote{
+The alternative is that they are flat structures, which allow the verb to be positioned in both initial
+and final position \citep{Uszkoreit87a,Pollard90a}, or linearization analyses 
+\citep{Reape92a,Reape94a,Mueller99a,Mueller2002b,Kathol95a,Kathol2000a}. In linearization analyses, the domain
+in which constituents can be permuatated is expanded so that, despite being a binary branching structure, verb-first
+and verb-final orderings can be derived. 
+The differing possibilities will be discussed further in Chapter~\ref{chap-alternatives}.%
+} 
+
+A radically simplified variant of the transformational analysis of (\mex{1}b) is presented in Figure~\vref{fig-verb-movement-gb}.
+\eal
+\ex 
+\gll dass er das Buch kennt\\
+     that he the book knows\\
+\glt `that he knows the book'\label{bsp-dass-er-das-buch-kennt}
+\ex 
+\gll Kennt$_i$ er das Buch \_$_i$?\\
+     knows{} he the book\\
+\glt `Does he know the book?'\label{bsp-kennt-er-das-buch}
+\zl
+\begin{figure}
+\centering
+\begin{forest}
+sm edges
+[CP
+	[\cnull
+		[kennt;knows]]
+	[VP
+		[NP
+			[er;he]]
+		[VP
+			[NP
+				[das Buch;the book, roof]]
+			[\vnull
+				[\trace]]]]]
+\end{forest}
+\caption{\label{fig-verb-movement-gb}Analysis of \emph{Kennt er das Buch?} `Does he know the book?' with Move-$\alpha$}
+\end{figure}
+
+
+The verb is moved from verb-final position to C$^0$.\footnote{
+  In more recent analyses the verb is adjoined to C$^0$. While V-to-c-movement analyses work well for German and
+  Dutch\il{Dutch} they fail for other V2 languages that allow for the combination of complementizers
+  with V2 clauses \citep{Fanselow2009b}. This will be discussed in more detail in
+  Subsection~\ref{sec-v2-germanic}.
+} This movement can be viewed as creating a new tree structure out
+of another, i.e. as a derivation. In the analysis of (\mex{0}b), two trees enter a relation with each other $-$ the
+tree with verb-final ordering and the tree where the verb was moved into first position. One can alternatively assume a 
+representational model where the original positions of elements are marked by traces (see %\citew{McCawley68a}; Pullum2007a:3 sagt, dass das nicht MTS ist
+Koster \citeyear[\page ]{Koster78b-u}; \citeyear[\page 235]{Koster87a-u}; 
+%\citealp[\page 66, Fußnote~4]{Bierwisch83a}; 
+\citealp{KT91a}; \citealp[Section~1.4]{Haider93a}; 
+\citealp[\page 14]{Frey93a}; \citealp[\page 87--88, 177--178]{Lohnstein93a-u}; \citealp[\page 38]{FC94a}; \citealp[\page 58]{Veenstra98a}, for example). This kind of representational view 
+is also assumed in HPSG. In HPSG analyses, verb-movement is modeled by a verb-trace in final position coupled with the percolation of
+the properties of the verb trace in the syntactic tree. 
+
+In what follows, I discuss another option for modeling verb-movement.
+The C-head in Figure~\ref{fig-verb-movement-gb} has different syntactic characteristics from
+V$^0$ in verb-final orders: the valence of the verb in final position does not correspond to
+the valence of the element in C. The functional head in C is combined with a VP (an IP in several
+works), whereas the verb in final structures requires a subject and an object. 
+In HPSG, the connection between the element in V1-position and the actual verb can be captured by an analysis which
+assumes that there is a verb trace in verb-initial structures that has the same valence properties and the same semantic
+contribution as an overt finite verb in final position and is also present in the same
+position.\footnote{
+  In the grammar developed in this book, it is impossible to say that a head follows or precedes its
+  dependents if the head is empty. The reason is that the head daughter and the non-head daughters
+  are the values of different features: the head daughter is the value of \textsc{head-dtr} and the
+  non-head daughters are members of the \textsc{non-head-dtrs} list. It is only the \phonvs of the
+  daughters that are serialized \citep{Hoehle94a}. So in a structure like [NP$_1$ [NP$_2$ t]] one cannot tell whether
+  NP$_2$ precedes t or follows it since in the AVM these two objects are just presented on top of each
+  other and the phonology does not show any reflex of t that would help us to infer the order. Note
+  however that t has the \initialv `$-$' and hence the phonology of t is appended to the end of the
+  phonology of NP$_2$. It does not matter whether we append the empty string at the end or at the
+  beginning of a list, but the \initialv of the head matters when NP$_1$ is combined with [NP$_2$ t]:
+  the complex phrase [NP$_2$ t] has to be serialized to the right of NP$_1$. If both NP$_1$ and
+  NP$_2$ contain phonological material, the material contributed by NP$_1$ will precede the material
+  from NP$_2$. So, we will always know that the trace is in a unit that contains other material and
+  this unit is serialized as if there would be a visible head in it. This means that despite Höhle's
+  claim to the contrary traces can (roughly) be localized in structures.
+
+  Note that \citet{GSag2000a-u} represent both head and non-head daughters in the same list. If one
+  assumes that this list is ordered according to the surface order of the constituents, traces are
+  linearized.
+
+  Traces will be shown in final position in the tree visualizations throughout this book.
+}
+The element in intial-position
+is licensed by a lexical rule, which licenses a verb that takes the initial position and selects for
+a projection of the verb trace. To make this clearer, we will take a closer look at the sentence in (\ref{bsp-kennt-er-das-buch}):
+the syntactic aspects of the analysis of (\ref{bsp-kennt-er-das-buch}) are shown in Figure~\vref{fig-verb-movement-syn}.
+\begin{figure}
+\centering
+\begin{forest}
+sm edges
+[V{[\comps \eliste]}
+	[V{[\comps \sliste{ \ibox{1} }]}
+		[V{[\textsc{comps \ibox{2}}]}, tier=np,edge label={node[midway,right]{V1-LR}}
+			[kennt;knows]]]
+	[\ibox{1} V\feattab{\textsc{dsl}|\textsc{cat}|\comps \ibox{2},\\
+                            \comps \eliste}
+		[\ibox{3} NP{[\textit{nom}]}, tier=np
+			[er;he]]
+		[V\feattab{\textsc{dsl}|\textsc{cat}|\comps \ibox{2},\\
+                           \comps \sliste{ \ibox{3} }}
+			[\ibox{4} NP{[\textit{acc}]}
+				[das Buch;the book, roof]]
+			[V\feattab{\textsc{dsl}|\textsc{cat}|\comps \ibox{2},\\
+                                   \comps \ibox{2} \sliste{ \ibox{3}, \ibox{4} }}
+				[\trace]]]]]
+\end{forest}
+\caption{\label{fig-verb-movement-syn}Analysis of \emph{Kennt er das Buch?} `Does he know the book?'}
+\end{figure}
+%
+In the verb trace, the \compsv of the trace is co-indexed with the value of the \compsf under
+\textsc{dsl}. The feature \dsl was introduced by \citet*{Jacobson87} with the aim of describing head movement in inversion
+structures in English. \dsl stands for \emph{double slash} and is sometimes abbreviated as `//' in figures.\footnote{
+  In addition to \dsl, there is a \slasch feature that is used for the analysis of nonlocal
+  dependencies. This will be explained in Section~\ref{sec-v2}.
+} \citet{Borsley89} adopted Jacobson's idea and translated it into HPSG terms thereby 
+showing how head movement in a HPSG variant of the CP/IP system can be modeled using
+\textsc{dsl}. The introduction of such a feature to HPSG in order to describe movement operations is
+motivated by the fact that this kind of movement is local, unlike the long-distance dependencies discussed in Section~\ref{sec-v2}.
+
+The verb trace in (\mex{1}) takes on the role of the finite verb in the analysis of
+(\ref{bsp-dass-er-das-buch-kennt}).\footnote{
+  The \spr feature is ignored here. As will become clear later, the \sprv of the trace and the
+  \dslf are also shared. The \sprv of finite verbs is always the empty list in German and hence the
+  \sprv of the trace is the empty list as well.
+}
+\eas
+Verb trace (valence information):\\
+\label{le-verbspur}
+\onems{
+phon \eliste\\
+synsem$|$loc$|$cat \ms{ head & \ms[verb]{
+                                           dsl$|$cat$|$comps & \ibox{1}\\
+                                           }\\
+                                    comps & \ibox{1}
+                                  }\\
+}
+\zs
+
+
+Since \textsc{dsl} is a head feature, it is passed on towards the top of the tree so that information
+about the valence of the verb trace is present at each projection.
+A special version of the finite verb takes the projection of the verb trace (\iboxb{1} in Figure~\vref{fig-verb-movement-syn}) as its argument. As they are combined,
+it is checked whether the valence of the original verb \iboxb{2} matches the valence of the verb
+trace ({\textsc{dsl$|$cat$|$comps} \ibox{2}\,).
+
+The special lexical item for V1-ordering is licensed by the following lexical rule:\footnote{\label{fn-koord-vm}%
+		I am adopting a view which integrates lexical rules into the formalism of HPSG and treats them as
+		unary rules \citep{Meurers2001a}.
+		Lexical rules are applied to stems or entire words \citep{Mueller2002b}.
+		Verb-movement will -- as in previous publications about verb-movement in HPSG -- be described using 
+		lexical rules. The following data suggests, however, that it is appropriate to speak of unary syntactic rules rather than lexical rules:
+		 \ea
+        \gll Karl kennt und schätzt diesen Mann.\\
+             Karl knows and values this man\\
+	\glt `Karl knows and values this man.'
+        \z
+		(i) cannot be analyzed applying the verb-movement rule to each verb individually and then coordinating the
+		result, since \emph{kennen} `to know' and \emph{schätzen} `to value' have different \contvs. The \contv
+		of the verb trace is determined by the \contv of the verb in initial position. The coordination of two products of
+		a lexical rule for verb-movement would not be allowed as the standard coordination theory of \citet[\page 202]{ps2} states
+		the valence requirements of both conjuncts be the same. Such a problem does not arise, however, if we apply a unary syntactic 
+		rule (parallel to (\ref{lr-verb-movement2})) to the result of the coordination.%
+}
+
+
+\ea
+\begin{tabular}[t]{@{}l@{}}
+\label{lr-verb-movement}
+Lexical rule for verb in initial position (valence information):\\
+\ms{
+synsem$|$loc & \ibox{1} \ms{ cat$|$head & \ms[verb]{ vform & fin\\
+                                                     initial & $-$\\
+                                             }\\
+                  }\\
+} $\mapsto$\\
+\ms{
+synsem$|$loc$|$cat & \ms{ head & \ms[verb]{vform & fin\\
+                                           initial & $+$\\
+                                             }\\
+                           spr & \eliste\\
+                           comps & \sliste{ \ms{ loc$|$cat \ms{ head  \ms[verb]{
+                                                               dsl & \ibox{1}\\
+                                                               }\\
+%                                                         spr   \eliste\\
+                                                                                  %SPR ist leer,
+                                                                                  %weil die finiten
+                                                                                  %Verben immer
+                                                                                  %leere SPR-Werte
+                                                                                  %haben, deshalb
+                                                                                  %kann auch über
+                                                                                  %den Trace nie
+                                                                                  %etwas anderes
+                                                                                  %projiziert werden
+                                                                                  %und wir müssen
+                                                                                  %hier nichts
+                                                                                  %sagen. Oder? 08.06.2015
+                                                         comps \eliste\\
+                                                       }\\
+                                              }}\\
+                         }\\
+}
+\end{tabular}
+\z
+
+The verb licensed by this lexical rule selects the maximal projection of the verb trace which has
+the same local properties as the input verb.\footnote{
+  In principle one would have to specify the \sprv of the selected argument to be the empty
+  list. However, since the \sprv of the trace is identical to the \sprv of the fronted verb and
+  since fronted verbs are always finite and since finite verbs have the empty list as the \sprv, the
+  \sprv of the complement may be left unspecified in the lexical rule. This is different for Danish
+  and in the Danish equivalent of the lexical rule the \sprv has to be specified.
+}
+This is achieved by co-indexing the \localv of the
+input verb and the \dslv of the selected verbal projection. Only finite verbs in final position (\textsc{initial}$-$) 
+can function as an input for this rule. The output is a verb in initial position (\textsc{initial}+).
+Linearization rules make reference to the \textsc{initial} feature and ensure the correct ordering of heads in 
+local trees.
+
+
+Nothing has been said about semantics so far. It is assumed that the verb trace also shares the
+semantic properties of the verb in initial position and that verb-initial clauses are interpreted
+like their verb-final counterparts (see the discussion of (\ref{bsp-absichtlich-nicht-anal-v1}) on
+page~\pageref{bsp-absichtlich-nicht-anal-v1}). This can be modeled by threading the semantic
+contribution in parallel with the valence properties through the tree. (\ref{le-verbspur2-prelim})
+shows the verb trace enriched with semantic information: 
+
+\eas
+\label{le-verbspur2-prelim}
+Verb trace (Valence information and semantic content):\\
+\onems{
+phon \eliste\\
+synsem$|$loc \ms{ cat & \ms{ head & \ms[verb]{
+                                           dsl & \ms{ cat & \ms{ comps & \ibox{1}\\
+                                                               }\\
+                                                      cont & \ibox{2}\\
+                                                   }\\
+                                           }\\
+                                    comps & \ibox{1}\\
+                            }\\
+                  cont & \ibox{2}\\
+                }\\
+}
+\zs
+
+
+By co-indexing the \contvs, the trace behaves semantically just like the original verb, which is
+now in initial position.
+
+If one allows cyclic feature structures, (\mex{0}) can be represented in a more compact manner
+as in (\mex{1}) \citep[\page 207]{Meurers2000b}:  
+\eas
+\label{le-verbspur2}
+Verb trace according to \citew[\page 207]{Meurers2000b}:\\
+\onems{
+phon \eliste\\
+synsem$|$loc \ibox{1} \onems{ cat$|$head$|$dsl \ibox{1} }\\
+}
+\zs
+The fact that all \local properties of a verb trace are represented under \textsc{dsl} is captured much
+more directly here. It is no longer necessary to have separate structural sharings or explicitly mention individual types and features
+under \textsc{head} (as in (\ref{le-verbspur2-prelim})).
+
+The Semantics Principle ensures that the \contv is passed along the head projection during the combination of arguments towards the top of the tree. 
+In the last step of the projection in Figure~\ref{fig-verb-movement-syn}, the verb in initial position is the head and therefore the semantic
+content of this verb will be projected. In the lexical rule (\mex{1}) for the verb in initial position, 
+the semantic content of the projection of the trace in final position \iboxb{2} is identified with the 
+\contv of the verb in initial position.
+
+
+\ea
+\begin{tabular}[t]{@{}l@{}}
+Lexical rule for verbs in initial position (valence und semantic\\
+contribution):\\
+\ms{
+synsem$|$loc & \ibox{1} \ms{ cat$|$head & \ms[verb]{ vform & fin\\
+                                                     initial & $-$\\
+                                             }\\
+                  }\\
+} $\mapsto$\\*
+\onems{
+synsem$|$loc \onems{ cat  \ms{ head & \ms[verb]{ vform & fin\\
+                                                     initial & $+$\\
+                                             }\\
+                               spr & \eliste\\
+                           comps & \sliste{ \onems{ loc \onems{ cat \ms{ head & \ms[verb]{
+                                                                                     dsl & \ibox{1}\\
+                                                                                 }\\
+                                                                         spr & \eliste\\
+                                                                         comps & \eliste\\
+                                                                    }\\
+                                                           cont \ibox{2}\\
+                                                         }\\
+                                              }}\\
+                         }\\
+                   cont \ibox{2}\\
+             }\\
+}
+\end{tabular}
+\label{lr-verb-movement2}
+\z
+
+
+Due to this combination, the semantic content of the verb trace projection is then taken over by the verb 
+in initial position and, as per the Semantics Principle, becomes the semantic contribution of the entire 
+construction. Figure~\vref{fig-verb-movement-sem} shows the semantic aspects of the verb-movement analysis with the
+trace in (\ref{le-verbspur2}) and the lexical rule in (\ref{lr-verb-movement2}).
+
+\begin{figure}
+\centering
+\begin{forest}
+sm edges
+[V{[\textsc{cont} \ibox{2}\,]}
+	[V{[\textsc{cont} \ibox{2}\,]}
+		[V{[\textsc{cont} \ibox{1} kennen(er, buch)]}, tier=np,edge label={node[midway,right]{V1-LR}}
+			[kennt;knows]]]
+	[V\feattab{\textsc{dsl}|\textsc{cont} \ibox{1},\\
+                   \textsc{cont} \ibox{2}\,}
+		[NP{[\textit{nom}]}, tier=np
+			[er;he]]
+		[V\feattab{\textsc{dsl}|\textsc{cont} \ibox{1},\\
+                           \textsc{cont} \ibox{2}\,}
+			[NP{[\textit{acc}]}
+				[das Buch;the book, roof]]
+			[V\feattab{\textsc{dsl}|\textsc{cont} \ibox{1},\\
+                                   \textsc{cont} \ibox{2}$=$\ibox{1}\,}
+				[\trace]]]]]
+\end{forest}
+\caption{\label{fig-verb-movement-sem}Analysis of \emph{Kennt er das Buch?} `Does he know the book?'}
+\end{figure}
+
+
+Technically speaking, \iboxt{1} and \iboxt{2} in Figure~\ref{fig-verb-movement-sem} are identical. To make aid 
+representation, they have been represented by different numbers. The identification of \ibox{1} and
+\ibox{2} is enforced by the identification of the information under \textsc{local} and \textsc{dsl} in the
+lexical entry of the trace (\ref{le-verbspur2}),
+as \cont is a \textsc{local} feature.
+
+
+The analysis in Figure~\ref{fig-verb-movement-sem} may seem somewhat complicated, since semantic information is passed on both
+via the \dsl from the verb in initial position to the trace \iboxb{1} and by the verb trace to the verb in
+initial position \iboxb{2}. However, once we consider examples with adjuncts, it will become clear that this seemingly complicated treatment is justified. The analysis of (\mex{1}) is given in 
+Figure~\vref{fig-verb-movement-adjunkt-sem}.
+\ea
+\gll Kennt er das Buch nicht?\\
+	 knows he the book not\\
+\glt `Doesn't he know the book?'
+\z
+\begin{figure}
+\oneline{%
+\begin{forest}
+sm edges
+[V{[\textsc{cont} \ibox{1}\,]}
+	[V{[\textsc{cont} \ibox{1}\,]}
+		[V{[\textsc{cont} \ibox{2} kennen(er, buch)]}, tier=np,edge label={node[midway,right]{V1-LR}}
+			[kennt;knows]]]
+	[V\feattab{\textsc{dsl}|\textsc{cont} \ibox{2},\\
+                   \textsc{cont} \ibox{1}\,}
+		[NP{[\textit{nom}]}, tier=np
+			[er;he]]
+		[V\feattab{\textsc{dsl}|\textsc{cont} \ibox{2},\\ 
+                           \textsc{cont} \ibox{1}\,}
+			[NP{[\textit{acc}]}, fit=band
+				[das Buch;the book, roof]]
+			[V\feattab{\textsc{dsl}|\textsc{cont} \ibox{2},\\
+                                   \textsc{cont} \ibox{1}\,}
+				[Adv\feattab{\textsc{mod} \ibox{3} {[\textsc{loc}|\textsc{cont} \ibox{2}\,]},\\
+                                             \textsc{cont} \ibox{1} $\neg$ \ibox{2}}
+					[nicht;not]]
+				[\ibox{3} V\feattab{\textsc{dsl}|\textsc{cont} \ibox{2},\\
+                                                    \textsc{cont} \ibox{2}\,}
+					[\trace]]]]]]
+\end{forest}
+}
+\caption{Analysis of \emph{Kennt er das Buch nicht?} `Doesn't he
+  know the book?'}\label{fig-verb-movement-adjunkt-sem}
+\end{figure}
+
+
+The initial verb \emph{kennt}, which is licensed by a lexical rule, requires a verbal projection
+with a \textsc{dsl$|$cont} value of
+$kennen(x, y)$, where the $x$ and $y$ in the lexicon entries for \emph{kennt} are already linked to arguments, which will later be
+filled by \emph{er} and \emph{das Buch}. The \textsc{dsl$|$cont} value of the verbal projection is -- due to \dsl being a head feature -- also
+restricted at the trace. At the trace, the \contv{} is co-indexed with \textsc{dsl$|$cont} value so that the trace has the same semantic representation
+as the verb \emph{kennt}, which was the input for the verb-first lexical rule. The verb trace is then modified by the adjunct \emph{nicht} 
+and the meaning of the head"=adjunct structure is passed up to the mother node \iboxb{1}. During the combination with its arguments, the 
+meaning is then transmitted up to the maximal projection of the verb trace in Figure~\ref{fig-verb-movement-adjunkt-sem}. The \contv of this
+projection is identical to the \contv of the initial verb due to the structure sharing in the lexical item for this verb, which is licensed by the lexical 
+rule (\ref{lr-verb-movement2}). Because the verb in first position is the head of the entire structure and it is a head"=argument structure, the semantic
+content of the structure is identical to that of the V1-verb, i.e. \iboxt{1} in Figure~\ref{fig-verb-movement-adjunkt-sem}.
+
+Finally, sentences such as (\mex{1}) must be somehow ruled out:
+\ea[*]{
+\gll Kennt er das Buch kennt.\\
+     knows he the book know\\
+}
+\z
+
+
+(\mex{0}) could be analyzed in such a way that the first occurrence of \emph{kennt} is the ouput of a verb-movement rule
+and the \textsc{dsl} value of the second \emph{kennt} is unrestricted, so that the second \emph{kennt} can take over the 
+same role as the verb trace in our analysis. Generally speaking, it is not possible for all overtly realised verbs to demand that
+their  \textsc{dsl} value be \emph{none} since these verbs represent the input for the lexical rule for verb movement and
+the \textsc{local} value of the input verb is identified with the \textsc{dsl} value of the verb trace selected by the output verb.
+If all overt verbs had the \textsc{dsl} value \emph{none}, it would lead to a contradiction during the combination with the verb
+trace since the trace has a specified \textsc{dsl} value (the trace is cyclic, therefore the value of \textsc{loc$|$cat$|$\-head$|$\-dsl$|$\-cat$|$\-head$|$\-dsl}
+is not compatible with \emph{none}).
+(\mex{0}) is excluded by a restriction which states that a verb has to have the \textsc{dsl} value \emph{none} when it is
+overtly realised and enters a syntactic structure. The desired result is achieved by the implication in (\mex{1}):
+
+\ea
+\ms{ head-dtr & \ms[word]{ phon & non-empty-list \\
+                         }
+} \impl \onems{ synsem$|$l$|$cat$|$head$|$dsl \type{none}\\
+            }
+\z
+%
+This restriction differs from that of \citet[\page 207]{Meurers2000b} and others in that the \textsc{head-daughter} in the antedecent must be of the type \emph{word}. Without this restriction, the
+constraint could be applied to projections of the verb trace and thereby exclude well-formed sentences.
+
+Following the discussion of the analysis of verb-first sentences, the next section focuses on the analysis of verb-second
+sentences.
+
+
+\subsection{V2}
+\label{sec-v2}
+
+
+Verb-second sentences such as (\mex{1}b) are, as we have already mentioned, related to verb-first sentences such as (\mex{1}a) 
+in most German grammars.\footnote{
+		 \citet[Chapter~6.3]{Kathol95a}, \citet{GO2009a}, and \citet{Wetta2011a} are exceptions. These authors analyze
+		 short fronting as in (\mex{1}b) as an alternative ordering for 
+		 the constituents in (\mex{1}a). They do, however, assume long-distance dependencies 
+		 for sentences such as (\ref{bsp-um-zwei-millionen}). \citet{Kathol2001a} revised
+                 his treatment and now assumes a uniform analysis of V2 phenomena in German. 
+
+                 Approaches that treat local frontings different are discussed in more detail in Section~\ref{sec-local-frontings-alternatives}.
+}
+
+\eal
+\ex
+\gll Kennt er das Buch?\\
+	 knows he the book\\
+\glt `Does he know the book?'
+\ex
+\gll Das Buch$_i$ kennt \_$_i$ er.\label{ex-das-buch-kennt}\\
+	 the book knows {}     he\\
+\glt `He knows the book'	 
+\zl\todostefan{position trace / Frey/Fanselow}
+
+In the second example, \emph{das Buch} is situated in the prefield. The position in the middle field, where
+the object could also occur, is empty. This position is most often represented by `\_'. (\mex{1}) shows that
+elements  which are dependent on an embedded head can occur in the pre-field:
+
+\ea
+\label{bsp-um-zwei-millionen}
+\gll{}[Um zwei Millionen Mark]$_i$ soll er versucht haben, [eine Versicherung \_$_i$ zu betrügen].\\
+    \spacebr{}of two million Deutschmarks{} should he tried have \spacebr{}an insurance.company {} to defraud\\\footnote{
+         taz, 04.05.2001, \page 20
+}
+\glt `He supposedly tried to defraud an insurance company of two million Deutschmarks'
+\z
+
+Therefore, occupying the pre-field (fronting) creates a long-distance dependency. 
+To deal with long-distance dependencies, \citet[Chapter\,4]{ps2}\ia{Pollard}\ia{Sag} suggest 
+a silent element which introduces a non-local dependency: \footnote{
+		In Chapter~9, \citet{ps2} introduce a lexical rule for complement extraction.
+		It is possible to describe long-distance dependencies with this rule and avoid using
+		a phonologically null element. A further alternative would be unary projections, as I suggest in
+		\citep*[Chapter~9, 10, 18]{Mueller99a}. A discussion of the alternatives can be found in 
+		\citep[Chapter~6.2.5.1]{Mueller2002b} and in Chapter~\ref{chap-empty} of this book. In more recent works in HPSG, relational
+                argument realization principles and lexical analyses are assumed for extraction
+                \citep*{BMS2001a}. See \citew{LH2006a} for a discussion of such relational approaches.
+		
+		For phenomena such as relative and interrogative clauses, one needs the features \textsc{rel}
+		and \textsc{que} in addition to \slasch. These features are omitted in what follows.
+}
+
+\eas
+\label{trace}
+Trace for the description of long-distance dependencies:\\
+%\ms[lexical-sign]{
+\ms{
+ phon & \phonliste{} \\
+ synsem & \ms{ local & \ibox{1} \\
+               nonlocal & \ms{ inherited & \ms{ slash & \sliste{\ibox{1}} \\
+                                               } \\
+                               to-bind   & \ms{ slash & \eliste \\ 
+                                              } \\ 
+                              } \\ 
+             } \\
+}
+\zs
+
+
+This kind of trace can stand for a complement or an adjunct depending on the context.
+The characteristics of the object, which are represented under \textsc{synsem$|$"-local}, are
+entered into the \textsc{slash} list under \textsc{synsem$|$"-nonlocal$|$"-inherited$|$"-slash}.
+The \textsc{nonloc} Principle ensures the percolation of non-local features from the daughter nodes
+of complex signs to their mother nodes.
+
+\begin{principle}[Nonlocal Feature Principle] 
+\label{nonloc-prinzip}
+$ \\ $
+The \textsc{non\-loc$|$\-inherited} value of a phrasal sign is the union of the
+\textsc{non\-loc$|$\-in\-her\-ited} values of its daughters minus the \textsc{non\-loc$|$\-to-bind} value of the
+daughter of the head.
+\end{principle}%
+
+A \textsc{slash} element can be bound off by the Filler"=Head Schema.
+
+\begin{samepage}
+\begin{schema}[Filler-Head Schema (for German)]
+\label{hf-schema}
+~\\
+\type{head-filler-phrase} \impl\\\ms{ 
+head-dtr$|$synsem & \onems{ local \ms{ cat & \ms{ head & \ms[verb]{vform & fin\\
+                                                                                     initial & $+$\\
+                                                                                    }\\
+                                                  spr   & \eliste{} \\
+                                                  comps & \eliste\\
+                                                }\\
+                                     }\\
+                            nonloc \ms{ inher$|$slash   & \sliste{ \ibox{1} }\\[2mm]
+                                        to-bind$|$slash & \sliste{ \ibox{1} }\\
+                                      }\\
+                          }\\
+non-head-dtrs & \sliste{ \ms{ synsem & \onems{ local \ibox{1}\\
+                                               nonloc$|$inher$|$slash \eliste \\
+                                             } \\
+                                 }}\\
+   }
+\end{schema}\is{schema!head filler}
+\end{samepage}
+%
+This schema describes structures in which finite clauses with the verb in initial position (\textsc{initial}+)
+and with an element in \textsc{inher$|$slash} (\tbox{1}) are combined with a phrase with matching \textsc{local} properties.
+In example (\ref{ex-das-buch-kennt}), \emph{kennt er} `knows he' is the finite clause with the corresponding element in \textsc{slash}
+and \emph{das Buch} `the book' is the filler. Figure~\vref{abb-das-buch-kennt} shows the analysis for (\ref{ex-das-buch-kennt}).
+\begin{figure}
+\oneline{%
+\begin{forest}
+sm edges
+[V\feattab{\comps \eliste,\\ 
+           \textsc{inh}|\textsc{slash} \eliste}
+	[NP \ibox{1} {[\textit{acc}]}, fit=band
+		[das Buch;the book, roof]]
+	[V\feattab{\comps \eliste,\\
+                   \textsc{inh}|\textsc{slash} \sliste{ \ibox{1} },\\
+                   \textsc{to-bind}|\textsc{slash} \sliste{ \ibox{1} }}
+		[V{[\comps \sliste{ \ibox{2} }]}
+			[V{[\comps \sliste{ \ibox{3}, \ibox{4} }]}, tier=trace,edge label={node[midway,right]{V1-LR}}
+				[kennt;knows]]]
+		[\ibox{2} V\feattab{\comps \eliste,\\
+                                    \textsc{inh}|\textsc{slash} \sliste{ \ibox{1} },\\
+                                    \textsc{to-bind}|\textsc{slash} \eliste}
+			[\ibox{4} \feattab{\textsc{local} \ibox{1},\\
+                                                  \textsc{inh}|\textsc{slash} \sliste{ \ibox{1} }},tier=trace
+					[\trace]]
+			[V\feattab{\comps \sliste{ \ibox{3} },\\
+                                   \textsc{inh}|\textsc{slash} \sliste{ \ibox{1} },\\
+                                   \textsc{to-bind}|\textsc{slash} \eliste}
+				[\ibox{3} NP{[\textit{nom}]}
+				[er;he]]
+				[V{[\comps \sliste{ \ibox{3}, \ibox{4} }]}
+					[\trace]]]]]]
+\end{forest}
+}
+\caption{Analysis of \emph{Das Buch kennt er.} `He knew the book.'}\label{abb-das-buch-kennt}
+\end{figure}
+
+
+The verb movement trace for \emph{kennt} `knows' is combined with an extraction trace. 
+The extraction trace in the example is the accusative object. The accusative object 
+is described in the \compsl of the verb and the information about the properties
+of the required NP are at the same time present in the extraction trace under \textsc{loc}
+and \textsc{inher$|$slash}. The \textsc{slash} information is passed up the tree until it reaches
+the point where the projection is combined with a filler (F). The Head-Filler Schema instantiates
+the \textsc{to-bind$|$slash} value of the head daughter. The Nonlocal Feature Principle then comes into
+play to cause the binding off of the \slashv, which percolated from the extraction trace, that is, the \slashv is no longer passed
+along up the tree. The Head"=Filler Schema then makes sure that the filler daughter (the non-head daughter
+in the schema) has exactly the same \textsc{loc} value as the extraction trace. It is only the accusative nominal
+phrase which is a possible candidate for a filler in our example.
+
+
+It is worth noting that Schema~\ref{hf-schema} does not say anything about the valence of the filler
+daughter. The form of the filler daughter is only restricted by the specification of the properties of complements of lexical 
+heads. Therefore, non-maximal projections are also licensed as fillers in long-distance dependencies by our schema. The theory
+presented here does not correspond to the rules of \xbart \citep*{Jackendoff77a}. This is however not necessarily a negative
+point, since \xbart does not restrict the generative capacity of grammars in any way as soon as
+empty elements are permitted \citep{Pullum85a,KP90a}. The fact that non"=maximal projections are possible in sentence-initial position plays a central role
+for the analysis of partial verb phrase fronting presented in the following section and also for the analysis of putative
+multiple fronting, which are discussed in Chapter~\ref{chapter-mult-front}. 
+
+
+In the following, I will present the analysis proposed by \citew{HN94a} for predicate complexes as well as the analysis of fronting of partial
+constituents based on \citew{Mueller97c,Mueller99a,Mueller2002b, Meurers99a}. These analyses have become established within the
+HPSG paradigm and alternative HPSG analyses will not be discussed here.
+For such a discussion, the reader is referred to \citew[Chapter~18.3]{Mueller99a} and \citew[Chapter~2.3]{Mueller2002b}.
+
+
+
+% \citet{HN89} haben auf der Grundlage von Voranstellungs- (\mex{1}) und Oberfeldumstellungsdaten (\mex{2}) dafür
+% argumentiert, daß Hilfs- und Modalverben im Deutschen mit dem Hauptverb einen Verbalkomplex bilden.
+% \ea
+% Geholfen haben wird er dem Mann.
+% \z
+% % mehr
+% %Since German is assumed to be a verb second language, i.e., a language with exactly one constituent before the
+% %finite verb, examples like (\mex{0}) are evidence for the existence of the constituent \emph{geholfen haben}.
+% \eal
+% \ex
+% daß er dem Mann helfen müssen wird.
+% \ex
+% daß er dem Mann wird helfen müssen.
+% \zl
+% Die Beispiele in (\mex{0}) kann man leicht erklären, wenn man annimmt, daß
+% \emph{helfen} und \emph{müssen} einen Komplex bilden, der dann unter \emph{wird} eingebettet wird.
+% \emph{wird} kann entweder links oder rechts des eingebetteten Verbalkomplexes stehen.
+%
+% In Hinrich und Nakazawas analyze bilden auch \emph{geholfen} und das Hilfsverb
+% \emph{hat} in (\mex{1}) einen Verbalkomplex:
+% \ea
+% \label{ex-er-geholfen-hat}
+% daß er dem Mann [geholfen hat].
+% \z
+
+
+
+\subsection{On the verbal complex and partial verb phrase fronting}
+\label{sec-pred-compl}
+
+In various works (for instance \citealp{Uszkoreit87a}\ia{Uszkoreit}), it is assumed that an
+auxiliary verb takes a verb phrase as its complement.
+\ea
+\label{ex-uf-two}
+\gll dass Karl [[das Buch lesen] können] wird]\\
+	 that Karl the book read can will\\
+\glt `that Karl will be able to read the book'
+\z
+However, if one asumes such structures, it is difficult to explain the ordering of (\ref{ex-of-two}) because the auxiliary \emph{wird} is located between two elements
+of the verb phrase.
+\ea
+\label{ex-of-two}
+\gll dass Karl das Buch wird lesen können\\
+     that Karl the book will read can\\
+\glt `that Karl will be able to the read the book.'
+\z
+
+Furthermore, the sentences in (\mex{1}) are not ruled out by such an analysis since \emph{das Buch lesen} 
+forms a phrase which can be moved left in the middle-field or appear in a so-called pied-piping construction 
+with a relative clause.
+\eal
+\ex[*]{
+\gll dass das Buch lesen Karl wird\\
+	 that the book read Karl will\\
+}
+\ex[*]{
+\gll das Buch, das lesen Karl wird\\
+	 the book, that read Karl will\\
+}
+\zl
+%
+\citet*{HN94a}\ia{Hinrichs}\ia{Nakazawa} therefore suggest using a special dominance schema which ensures that
+(certain) verbal complements are saturated before non-verbal ones. This means that, in the analysis of (\ref{ex-uf}) and (\ref{ex-of}),
+\emph{lesen} is first combined with \emph{können} and the resulting verbal complex is then combined with \emph{wird}:
+\ea
+\gll daß Karl das Buch [[lesen können] wird].\\
+     that Karl the book \hspaceThis{[[}read can will\\
+\z
+\emph{wird} can be placed to the right of the embedded verbal complex (as in \pref{ex-uf}), or indeed to the left as
+in \pref{ex-of}. After the construction of the verbal complex \emph{lesen können wird}, it is then combined with the 
+arguments of the involved verbs, that is with \emph{Karl} and \emph{das Buch}.\footnote{
+		This kind of structure has already been suggested 
+		by \citet*{Johnson86a} in connection with an analysis of partial verb phrase fronting.
+}
+
+There are also coordination data, such as the example in (\mex{1}), which support this kind of approach.
+\ea
+\gll Ich liebte ihn, und ich fühlte, daß er mich auch geliebt hat oder doch, daß er mich hätte lieben wollen oder lieben müssen.\footnotemark\\
+     I   loved  him and I felt that he me also loved had or PRT that he me   would.have love want or love must.\\
+\footnotetext{
+        \citep*[\page 36]{Hoberg81a}
+}
+\iw{müssen}
+\glt `I loved him and felt that he loved me too, or at least he would have wanted to love me or would have had to.'
+\z
+
+The following schema, which is derived from the one suggested by Hinrichs and Nakazawa, licenses
+predicate complexes:
+
+\begin{samepage}
+\begin{schema}[Schema for predicate complexes]
+\label{schema-vk}
+~\\
+\type{head-cluster-phrase} \impl\\
+\ms{
+ synsem & \onems{ loc$|$cat$|$comps \ibox{1} \\ 
+                } \\
+ head-dtr & \onems{ synsem$|$loc$|$cat$|$comps \ibox{1} $\oplus$ \sliste{ \ibox{2} }\\ } \\
+ nonhead-dtrs & \sliste{ \onems{ synsem  \ibox{2} \\}
+                      } \\
+}
+\end{schema}
+\end{samepage}
+%
+
+I will assume the representation in (\mex{1}) for the auxiliary verb \emph{werden}:\footnote{\label{subj-fn}%
+	 \citet{Pollard90a} and \citet*{Kiss92} have suggested that the subject of non-finite verbs is better represented
+	 as an element in a separate list (\subj) rather than in the \comps list of the verb. For reasons of simplicity,
+	 I have placed the subjects of both finite and non-finite verbs in the \comps list. The separate representation of infinite
+	 subjects predicts that subjects cannot occur in projections of non-finite verbs, unless one formulates special rules which would
+	 license such combinations.%
+%% Für die Analyze der scheinbar mehrfachen Vorfeldbesetzung würde ebenfalls vorausgesagt, daß
+%% Subjekte nicht zusammen mit anderen Konstituenten im Vorfeld stehen können, was empirisch korrekt
+%% zu sein scheint. Zu einer Analyze von Prädikatskomplexen, die das Subjekt infiniter Verben separat repräsentiert,
+%% siehe \citew{Mueller99a,Mueller2002b}.%
+%Nimmt man die in \citew[Chapter~3]{Mueller2002b}
+%vorgeschlagene Passivanalyze an, so sind die Beispiele in (\ref{bsp-mehrfach-vf-subjekt}),
+%in denen ein Oberflächensubjekt in Passivkonstruktionen zusammen mit einer anderen Konstruktion
+%vorangestellt wurde, auch mit einem separat repräsentierten Subjekt problemlos analysierbar.%
+}
+\eas
+\label{le-wird}
+\emph{werden} (Future auxiliary):\\
+\ms[cat]{
+ head   & \type{verb}\\*
+ comps & \ibox{1} $\oplus$ \sliste{ \textsc{V[\textsc{lex}+, \type{bse}, comps~\ibox{1} ]}} \\
+}
+\zs
+\emph{werden} selects a verb in its \type{bse} form, that is an infinitive without \emph{zu} `to'.
+
+In example (\mex{1}), \emph{wird} takes over the partial specification of the arguments \emph{Karl} and
+\emph{mir} `me' from \emph{helfen} `to help'.
+\ea
+\gll dass Karl mir helfen wird\\
+	 that Karl me help will\\
+\glt `that Karl will help me'
+\z
+This argument attraction is made possible by the structural sharing expressed by the box \iboxt{1}
+in (\ref{le-wird}). The \comps list of \emph{wird helfen} `will help' therefore is identical
+with  the \comps list for \emph{hilft} `helps'. The combination of \emph{helfen} `help' and
+ \emph{wird} `will' is shown in Figure~\vref{abb-helfen-wird}. 
+
+\begin{figure}
+\centering
+\begin{forest}
+sm edges
+[\ms{ head   & \ibox{1}\\
+      comps & \ibox{2}\\
+    }
+[\iboxt{3}~\onems{ loc \onems{ head  \ms[verb]{ vform & bse \\
+                                             }\\
+                                comps~\ibox{2} \sliste{ NP[\type{nom}], NP[\type{dat}] }\\[2mm]
+                               }\\
+                }
+[helfen;help]]
+[\ms{ head & \ibox{1} \ms[verb]{ vform & fin \\
+                               }\\
+      comps & \ibox{2} $\oplus$\sliste{ \ibox{3} }\\[2mm]
+                    }
+[wird;will]]]
+\end{forest}
+\caption{\label{abb-helfen-wird}%
+Analysis of \emph{helfen wird} `will help'}
+\end{figure}
+
+Auxiliaries are like raising verbs: They do not assign semantic roles to either subjects or
+complements. For this reason, it is not surprising that \iboxt{1} in (\ref{le-wird}) can be 
+instantiated by the empty list:
+\ea
+\gll Morgen wird getanzt werden.\\
+	 tomorrow will danced become\\
+\glt `There will be dancing tomorrow.'
+\z
+In (\mex{0}), subjectless construction created by passivization (\emph{getanzt werden}) has been
+embedded under a future auxiliary.
+
+
+% \footnote{
+%       Note that this is the only purpose \textsc{lex} has in my grammar.
+%       \textsc{lex} has the value $-$ if a head has been combined with a complement and +
+%       otherwise. So if an unsaturated verb is combined with an adjunct its \textsc{lex} value
+%       is still $+$. This is not the way \textsc{lex} is seen in the standard framework, and
+%       therefore it might be reasonable to choose a different feature name. However, I decided
+%         to stick with the name \textsc{lex} for historical reasons.
+% } 
+
+Spurious ambiguities are ruled out by the specification of the \textsc{lex} value of the embedded 
+verbal complex in (\ref{le-wird}). Without such a specification all three structures in (\mex{1})
+would be admitted:
+\eal
+\ex 
+\gll er seiner Tochter  ein Märchen [erzählen wird]\\
+     he his daughter a fairy.tale   \spacebr{}tell will\\
+\glt `he will tell his daughter a fairy tale'
+\ex er seiner Tochter [[ein Märchen erzählen] wird]]\label{pvp-ein-maerchen-erzaehlen}
+\ex er [[seiner Tochter ein Märchen erzählen] wird]]
+\zl
+
+
+
+
+The \textsc{lex} feature ensures that \emph{erzählen} is combined with \emph{wird} before
+\emph{erzählen} is combined with its arguments. Since the mother node in head"=complement
+structures is specified as \textsc{lex}$-$, the projections of \emph{erzählen} in (\mex{0}b--c)
+cannot be combined with \emph{wird}.
+
+
+% \footnote{
+% Of course, phrases like \emph{ein Märchen erzählen} and \emph{seiner Tochter ein Märchen erzählen} are needed in the analysis
+% of German sentences like those in (i) and (ii):
+% \ea
+% \gll weil er seiner Tochter hätte ein Märchen erzählen sollen.\\
+%      because he his daughter had  a   fairytale tell should\\
+% \glt `because he should have told his daughter a fairytale.'
+% \z
+% \eal
+% \ex 
+% \gll Ein Märchen erzählen wird er seiner Tochter.\\
+%      a   fairytale tell   will he his daughter\\
+% \ex 
+% \gll Seiner Tochter ein Märchen erzählen wird er sicher.\\
+%      his daughter   a   fairytale tell will he surely\\
+% \glt `He surely will tell his daughter a   fairytale.'
+% \zl
+% The example in (i) is an instance of the so"=called \emph{Oberfeldumstellung} (\citealp{Bech55a};
+% \citealp[\page 723]{Haftka81}) and the examples in (ii) are examples of (partial) verb phrase fronting 
+% \citep[\page 720--721]{Haftka81}. For an analysis of Oberfledumstellung see \citep{HN94a} and \cite[Ch.~14]{Mueller99a-unlinked}
+% and for an analysis of the partial verb phrase fronting examples see \citep{Mueller97c} and \citep{Meurers99a-unlinked}.
+% In the HPSG analysis of these phenomena the constraint that all arguments of embedded verbal complexes have to be raised
+% to the higher predicate is relaxed for fronting or in cases like (ii) where no spurious ambiguities can
+% arise.
+% }
+
+
+The \textsc{lex} value of the mother in predicate complex structures  -- unlike in head"=argument structures
+(see Schema~\ref{schema-bin} on page~\pageref{schema-bin})-- is not quite as restricted since predicate complexes can be
+embedded under different verbs and subsequently form a predicate complex with these, as shown by (\ref{ex-er-geholfen-haben-wird}).
+
+\ea
+\label{ex-er-geholfen-haben-wird}
+\gll dass er dem Mann [[geholfen haben] wird]\\
+     that he the man \hspaceThis{[[}helped have will\\
+\glt `that he will have helped the man'
+\z
+
+If we want to rule out spurious ambiguities, we have to make sure that sentences such as (\mex{0}) can only be analyzed
+as shown in (\mex{0}) and that an analysis such as (\mex{1}) is not possible.
+\ea
+\label{bsp-non-complex-forming}
+\gll dass er dem Mann [geholfen [haben wird]]\\
+     that he the man  \spacebr{}helped have will\\
+
+\z
+%
+In the analysis of (\mex{0}), the verbal argument of \emph{haben} is raised to the argument of the complex \emph{haben wird}.
+The complex \emph{haben wird} is then combined with \emph{geholfen} via the Head"=Argument Schema. The analysis in (\mex{0})
+can be ruled out if one restricts the kind of elements which can be raised in the lexicon entries for raising predicates.
+Furthermore, we need an additional condition for (\ref{le-wird}), namely that \iboxt{1} only
+contains fully saturated, non-predicative elements with the \textsc{lex} value $-$. In formal terms, this can be expressed as a restriction on \iboxt{1}:\footnote{
+		\citet{BvN98} formulate an equivalent restriction. They differentiate between an
+		\emph{Inner Zone} and \emph{Outer Zone} in a sentence. The \emph{Inner Zone} 
+		is the predicate complex. Elements which are marked as belonging to the \emph{Inner Zone}
+		by the governing head may not be raised.
+
+In light of this restriction for raised elements, my criticism \citep[\page 351--352]{Mueller99a} of Kiss' treatment of
+		obligatory coherence as a subcase of optional coherence \citep[\page 183]{Kiss95a} is rendered obsolete: One lexical
+		item suffices for optionally coherent verbs in the present analysis.
+}
+\ea
+\label{constr-non-complex-forming}
+list\_of\_non\_c\_forming\_synsems(\eliste).\\
+list\_of\_non\_c\_forming\_synsems(\liste{ \onems{ loc$|$cat \onems{ head$|$prd $-$\\
+                                                          comps \eliste\\
+                                                        }\\
+                                                lex $-$\\
+                                                } $|$ \ibox{2} }) :=\\
+\flushright        list\_of\_non\_c\_forming\_synsems( \ibox{2} ).
+\z
+A list consists of elements which do not form a predicate complex when the list is empty (first
+clause), or when the list starts with an element that has an empty \compsl, a \textsc{lex} value and
+\textsc{prd} value of `$-$' and when the rest of the list \iboxb{2} is itself a list\_of\_non\_c\_forming\_synsems.\footnote{
+		It is not possible to avoid mentioning the \textsc{lex} value, as embedded intransitive verbs have
+		an empty valence list since the subject of non-finite verbs is represented separately. The \textsc{lex} value of
+		intransitive verbs is not specified in the lexicon. They can therefore occur in positions, 
+		where only phrases are permitted (in so-called incoherent constructions \citep{Bech55a}) as
+		well as in positions in which only lexical elements are allowed (in coherent constructions). 
+		This is also the reason for the fact that the \textsc{lex} value of the mother in predicate complex
+		structures is not specified as \textsc{lex}+ (as is the case in the analyses of \citealp{HN94a,dKM2001a}) since combinations
+		of verbs which embed an intransitive verb may be fully saturated. Such fully
+                saturated verbal complexes may form an incoherent construction with a matrix
+                verb. The \textsc{lex} value of verbal complexes is therefore only constrained by the superordinate verb.%
+}
+The \textsc{prd} feature was introduced by \citet[\page 64--67]{ps} for means of differentiating predicative and non"=predicative
+elements.
+
+At a later point, I will explain why this restriction not only plays a role for excluding spurious
+ambiguities, but also for the exclusion of certain impossible frontings.
+Figure~\vref{abb-kombin1} shows in detail how the analysis of (\ref{ex-er-geholfen-haben-wird}) works.
+
+\begin{figure}
+\begin{sideways}
+%\oneline{%
+\begin{forest}
+sm edges
+[{\ms[cat]{ head   & \ibox{1} \\
+           comps & \ibox{2}\\
+            }}
+[\iboxt{4}~\onems{ loc \ms{ head & \ibox{3} \\
+                                   comps & \ibox{2} \\
+                                 }
+}
+[\iboxt{5}~\onems{ loc \onems{ head  \ms[verb]{ vform & ppp  \\
+                                                }  \\
+                                comps~\ibox{2} \sliste{ NP[\type{nom}], NP[\type{dat}] } \\
+                              }\\
+                }
+[geholfen;helped]]
+[{\onems[cat]{ head~\ibox{3} \ms[verb]{ vform & bse \\
+                            } \\
+            comps ~ \ibox{2} $\oplus$ \sliste{ \ibox{5} } \\
+          }}
+[haben;have]]]
+[
+                 {\ms[cat]{ head & \ibox{1} \ms[verb]{ vform & fin \\
+                                                    } \\
+                           comps & \ibox{2} $\oplus$ \sliste{ \ibox{4} } \\
+                    }}
+[wird;will]]]
+\end{forest}
+%}
+\end{sideways}
+\caption{Analysis of the verbal complex in \emph{dass Karl dem Mann geholfen haben wird} `that Karl
+  will have helped the man'}\label{abb-kombin1}%
+\end{figure}
+
+The perfect auxiliary \emph{haben} embeds the past participle \emph{geholfen} (a verb with \textsc{vform} \type{ppp}).
+It adopts the arguments of this verb \iboxb{2} as its own. The resulting verbal complex has the same valence as 
+\emph{geholfen}. This complex is embedded under \emph{wird}. \emph{wird} also attracts the arguments of the embedded
+complex so that the entire complex \emph{geholfen haben wird} requires the same arguments as \emph{geholfen}.
+
+At first glance, it may seem problematic that we need phrases such as \emph{ein Märchen erzählen} `to tell a fairy tale'
+for sentences in which this group of words appears in first position. While we want to exclude this phrase as a complement
+in \pref{pvp-ein-maerchen-erzaehlen}, it needs to act as a binder for the long-distance dependency of fronting in (\mex{1}):
+\ea
+\gll Ein Märchen erzählen wird er ihr müssen.\\
+     a fairy.tale tell will he her must\\
+\glt `He will have to read her a fairy tale'
+\z
+Sentences such as (\mex{0}) are unproblematic if \textsc{lex} is represented under \textsc{synsem}, i.e. outside of \textsc{local}, 
+unlike \cite{ps} where \textsc{lex} was represented under \textsc{cat} -- that is, inside \textsc{local} \citep{Hoehle94a,Mueller97c,Mueller99a,Mueller2002b,Meurers99a}.
+
+Due to the fact that a filler in a long-distance dependency only shares the features of the trace which are under 
+\textsc{local}, a verb can require an embedded trace to have the \textsc{lex} value $+$. The \textsc{lex} value of the trace
+does not have to be identical to the \textsc{lex} value of the constituent in initial position. This means that word
+groupings with a \textsc{lex} value of $-$ are possible fillers as well.\footnote{
+			This means that it is not wise to formulate a structure preserving principle for grammars of HPSG, which
+			states that a moved constituent has to be identical to its trace. (See \eg \citew{Emonds76a-u} for
+			his formulation of this kind of principle for transformations). This kind of structure preserving
+			principle does not make sense for HPSG"=grammars, as overt realizations mostly differ from their traces
+			in that the overt realizations have daughters, whereas traces do not. In HPSG grammars, only information
+			under \textsc{local} is normally separated. Traces and fillers can have different values with respect to everything 
+			else (\textsc{phon}, \textsc{head-dtr}, \textsc{non-head-dtr},\textsc{synsem$|$nonlocal},\textsc{synsem$|$lex}, \ldots). In order to prevent 
+			overgeneration, there are general conditions on extraction which make reference to local contexts.%
+}		
+Figure~\vref{abb-seiner-tochter-erzaehlen} shows the analysis of (\mex{1}).
+\ea
+\gll Seiner Tochter erzählen wird er das Märchen.\\
+	 his daughter tell will he the fairy.tale\\
+\glt `He will read his daughter the fairy tale'
+\z	
+
+\begin{figure}
+\resizebox{!}{\textheight-3\baselineskip}{%
+\begin{sideways}
+\begin{forest}
+sm edges
+[V\feattab{\textit{fin},\\
+           \comps \eliste,\\
+           \textsc{slash} \eliste}
+	[V{[\begin{tabular}[t]{@{}l@{}}
+                   \textsc{lex} $-$,\\
+                   \textsc{loc} \ibox{1}\,[\begin{tabular}[t]{@{}l@{}}
+                                        \textit{bse},\\
+                                        \comps \ibox{2}\,\sliste{ \ibox{3}, \ibox{4} }] ]
+                                        \end{tabular}
+           \end{tabular}}
+		[\ibox{5} NP{[\textit{dat}]}
+			[seiner Tochter;his daughter, roof]]
+		[V\feattab{\textit{bse},\\
+                           \comps \sliste{ \ibox{3}, \ibox{4}, \ibox{5} }}
+			[erzählen;tell]]]
+	[V\feattab{\textit{fin},\\
+                   \comps \eliste,\\
+                   \textsc{slash} \sliste{ \ibox{1}}}
+		[V\feattab{\textit{fin},\\ 
+                          \comps \sliste{ \ibox{7} }}
+			[V{[\comps \ibox{2} $\oplus$ \ibox{6}\,]}, tier=np,edge label={node[midway,right]{V1-LR}}
+				[wird;will]]]
+		[\ibox{7} V\feattab{\textit{fin},\\
+                                    \comps \eliste,\\
+                                    \textsc{slash} \sliste{ \ibox{1} }}
+			[\ibox{3} NP{[\textit{nom}]}, tier=np
+				[er;he]]
+			[V\feattab{\textit{fin},\\
+                                   \comps \sliste{ \ibox{3} },\\
+                                   \textsc{slash} \sliste{ \ibox{1} }}
+				[\ibox{4} NP{[\textit{acc}]}, fit=band
+					[das Märchen;the fairy tale, roof]]
+				[V\feattab{\textit{fin},\\
+                                           \comps \ibox{2} \sliste{ \ibox{3}, \ibox{4} },\\
+                                           \textsc{slash} \sliste{ \ibox{1} }}
+					[\ibox{6} V\feattab{\textsc{lex} $+$,\\
+                                                            \textsc{loc} \ibox{1},\\
+                                                            \textsc{slash} \sliste{ \ibox{1} }}
+						[\trace]]
+					[V\feattab{\textit{fin},\\
+                                                   \comps \ibox{2} \sliste{ \ibox{3}, \ibox{4} } $\oplus$ \sliste{ \ibox{6} }}
+						[\trace]]]]]]]
+\end{forest}
+\end{sideways}
+}
+\caption{\label{abb-seiner-tochter-erzaehlen}%
+Analysis of \emph{Seiner Tochter erzählen wird er das Märchen.} `He will tell his daughter the fairy
+tale.'}
+\end{figure}
+
+
+Ungrammatical sentences such as (\mex{1}) are ruled out by the condition in (\ref{constr-non-complex-forming}).
+\ea[*]{
+\gll Müssen wird er ihr ein Märchen erzählen.\\
+     must will he her a fairy.tale tell\\
+}
+\z
+\emph{Wird} requires an infintive in the \emph{bse} form and then attracts its arguments. The
+attracted elements must be \textsc{lex}$-$. Since \emph {müssen} selects \emph{erzählen} and requires it to be \lex+, it cannot be attracted. This explains
+why a structure such as (\mex{1}) is ruled out:
+\ea[*]{
+\gll Müssen$_i$ wird$_j$ er ihr ein Märchen [erzählen [\_$_i$ \_$_j$]].\\
+     must       will     he her a fairy.tale \spacebr{}tell\\
+}
+\z
+For more on this, see the discussion of (\ref{bsp-non-complex-forming}) on page~\pageref{bsp-non-complex-forming}.
+
+The analysis in (\mex{1}) is ruled out by a general condition which bans extraction traces in head
+positions.
+\ea[*]{
+\gll Müssen$_i$ wird$_j$ er ihr ein Märchen  [[erzählen \_$_i$] \_$_j$].\\
+     must       will     he her a fairy.tale \hspaceThis{[[}tell\\
+}
+\z
+The contrast in (\mex{1}) can be explained by the fact that in (\mex{1}a) a predicative PP has to
+be attracted, which is not the case in (\mex{1}b).
+\eal
+\ex[\#]{
+\gll Halten wird er ihn für den Präsidenten.\\
+	 hold will he him for the president\\
+\glt `He will think he is the president'
+}
+\ex[]{
+\gll Interessieren wird er sich für den Präsidenten.\\
+	 be.interested will he \textsc{refl} for the president\\
+\glt `He will be interested in the president'
+}
+\zl
+
+The analysis presented is most certainly compatible with the analysis presented in \citew[Chapter~2]{Mueller2002b} of 
+constructions such as \emph{halten für} as complex predicates.
+
+In the Principles and Parameters Framework, fronting of incomplete projections is often analyzed as remnant movement
+(see G.\,\citealp{GMueller96a,GMueller98a,GMueller2014a-u}). \citet{deKuthy2002a}, \citet{dKM2001a} and \citet{Fanselow2002a} have
+shown however that remnant movement analyses face empirical problems which argument composition
+approaches as the one suggested here do not.\todostefan{Add discussion of \citew{GMueller2014a-u}}
+
+\subsection{Verb movement and extraction in other Germanic languages}
+\label{sec-v2-germanic}
+
+\subsubsection{Verb movement}
+
+The Subsections~\ref{sec-v1} and~\ref{sec-v2} provide an analysis of the verb position in German. It is in some sense
+similar to the GB analysis of \citew{Reis74a}, \citew{Koster75a}, \citep[Chapter~1]{Thiersch78a} and \citep{denBesten} where it is assumed that the
+finite verb moves into the C position. See also Figure~\vref{fig-verb-movement-gb}. The V-to-C
+movement analysis of verb initial sentences in German and Dutch was motivated by the observation
+that the finite verb and the complementizer are in complementary distribution: if the complementizer
+is present the verb may not be fronted. So it was assumed that the verb moves into the
+complementizer position, provided it is empty. The drawbacks of this proposal will be discussed in
+Section~\ref{sec-v-to-c-movement} in more detail. This section deals with one aspect: there are
+other V2 languages that have complementizers that appear together with V2 sentences
+(\citealt{Vikner95a}; \citealt{Bhatt99a}; \citealt[\page 87]{Fanselow2009b}). Analyses that
+assume that a finite verb moves into the position of a complementizer do not extend to such
+languages. This shows that the V-to-C analysis does not capture the verb placement phenomenon in its
+whole breadth. In Section~\ref I claimed that the HPSG analysis is similar to the GB analysis but
+the similarity does not extend to the problematic aspects. The HPSG analysis captures the similarity
+between complementizers and finite verbs in German by assigning verbs in initial position a valence
+frame that is almost identical to the one of a complementizer. Both complementizer and initial
+finite verb select a verb final finite clause. The only difference between complementizer and
+initial finite verb is that the former requires that the finite verb is realized within the selected
+clause (\dsl \type{none}) while the latter requires the verb to be missing (\dsl is an object of
+type \type{local}).
+
+Now, the analysis suggested here is different from the V-to-C analysis in that it is compatible with
+languages like Yiddish in which a complementizer is combined with a V2 sentence. (\mex{1}) shows a
+Yiddish example:
+\ea
+\settowidth\jamwidth{(Yiddish)}
+\gll Ikh meyn  az   haynt hot Max geleyent dos bukh.\footnotemark\\
+     I   think that today has Max read the book\\\jambox{(Yiddish)}
+\footnotetext{\citew[\page 58]{Diesing90a}.}
+\glt `I think that Max has read the book today.'
+\z
+The analysis of the CP in the example is shown in Figure~\vref{fig-analysis-cp-yiddish}.
+\begin{figure}
+\centering
+\begin{forest}
+sm edges
+[CP
+  [{C[ \sliste{ S } ]} [az;that]]
+  [S 
+    [Adv [haynt;today]]
+    [S/Adv
+      [{V[ \sliste{ S//V } ]} 
+        [V [hot;has]]]
+        [S//V/Adv
+          [NP [Max;Max]]
+          [VP//V/Adv 
+            [V//V [\trace]]
+            [VP/Adv
+              [VP [V [geleyent;read]]
+                  [NP [dos bukh;the book, roof]]]
+              [Adv/Adv [\trace]]]
+]]]]]
+\end{forest}
+\caption{Analysis of the Yiddish sentence \emph{az   haynt hot Max geleyent dos bukh} `that Max has read the book today'}\label{fig-analysis-cp-yiddish}
+\end{figure}%
+I assume that adverbs attach to VPs in SOV languages like English and Danish. The adverb is
+extracted in (\mex{0}), so Figure~\ref{fig-analysis-cp-yiddish} shows a trace in the adverb position following the
+VP. The information about the adverb gap is passed up in the tree until it is bound off by the
+adverb in front of the finite verb. The perfect auxiliary is realized adjacent to the VP it embeds
+but since the sentence in (\mex{0}) is a verb second sentence, the verb appears in initial position,
+that is, to the left of the subject. The normal position of the verb is taken by the verb
+trace. Information about the missing verb is projected from the verb trace to the VP and the S
+level. The finite verb in initial position takes a clause from which itself is missing. The result
+of the combination is S/Adv, that is, a sentence with an adverb gap. The adverb is combined with the
+S/Adv and binds off the gap information. The result of the combination is an S. This S is the
+argument of the complementizer and the result of the combination of complementizer and S is a CP.
+
+The difference between the German and the Yiddish complementizer is that the German complementizer
+selects a finite clause with the verb in final position, while the Yiddish complementizer selects a
+V2 clause. As is clear from Figure~\ref{fig-analysis-cp-yiddish} an analysis that assumes that the
+finite verb moves to C would run into trouble unless one assumes that \emph{az} `that' embeds a
+CP. The analysis developed here does not have this problem and extend easily to other V2
+languages. I discuss the analysis of other Germanic languages in more detail in
+\citew{MuellerGermanic}.\todostefan{Vikner95a zeigt, dass CP-Analyse schwierig ist.}
+
+\subsubsection{Extraction}
+
+\citet[]{Fanselow2009b} compares English with German and notes that a full sentence like \emph{John
+  came} in (\mex{1}a) can be combined with the adverbial \emph{yesterday}, while the same is
+impossible in German, as (\mex{1}b) shows:
+\eal
+\ex[]{
+Yesterday, John came.\jambox{(English)}
+}
+\ex[*]{
+\gll Gestern John kam.\\
+     yesterday John came\\
+}
+\zl
+Fanselow, working in a Minimalist setting, argues that the difference in (\mex{0}) is due to the
+fact that \emph{John came} is a TPs while \emph{John kam} is a CP in German. In the analysis
+suggested here, \emph{kam} `came' is a sentence with fully saturated valence requirements and one
+element in \slasch. This is bound off by \emph{John} to form the V2 clause \emph{John kam}. Since
+the Head-Filler Schema allows for exactly one element in \slasch and binds off this element, the
+\slasch list of the mother is the empty list and hence there is no way to combine \emph{gestern} as
+a filler with \emph{John kam}. Since adverbials modify verbs in final position (\initial$-$) and
+since \emph{John kam} is head-initial (\initial$+$) a combination via Head-Adjunct Schema is also
+ruled out.
+
+\citet{ps2} suggested analyzing \emph{John came} as a fully saturated verbal projection. It may
+contain a gap and if it does it is possible to combine \emph{John came} with the filler
+\emph{yesterday}. The Filler-Head Schema is rather similar for English and German. The difference
+between the two languages lies in the way of building verb initial projections that can be used in Filler-Head structures:
+while German and other Germanic languages involve verb movement, English is SVO and the combination of the head with its objects
+and subjects is licensed directly. For German it is sufficient to require the verbal projection to
+be \initial$+$. Since only verbs that underwent verb fronting are \initial$+$ this captures the data
+correctly. For SVO+V2 languages this would not be sufficient since verbs are classified as \initial$+$
+in VO languages anyway. Here an additional distinction \textsc{inverted}$+/-$ is needed. In V2
+Filler-Head structures the head daughter must be a verbal projection with a fronted verb, that is,
+\textsc{inverted}$+$.
+
+While the modification of \emph{John kam} by \emph{gestern} is excluded in German due to the fact
+that adjuncts modify \initial$-$ verbal projections, this sequence is excluded for SVO languages
+since adjuncts modify VPs rather than complete sentences in these languages. 
+
+\section{Alternatives}
+
+\subsection{V to (I to) C movement}
+\label{sec-v-to-c-movement}
+
+The preceding subsections provide an analysis for constituent order in German. It is in some sense
+similar to the GB analysis of \citep[Chapter~1]{Thiersch78a} and \citep{denBesten} where it is assumed that the
+finite verb moves into the C position. See also Figure~\vref{fig-verb-movement-gb}. While this
+somehow captures the idea that complementizers and finite verbs in initial position share certain
+properties \citep{Hoehle97a} the V-to-C analysis has several problematic aspects, as
+\citet{Fanselow2009a} points out.
+
+
+
+\subsection{Squeezing in}
+
+\citet[\page34]{Bierwisch63} suggested that V2 sentences are accounted for by assuming that the verb
+is ``squeezed in'' into the sentence after the first constituent. As \citet{Fanselow2009a} notes,
+this nicely explains the observation by Haider, Frey and Fanselow that the
+element in the \vf basically has the same information structural status as it could have in the
+left-most \mf position. However, as also noted by \citet{Fanselow2009b} there is a problem with
+examples like (\mex{1}). While certain elements may take the first position in the \mf, they are
+excluded from appearing in the \vf.
+\eal
+\ex
+\zl
+In a fronting proposal like the one suggested here, one can exclude certain elements from entering
+nonlocal dependencies. This is impossible in a squeezing-in approach since the \mf constituent would
+not move. It would stay in its original position and it would just be the finite verb that would be
+inserted between the first and the second element in the \mf.
+
+This is an empirical argument against Bierwisch's analysis. There is also a technical argument. If
+it could be shown that the squeezing in analysis is the only sensible analysis of the phenomenon is
+the squeezing in analysis, non"=transformational frameworks would be in trouble since they usually do
+not assume that there are certain structures that can be broken up by other material that is
+inserted in the middle in later steps of an analysis.
+
+Furthermore, \citet[Section~2.2]{Reis80a} noted that certain elements can be fronted without being able to occur
+in the left-most position in the \mf:
+\eal
+\ex[]{ 
+\gll Verehrt hat er ihn.\\
+     adored  has he him\\
+\glt `He has adored him.'
+}
+\ex[*]{
+\gll [dass] verehrt er ihn hat\\
+     \spacebr{}that adored he him has\\
+}
+\ex[]{
+\gll Das alles erwähnte der Autor. Nicht hat er hingegen berücksichtigt, dass \ldots \\
+     this all mentioned the author not   has he however  taken.into.account that\\
+\glt `The author mentioned all this, but he did not take into account that \ldots'
+}
+\ex[*]{
+\gll [dass] nicht er hingegen berücksichtigt hat, dass \ldots\\
+     \spacebr{}that not   he however   taken.into.account has that\\
+}
+\ex[]{
+\gll [dass] er hingegen nicht berücksichtigt hat, dass \ldots\\
+     \spacebr{}that he however not  taken.into.account has that\\
+}
+\zl
+In a squezing in approach the order \emph{verehrt er ihn hat} `adored he him has' would have to be derived and then the
+auxiliary would move between \emph{verehrt} and \emph{er}. Similarly, the sequence \emph{nicht er
+  hingegen berücksichtigt hat} `not he however taken.into.account has' would be the basis for
+squezing the auxiliary between \emph{nicht} and \emph{er}. This sequence is inappropriate with the
+intended reading. The only reading that is acceptable for (\mex{0}d) is the constituent negation of
+\emph{er} `he'. The correct order with the verb in final position is (\mex{0}e).
+
+
+\subsection{Reprojection}
+
+As \citet[\page 93]{Fanselow2009b} and others noted, the adjunction to C analysis that
+was suggested in GB is excluded in Minimalist accounts for theory internal technical reasons.
+
+What is suggested instead is something that is called \emph{reprojection}\is{reprojection} or \emph{Remerge}\is{Remerge} \citep{Suranyi2005a,Fanselow2009b}. It is assumed that a head
+is realized at a different location, leaving a trace at the original position. In the new position
+the head selects the projection from which it was moved. One such analysis is provided in
+Figure~\vref{fig-reprojection}.
+\begin{figure}
+\begin{forest}
+[HP
+  [H,name=H oben]
+  [K
+    [~~(H)~~,roof,name=H unten]]]
+%\draw (H unten.south) |-  ([yshift=-5mm]H unten.south |- H oben) -| (H oben);
+\draw[->] (H unten) to[out=245,in=south] (H oben);
+\end{forest}
+\caption{Head movement as reprojection according to \citet{Suranyi2005a}}\label{fig-reprojection}
+\end{figure}%
+The proposals are never worked out in detail. For instance it is unclear why the fronted head
+selects for the phrase it is missing from or if it is not selection what else would license the
+combination of fronted element and projection of the trace of the head. It is not explained why the
+head is governing in another direction once fronted. \citet[\page 105]{Fanselow2009b} suggests that
+``The verb possesses the checking feature and feature to be checked at the same time (the probe and
+the goal are identical).''. But it is unclear what ``at the same time'' means. The two instances of
+\emph{aime} in Figure~\vref{fig-fanselow-reprojection} cannot be identical. If they were both had to have a checking feature
+and a feature to be checked. This would result in a situation in which half of the features of the
+lower instance and half of the features of the upper instance could not be used in the derivation.
+\begin{figure}
+\begin{forest}
+[{[Tense, \st{V}]}
+    [subject]
+    [ {[Tense, \st{V}]}
+        [ {[Tense, \st{V}]} [aime\\love]]
+        [ {[Tense, V]}
+          [ {[Tense, V]} [\st{aime}\\ love]]
+          [object]]]]
+\end{forest}
+\caption{Fanselow's analysis of head-movement as reprojection \citeyearpar[\page 105]{Fanselow2009b}}\label{fig-fanselow-reprojection}
+\end{figure}%
+So there have to be two different instances of \emph{aime}, in fact of all verbs that undergo head
+movement and of course any account should capture the fact that these instances are somehow related.
+
+\citet[\page 14]{Suranyi2005a} suggests that inflectional affixes attach to stems directly ``prior to the point where the fully inflected stem merges with another (independent) element''.
+So he assumes the representation in Figure~\vref{fig-verb-suranyi} for fully inflected
+verbs.\footnote{
+  Interestingly this is very similar to what is assumed in HPSG: HPSG does not assume a
+  decomposition in terms of verb shells. Instead decomposition is done lexically. A verb contains
+  the information contributed by V and by \emph{v} in Minimalist approaches. Inflection is also done
+  presyntactically in HPSG. HPSG assumes lexical rules for inflection. They are equivalent to the
+  V-T combination in Figure~\ref{fig-verb-suranyi}.%
+}
+\begin{figure}
+\begin{forest}
+[V
+  [V
+    [V] [\emph{v}]]
+  [T]]
+\end{forest}
+\caption{Verbal stem plus affixes according to \citet[\page 15]{Suranyi2005a}}\label{fig-verb-suranyi}
+\end{figure}%
+This structure is combined with the object DP as shown in Figure~\vref{fig-verb-object-suranyi}.
+\begin{figure}
+\begin{forest}
+[V(P)
+  [V
+    [V
+      [V] [\emph{v}]]
+    [T]]
+  [Obj]]
+\end{forest}
+\caption{Combination of verb and object according to \citet[\page 15]{Suranyi2005a}}\label{fig-verb-object-suranyi}
+\end{figure}%
+Surányi assumes that the verb tree in Figure~\ref{fig-verb-object-suranyi} moves to the left. Since
+the features of V are checked already it is not the functor in the verbal tree any longer. Therefore
+the labels in the fronted tree are not determined by V but by \emph{v}. The result of the head
+reprojection is provided in Figure~\vref{fig-verb-movement-result-suranyi}.
+\begin{figure}
+\begin{forest}
+[\emph{v}(P)
+  [\emph{v}
+    [\emph{v}
+      [V] [\emph{v}]]
+    [T]]
+  [V(P)
+    [t]
+    [Obj]]]
+\end{forest}
+\caption{Combination of verb and object according to \citet[\page 15]{Suranyi2005a}}\label{fig-verb-movement-result-suranyi}
+\end{figure}%
+The left subtree of \emph{v}(P) is the moved verb from Figure~\ref{fig-verb-suranyi}. \emph{v}
+provides the label of this subtree. It selects a V(P) and the result of the combination is a
+\emph{v}(P), which may be combined with a subject in a later step.
+
+As with Fanselow's analysis one has to say that the details are not worked out. What does V select?
+An incomplete projection of \emph{v} as seems to be needed to justify trees like the one in
+Figure~\ref{fig-verb-suranyi}? If this is the case, why is \emph{v} the functor in
+Figure~\ref{fig-verb-movement-result-suranyi} taking a V to its left, a T to its right and a V(P)?
+%Why is V linearized to the left of \emph{v}? If \emph{v} is the functor 
+
+%% Note also that models in which linguistic objects change their categories during a derivation are
+%% highly implausible from a psycholinguistic point of view since 
+%% they presuppose a certain order of
+%% processing. This is incompatible with the view that we use the same linguistic knowledge for both
+%% parsing and generation and that human processing is quite robust, that is, we are capable of
+%% processing fragments. We are able to work with verbs in 
+
+All of this is provided by the proposal presented in this book: there is a lexical rule/unary schema that maps
+the verb in final position to a verb in initial position that acts as a head-initial head that
+selects for a projection in which a respective verb is missing. I think that the Minimalist
+reprojection approaches are notational variants of the HPSG analyses, which were developed several
+years earlier (\citealp*[Section~4.7]{KW91a}; \citealp*{Kiss93}; \citealp*{Frank94}; \citealp*{Kiss95a}; \citealp{Feldhaus97},
+\citealp{Meurers2000b}) but while the Minimalist proposals remain on the level of sketches like the
+one in Figure~\ref{fig-reprojection}, the HPSG analyses are worked out in detail.
+
+
+%This tradition is grounded in a proposal Holmberg (1991) made for the analysis of VP-shells:
+%substitutions into empty heads should be replaced by adjunc- tions of heads to maximal projections
+%followed by a re-projection of the moved head.
+
+
+\section{Summary}
+
+In this chapter, I have presented a model of German sentence structure which can explain the relatively
+free ordering of constituents in the Mittelfeld, the position of the finite verb, the predicate complex,
+and fronting. I have argued against alternative analyses with variable linearization/variable branching.
+The analysis put forward in this chapter forms the basis for the explanation of the previously discussed cases 
+of supposed multiple fronting that is discussed in the next chapter. 
+
+
+% Fanselow 2009b 92
+%%
+%% Some languages such as Venetian (see van Craenenbroek 2006; Zwart 2006) employ ordering requirements
+%% such as topic > focus, focus > che, che > topic, which cannot be translated into a cartographic
+%% system because of the obvious transitivity problems that arise when such or- dering statements are
+%% translated into hierarchical relations between heads. Samek-Lodovici (2006) argues convincingly that
+%% the le peripheral focus of Italian is in fact situated at the right edge of the clause, being
+%% followed by right-dislocated material.  is seriously under- mines the line of reasoning in Rizzi
+%% (1997) in favor of a Focus-phrase in Italian.
+
+
+
+% 
+
+
+%      <!-- Local IspellDict: en_US-w_accents -->
+
+
+% Scherpenisse84a-u 219  gestern am Strand ist eine AdvP

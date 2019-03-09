@@ -1,0 +1,1229 @@
+%% -*- coding:utf-8 -*-
+\chapter{Alternatives}
+\label{chap-alternatives}%
+
+\label{sec-local-frontings-alternatives}% Wetta, GO2009, Kathol95a
+
+This chapter discusses alternative proposals of German sentence structure. The phenomena that have
+to be explained by all proposals are the placement of the (finite) verb in initial or final
+position, the possibility of scrambling of arguments, the fact that German is a V2 language that
+allows to front an arbitrary constituent even if the constituent is dependent on a deeply embedded
+head and the fact that sometimes there seem to be more than one constituent in the position before
+the finite verb.\todostefan{add \citew{Kasper94a}}
+
+Existing approaches can be classified along the following dimensions:
+\begin{itemize}
+\item phrase structure"=based vs.\ dependency-based
+\item flat structures vs.\ binary branching structures
+\item discontinuous vs.\ continuous constituents
+\item linearization vs.\ ``head movement''
+\item linearization-based approaches vs.\ ``movement''
+\end{itemize} 
+Movement and head movement are put in quotes since I include GPSG, HPSG, and Dependency Grammar
+analyses among the movement analyses although technically, there is no movement in any of these
+frameworks, but there are special relationships between fillers and gaps. 
+In the following I will explore proposals from various frameworks (GPSG, HPSG, Dependency Grammar)
+that differ along these dimensions.
+
+The first proposal I want to look at is a GPSG proposal that does not assume a head-movement
+mechanism.
+
+
+\section{Flat structures and free linearization of the verb}
+\label{sec-flat-free-linearization-of-verb-gpsg}
+
+\citet{Uszkoreit87a} has developed a GPSG grammar for German which assumes that a verb is realized with
+its arguments in a local tree. As the verb and its arguments are dominated by the same node, they can -- under
+GPSG assumptions -- exhibit free ordering as long as certain theory-specific linearization
+constraints are respected. For instance there is a rule for ditransitive verbs that states that a
+sentence (V3) may consist of a verb (the head, abbreviated as H) and three NPs:
+\ea
+V3 $\to$ H[8], N2[\textsc{case} dat], N2[\textsc{case} acc], N2[\textsc{case} nom] 
+\z
+Each lexical item of a verb comes with a number which is associated with its valence and regulates
+into which kind of phrase a verb can be inserted. The example in (\mex{0}) shows a rule for
+ditransitive verbs. Since this rule does not restrict the order in which the elements at the right
+hand side of the rule have to be realized, verb initial and verb final orderings are
+possible. Furthermore all six permutations of the NPs can be derived.
+
+\citet{Pollard90a} has adapted Uszkoreit's approach for his HPSG analysis of sentence structure in
+German.
+
+These kinds of analyses have the advantage of not needing empty heads to describe the position
+of the verb. However, there does not seem to be any possibility of expressing the generalizations that are captured
+in the analysis of apparent multiple frontings that was presented in the previous chapter in a flat
+linearization model. In head-movement analyses it is possible to assume that the verb trace forms a
+constituent with other nonverbal material, but this option is simply excluded in approaches like the
+GPSG one for the simple reason that there is no empty verbal head.
+
+Of course one could assume an empty element int the \vf as I did in
+\citew{Mueller2002f,Mueller2002c,Mueller2005d}, but this empty element would be a special empty
+element that would not be needed in any other part of the grammar and it would be stipulated with
+the only purpose of getting an analysis of apparent multiple frontings.
+
+GPSG is famous for its non-transformational treatment of non-local dependencies \citep{Gazdar81}
+and the tools that were developed by Gazdar for extraction in English were used by
+\citet{Uszkoreit87a} for the analysis of V2 sentences in German. However, some researchers assume
+that such mechanisms are not necessary for simple sentences. They see the possible orderings as a
+simple reordering of elements that depend on the same head. Such proposals are discussed in the
+following section. 
+
+
+\section{Flat structures and no extraction in simple sentences}
+
+This section deals with approaches that assume that the constituent orders in (\mex{1}) are just
+linearization variants of each other:
+\eal
+\ex
+\gll Der Mann kennt die Frau.\\
+     the.\nom{} man  knows the.\acc{} woman\\
+\ex
+\gll Die Frau kennt der Mann.\\
+     the.\acc{} woman knows the.\nom{} man\\
+\ex
+\gll Kennt der Mann die Frau?\\
+     knows the.\nom{} man the.\acc{} woman\\
+\ex
+\gll {}[dass] der Mann die Frau kennt\\
+     \spacebr{}that the.\nom{} man the.\acc{} woman knows\\     
+\zl
+(\mex{0}) shows two V2 sentences and one V1 and one VL sentence. While most theories assume that
+\emph{der Mann} in (\mex{0}a) and \emph{die Frau} in (\mex{0}b) are extracted, there are some
+researchers that assume that these two sentences are just possible linearizations of the dependents
+of \emph{kennt} `knows'. Such linearization proposals have been made in HPSG
+(\citealp[Chapter~6.3]{Kathol95a}; \citealp{Wetta2011a,Wetta2014a-u})\footnote{
+  \citet{Kathol2001a} revised his treatment and assumes a uniform analysis of V2 phenomena in German.}
+and in Dependency Grammar. In what follows, I discuss the Dependency Grammar proposal in more detail.
+
+One option in a Dependency Grammar analysis would be to allow for discontinuous constituents and
+assume that dependents of deeply embedded heads can be serialized in the \vf even if the head is not
+adjacent to the \vf. However, such radical approaches are difficult to constrain
+\citep[]{MuellerGT-Eng1} and are hardly ever proposed in Dependency Grammar. Instead Dependency
+Grammarians like \citet{Kunze68a-u}, \citet{Hudson97a,Hudson2000a}, \citet*{KNR98a},
+and \citet{GO2009a}
+%\todostefan{S: rather Hudson 2000, Khanae et al. 1998, \citew{DD2001a-u}, etc.} 
+suggested analyses in which dependents of a head rise
+to a dominating head for those cases in which a discontinuity would arise otherwise. The approach is
+basically parallel to the treatment of non-local dependencies in GPSG, HPSG, and LFG, but the
+difference is that it is only assumed for those cases in which discontinuity would arise
+otherwise. However, there seems to be a reason to assume that fronting should be treated by special mechanisms even in cases
+that allow for continuous serialization. In what follows I discuss three phenomena that provide
+evidence for a uniform analysis of V2 sentences: scope of adjuncts, coordination of simple and
+complex sentences, and apparent multiple frontings that cross clause boundaries.
+
+\subsection{Scope of adjuncts}
+
+The ambiguity or lack of ambiguity of the examples in (\ref{ex-oft-liest-er-das-buch-nicht}) from
+page~\pageref{ex-oft-liest-er-das-buch-nicht}--repeated here as (\mex{1})--cannot be explained in a straightforward way:
+\eal
+\ex\label{ex-oft-liest-er-das-buch-nicht-zwei} 
+\gll Oft liest er das Buch nicht.\\
+     often reads he the book not\\
+\glt `It is often that he does not read the book.' or `It is not the case that he reads the book
+often.'
+\ex
+\gll dass er das Buch nicht oft liest\\
+     that he the book not often reads\\
+\glt `It is not the case that he reads the book often.'
+\ex
+\gll dass er das Buch oft nicht liest\\
+     that he the book often not reads\\
+\glt `It is often that he does not read the book.'
+\zl
+The point about the three examples is that only (\mex{0}a) is ambiguous. Even though (\mex{0}c) has
+the same order as far as \emph{oft} `often' and \emph{nicht} `not' are concerned, the sentence is
+not ambiguous. So it is the fronting of an adjunct that is the reason for the ambiguity. The
+dependency graph for (\mex{0}a) is shown in Figure~\vref{fig-oft-liest-er-das-buch-nicht-dg}.
+\begin{figure}
+\centering
+\begin{forest}
+dg edges
+[V
+  [Adv, dg adjunct [oft;often] ] 
+  [liest;reads] 
+  [N [er;he] ]
+  [N 
+    [Det [das;the] ]
+    [Buch;book] ]
+  [Adv, dg adjunct [nicht;not]] ]
+\end{forest}
+\caption{\label{fig-oft-liest-er-das-buch-nicht-dg}Dependency graph for \emph{Oft liest er das Buch
+    nicht.} `He does not read the book often.'}
+\end{figure}%
+Of course the dependencies for (\mex{0}b) and (\mex{0}c) do not differ, so the graphs would be the
+same only differing in serialization. Therefore, differences in scope could not be derived from the
+dependencies and complicated statements like (\mex{1}) would be necessary:
+\ea
+If a dependent is linearized in the \vf it can both scope over and under all other adjuncts of the
+head it is a dependent of.
+\z
+\citet[\page 320]{Eroms85a} proposes an analysis of negation in which the negation is treated as the head,
+that is, the sentence in (\mex{1}) has the structure in Figure~\vref{dg-adv-head}.\footnote{
+But see \citew[Section~11.2.3]{Eroms2000a}.
+}
+\begin{figure}
+\begin{forest}
+dg edges
+[Adv 
+  [V [N [er;he]]
+     [kommt;comes]]
+  [nicht;not]] 
+\end{forest}
+\caption{\label{dg-adv-head}Analysis of negation according to \citet[\page 320]{Eroms85a}}
+\end{figure}%
+% S:
+%this clearly not a syntactic structure. You must use different conventions. See for instance the semantic graph of MTT.
+%Moreover it is strange to propose a direct interface between semantics and word order. In mots DGs, semantics is lnked to an unordered dependency tree and this tree to the linear order.
+%The necessary seperation between the syntactic dependencies and the linear order is extensively discussed in the begining of TEsnière's book.
+%
+This analysis is equivalent to analyses in the Minimalist Program that assume a NegP\is{NegP} and it
+has the same problem: The category of the whole object is Adv, but it should be V. This is a problem
+since higher predicates may select for a V rather than an Adv. See for instance the analysis of
+embedded sentences like (\ref{ex-dass-er-nicht-singen-darf}) below.
+
+The same is true for constituent negation or other scope bearing elements. For example, the analysis of (\mex{1})
+would have to be the one in Figure~\vref{dg-alledged-murderer}.
+\ea
+\gll der angebliche Mörder\\
+     the alleged murderer\\
+\z
+\begin{figure}
+\begin{forest}
+dg edges
+[Adj
+    [Det, no edge, name=det, l+=3\baselineskip, [der;the] ]
+  [angebliche;alleged]
+  [N, name=n [Mörder;murderer]]]
+\draw (n.south)--(det.north);
+\end{forest}
+\caption{\label{dg-alledged-murderer}Analysis that would result if one considered all scope-bearing adjuncts
+  to be heads}
+\end{figure}%
+This structure would have the additional problem of being non-projective. Eroms does treat the determiner
+differently from what is assumed here, so this type of non"=projectivity may not be a problem for
+him. However, the head analysis of negation would result in non"=projectivity in so"=called coherent
+constructions in German. The following sentence has two readings: in the first reading the negation
+scopes over \emph{singen} `sing' and in the second one over \emph{singen darf} `sing may'.
+\ea\label{ex-dass-er-nicht-singen-darf} 
+\gll dass er nicht singen darf\\
+     that he not sing may\\
+\glt `that he is not allowed to sing' or `that he is allowed not to sing'
+\z
+The reading in which \emph{nicht} scopes over the whole verbal complex would result in the
+non-projective structure that is given in Figure~\vref{dg-nicht-singen-darf}.
+\begin{figure}
+\begin{forest}
+dg edges
+[Subj
+  [dass;that]
+  [Adv
+    [N, no edge, name=n, tier=n [er;he]]
+    [nicht;not]
+    [V,name=v 
+      [V, tier=n [singen;sing]]
+      [darf;may]]]]
+\draw (v.south)--(n.north);
+\end{forest}
+\caption{\label{dg-nicht-singen-darf}Analysis that results if one assumes the negation to be a head}
+\end{figure}%
+Eroms also considers an analysis in which the negation is a word part (`Wortteiläquivalent'), but
+this does not help here since first the negation and the verb are not adjacent in V2 contexts like
+(\ref{ex-oft-liest-er-das-buch-nicht}) and even in verb final contexts like
+(\ref{ex-dass-er-nicht-singen-darf}). Eroms would have to assume that the object to which the negation
+attaches is the whole verbal complex \emph{singen darf}, that is, a complex object consisting of two
+words.
+
+So, this leaves us with the analysis provided in Figure~\ref{fig-oft-liest-er-das-buch-nicht-dg} and
+hence with a problem since we have one structure with two possible adjunct realizations that
+correspond to different readings, which is not predicted by an analysis that treats the two possible
+linearizations simply as alternative orderings.
+% Eroms 2000: 159 nicht is an adjunct, später dann Ergänzungskanten
+
+Thomas Groß (p.\,c.\ 2013) suggested an analysis in which \emph{oft} does not depend on the verb but
+on the negation. This corresponds to constituent negation in phrase structure approaches. The
+dependency graph is shown at the left-hand side in Figure~\vref{fig-oft-liest-er-das-buch-nicht-dg-constituent-negation}.
+\begin{figure}
+\hfill
+\begin{forest}
+dg edges
+[V
+  [Adv, edge=dashed [oft;often] ] 
+  [liest;reads] 
+  [N [er;he] ]
+  [N 
+    [Det [das;the] ]
+    [Buch;book] ]
+  [Adv\sub{g}, dg adjunct [nicht;not]] ]
+\end{forest}
+\hfill
+\begin{forest}
+dg edges
+[V, l sep+=5pt
+  [N [er;he] ]
+  [N 
+    [Det [das;the] ]
+    [Buch;book] ]
+  [Adv, dg adjunct=4pt [nicht;not]
+    [Adv [oft;often] ] ] 
+  [liest;reads] ]
+\end{forest}
+\hfill\mbox{}
+\caption{\label{fig-oft-liest-er-das-buch-nicht-dg-constituent-negation}Dependency graph for \emph{Oft liest er das Buch
+    nicht.} `He does not read the book often.' according to Groß and verb-final variant}
+\end{figure}%
+The figure at the right-hand side shows the graph for the corresponding verb-final sentence. The
+reading that corresponds to constituent negation can be illustrated with contrastive
+expressions. While in (\mex{1}a) it is just the \emph{oft} `often' that is negated, it is \emph{oft
+  gelesen} `often read' that is in the scope of negation in (\mex{1}b).
+\eal
+\ex 
+\gll Er hat das Buch nicht oft gelesen, sondern selten.\\
+     he has the book not often read     but seldom\\
+\glt `He did not read the book often, but seldom.'
+\ex
+\gll Er hat das Buch nicht oft gelesen, sondern selten gekauft.\\
+     he has the book not often read     but seldom bought\\
+\glt `He did not read the book often but rather bought it seldom.'
+\zl
+These two readings correspond to the two phrase structure trees in Figure~\vref{fig-er-das-buch-nicht-oft-liest-psg}.
+\begin{figure}
+\hfill
+\begin{forest}
+sm edges
+  [V
+    [N [er;he] ]
+    [V
+      [NP 
+        [Det [das;the] ]
+        [N [Buch;book] ] ]
+      [V 
+        [Adv [nicht;not]] 
+        [V [Adv [oft;often] ] 
+           [V [liest;reads] ] ] ] ] ]
+\end{forest}
+\hfill
+\begin{forest}
+sm edges
+  [V
+    [N [er;he] ]
+    [V
+      [NP 
+        [Det [das;the] ]
+        [N [Buch;book] ] ] 
+      [V 
+        [Adv 
+           [Adv [nicht;not] ]
+           [Adv [oft;often] ] ]  
+        [V [liest;reads] ] ] ] ]
+\end{forest}
+\hfill\mbox{}
+\caption{\label{fig-er-das-buch-nicht-oft-liest-psg}Possible syntactic analyses for \emph{er das
+    Buch  nicht oft liest} `He does not read the book often.'}
+\end{figure}%
+Note that in an HPSG analysis, the adverb \emph{oft} would be the head of the phrase \emph{nicht oft}
+`not often'. This is different from the Dependency Grammar analysis suggested by Groß. Furthermore,
+the Dependency Grammar analysis has two structures: a flat one with all adverbs depending on the
+same verb and one in which \emph{oft} depends on the negation. The phrase structure"=based analysis
+has three structures: one with the order \emph{oft} before \emph{nicht}, one with the order
+\emph{nicht} before \emph{oft} and the one with direct combination of \emph{nicht} and
+\emph{oft}. The point about the example in (\ref{ex-oft-liest-er-das-buch-nicht}) is that one of the
+first two structures is missing in the Dependency Grammar representations. This probably does not make it
+impossible to derive the semantics, but it is more difficult than it is in constituent"=based approaches.
+
+\subsection{Coordination of simple and complex sentences}
+
+
+A further argument against linearization approaches for simple sentences can be based on the following coordination
+example:
+\ea
+\gll Wen$_i$ kennst \_$_i$ du  und glaubst du, dass \_$_i$ jeder kennt?\\
+     who     knows  {} you and believe you that {} everybody  knows\\
+\glt `Who do you know and do you believe that everybody knows?'
+\z
+The classical analysis of Across the Board Extraction\is{Across the Board Extraction} by
+\citet{Gazdar81} assumes that two slashed clauses are coordinated. If one assumes that simple
+clauses are analyzed via linearization of one element into the \vf while long-distance dependencies
+are analyzed with a special mechanism (for instance the \slasch mechanism of GPSG/HPSG or special
+dependencies \citew{Hudson2000a}), the two coordinated clauses in (\mex{0}) would differ
+fundamentally in their structure and all coordination theories would fail. The conclusion is that
+coordination forces us to treat the frontings in the sentences in (\mex{1}) in the same way:
+\eal
+\ex
+\gll Wen kennst du?\\
+     who     knows  you\\
+\glt `Who do you know?'
+\ex
+\gll Wen glaubst du, dass jeder kennt?\\
+     who     believe you that everybody knows\\
+\glt `Who do you believe that everybody knows?'
+\zl
+Either both sentences are analyzed via linearization or both are analyzed using a special
+mechanism for extraction. Since linearization analyses of (\mex{0}b) are either very complicated
+(in HPSG) or open Pandora's box (in Dependency Grammar, see \citealp[Section~11.7.1]{MuellerGT-Eng1}), extraction-based
+analyses with a special mechanism for both sentences should be preferred.
+
+
+\subsection{Apparent multiple frontings}
+
+Furthermore, note that models that directly relate dependency graphs to topological fields will not be able to
+account for sentences like (\mex{1}).
+\ea
+\gll Dem Saft eine kräftige Farbe geben Blutorangen.\footnotemark\\
+     the juice a   strong   color give blood.oranges\\
+\footnotetext{
+\citet{BC2010a} found this example in the \emph{Deutsches Referenzkorpus} (DeReKo), hosted at Institut
+für Deutsche Sprache, Mannheim: \url{http://www.ids-mannheim.de/kl/projekte/korpora}
+}
+\glt `Blood oranges give the juice a strong color.'
+\z
+The dependency graph of this sentence is given in Figure~\vref{fig-dem-saft-eine-kraefitge-farbe-dg}.
+\begin{figure}[htb]
+\centerline{
+\begin{forest}
+dg edges
+[V
+  [N [Det,tier=eine [dem;the]]
+   [Saft;juice] ]
+  [N, l sep+=3pt 
+      [Det,tier=eine [eine;a] ]
+      [Adj, dg adjunct=4pt  [kräftige;strong]]
+      [Farbe;color]]
+  [geben;give] 
+  [N [Blutorangen;blood.oranges] ] ]
+\end{forest}
+}
+\caption{\label{fig-dem-saft-eine-kraefitge-farbe-dg}Dependency graph for \emph{Dem Saft eine kräftige Farbe geben Blutorangen.} `Blood oranges give the juice a strong color.'}
+\end{figure}%
+
+Such apparent multiple frontings are not restricted to NPs. As was shown in Section~\ref{sec-phenomenon-mult-front}, various types of dependents can be
+placed in the \vf. Any theory that is based on dependencies alone and that does not allow for
+empty elements is forced to give up the restriction that is commonly assumed in the analysis of V2 languages, namely that the verb is in second position. 
+In comparison, analyses like \gb and those \hpsg variants that assume an empty verbal head can
+assume that a projection of such a verbal head occupies the \vf. This explains why the material in
+the \vf behaves like a verbal projection containing a visible verb: Such \emph{Vorfelds} are
+internally structured topologically, they may have a filled \nf and even a particle that fills the
+right sentence bracket (Examples with verbal particle and \mf or \nf are given in
+(\ref{ex-adv-particle}) on page~\pageref{ex-adv-particle}). The equivalent of the analysis in Gross
+\& Osborne's framework \citeyearpar{GO2009a} would be something like the graph that is shown 
+in Figure~\vref{fig-dem-saft-eine-kraefitge-farbe-empty-dg}, but note that \citet[\page 73]{GO2009a}
+explicitly reject empty elements and in any case an empty element that is stipulated just to get the
+multiple fronting cases right would be entirely ad hoc.\footnote{
+  I stipulated such an empty element in a linearization-based variant of HPSG allowing for
+  discontinuous constituents \citep{Mueller2002c},
+  but later modified this analysis so that only continuous constituents are allowed and verb
+  position is treated as head-movement and multiple frontings involve the same empty verbal head as
+  is used in the verb movement analysis. The revised theory is presented in this book.
+}
+\begin{figure}
+\centerline{
+\begin{forest}
+dg edges
+[V\sub{g}
+  [V,edge=dashed [N [Det [dem;the]]
+      [Saft;juice] ]
+     [N [Det [eine;a] ]
+        [Adj, dg adjunct=4pt [kräftige;strong]]
+        [Farbe;color]]
+     [ \trace ] ]
+  [geben;give] 
+  [N [Blutorangen;blood.oranges] ] ]
+\end{forest}
+}
+\caption{\label{fig-dem-saft-eine-kraefitge-farbe-empty-dg}Dependency graph for \emph{Dem Saft eine
+    kräftige Farbe geben Blutorangen.} `Blood oranges give the juice a strong color.' with an empty
+  verbal head for the \vf}
+\end{figure}%
+It is important to note that the issue is not solved by simply dropping the V2 constraint and
+allowing dependents of the finite verb to be realized to its left, since the fronted constituents do
+not necessarily depend on the finite verb as the examples in (\ref{bsp-gezielt-mitglieder}) and
+(\ref{bsp-kurz-die-bestzeit}) from page~\pageref{bsp-gezielt-mitglieder} -- repeated
+here as (\mex{1}) -- show:
+\eal
+\ex
+\gll [Gezielt] [Mitglieder] [im     Seniorenbereich]       wollen  die Kendoka allerdings nicht werben.\footnotemark\\
+    \spacebr{}targeted \spacebr{}members     \spacebr{}in.the senior.citizens.sector want.to the Kendoka however    not   recruit\\
+\glt `However, the Kendoka do not intend to target the senior citizens sector with their member recruitment strategy.'%
+\label{bsp-gezielt-mitglieder-zwei}
+\footnotetext{
+        taz, 07.07.1999, p.\,18. Quoted from \citew{Mueller2002c}.
+      }
+\ex 
+\gll {}[Kurz] [die Bestzeit] hatte der Berliner Andreas Klöden [\ldots] gehalten.\footnotemark\\
+	 \spacebr{}briefly \spacebr{}the best.time had the Berliner Andreas Klöden {} held\\
+\footnotetext{
+        Märkische Oderzeitung, 28./29.07.2001, p.\,28.
+}\label{bsp-kurz-die-bestzeit-zwei}     
+\glt `Andreas Klöden from Berlin had briefly held the record time.'
+\zl
+And although the respective structures are marked, such multiple frontings can even cross clause boundaries:
+\eal
+\label{ex-der-maria-einen-ring}
+\ex 
+\gll Der Maria einen Ring glaube ich nicht, daß er je schenken wird.\footnotemark\\
+	 the Maria a ring believes I not that he ever give will\\
+\footnotetext{
+\citew[\page 67]{Fanselow93a}.
+}
+\glt `I dont think that he would ever give Maria a ring.'
+\ex 
+\gll (Ich glaube) Kindern Bonbons gibt man besser nicht.\footnotemark\\
+     \hspaceThis{(}I think children candy gives one better not\\
+\footnotetext{
+        G.\ \citew[\page 260]{GMueller98a}.
+}
+\glt `I think it's better not to give candy to children.'
+\zl
+If such dependencies are permitted it is really difficult to constrain them. As was discussed in
+Section~\ref{sec-ausgeschlossen-mvf}, I started with an approach that admitted several elements in \slasch, but the
+disadvantage was that it was difficult to explain why certain parts of idioms could not be
+extracted. Furthermore, it would be difficult to represent the fact that the fronted elements have
+to be clausemates (see also Section~\ref{sec-ausgeschlossen-mvf}).
+
+So far I only discussed Dependency Grammar approaches but all the issues mentioned in this and the
+previous subsections are also problematic for Wetta's approach
+\citeyearpar{Wetta2011a,Wetta2014a-u}. Wetta, working in the framework of linearization"=based HPSG 
+\citep{Reape94a,Kathol95a,Kathol2001a,Mueller99a,Mueller2002b}, assumes that sentences in which
+the\todostefan{Rui has some further suggestions, check whether published}
+fronted elements belong to a verb in the same clause are simply reordering variants of sentences
+with the verb in initial or final position. For the analysis of apparent multiple frontings \citet{Wetta2011a}
+assumes a relational constraint that takes arbitrarily many preverbal objects and forms a new complex
+one:\footnote{
+  I added a \textsc{dom} feature in the first domain element of the mother, which was missing in the
+  original.
+}
+\begin{exe}
+\ex Discourse prominence constructions for German according to \citet[\page 264]{Wetta2011a}:
+\begin{xlist}
+\ex doms$_\bigcirc$(\sliste{ [\textsc{dom} X$_1$], \ldots, [\textsc{dom} X$_n$] }) $\equiv$ X$_1$
+$\bigcirc$ \ldots{} $\bigcirc$ X$_n$
+\ex \type{prom-part-compact-dom-cxt} \impl\\
+    \ms{
+    mtr & \ms{ dom \sliste{ \ms{ prom & \normalfont +\\
+                                 dom  & \normalfont doms$_\bigcirc$(L$_1$) } } $\bigcirc$
+      \normalfont doms$_\bigcirc$(L$_2$) \\
+                               }\\
+    dtrs & \upshape L$_1$:\type{list}( [\textsc{prom}+] ) $\bigcirc$ L$_2$:\type{list}\\
+    }
+\zl
+The list L$_1$ in (\mex{0}) is a list of elements that are marked as prominent (\textsc{prom}+). The
+idea is that these elements are compacted into one element which is then the element that is placed
+in the \vf. The daughters that are not marked as prominent are collected in L$_2$.%
+% Könnte man machen, indem man Linearisierungsbeschränkungen sagen lässt, dass es nur ein
+% PROM+-Element pro Domäne geben darf.
+\footnote{
+  Actually the fact that L$_2$ does contain \textsc{prom}$-$ elements is not specified in
+  (\mex{0}b). It may follow from other constraints in the theory. They were not given in the paper though.
+}
+Since they are combined with $\bigcirc$ with the prominent element, they can appear in any order
+provided no linearization constraint is violated.
+Figure~\ref{fig-v3-wetta2011} shows what (\mex{0}b) does.\footnote{%
+  Note that \citet[\page 259]{Wetta2011a} assumes an unusual definition of compaction and hence that the \domv of \emph{die Weltmeisterschaft} is a single object, while
+  all other domain"=based approaches assume that \emph{die Weltmeisterschaft} has two \domain
+  objects: \emph{die} and \emph{Weltmeisterschaft} \citep{KP95a,Kathol2001a,Babel,Mueller99a}. Without these rather unusal assumptions the call
+  of doms$_\bigcirc$ would be unnecassiry and L$_1$ and L$_2$ could be used directly.
+}
+\begin{figure}
+\oneline{%
+\begin{forest}
+sn edges
+[{\ms{ d & \sliste{ \ms{ prom & \normalfont + \\
+                          f    & \phonliste{ zum, zweiten, Mal, die Weltmeisterschaft } },
+                     \ms{ f    & \phonliste{ errang } },
+                     \ms{ f    & \phonliste{ Clark } } } } } 
+ [{\ms{ d & \sliste{ \ms{ f  & \phonliste{ Clark } \\
+                            s  & \normalfont NP[\type{nom}] } }\\ }}]
+ [{\ms{ d & \sliste{ \ms{ f  & \phonliste{ die, Weltmeisterschaft } \\
+                            s  & \normalfont NP[\type{nom}] } }\\ }}]
+ [{\ms{ d & \sliste{ \ms{ f  & \phonliste{ zum, zweiten, Mal } \\
+                            s  & \normalfont PP } }\\ }}]
+ [{\ms{ d & \sliste{ \ms{ f  & \phonliste{ errang } \\
+                            s  & \normalfont V[\type{fin}] } }\\ }}]
+]
+\end{forest}}
+\caption{Vn with partial compaction according to \citet[\page 264]{Wetta2011a}}\label{fig-v3-wetta2011}
+\end{figure}
+The daughters of the complete construction are shown in the figure. \emph{zum zweiten Mal} and \emph{die Weltmeisterschaft} will
+be marked \textsc{prom}+ and their \domvs will be combined via $\bigcirc$ and the result will be the
+\domv of the first element in the \doml of the mother. This begs the question what the properties of this new object would be. This is not made explicit
+in Wetta's paper but he assumes that domain objects are of type \type{sign}, so this object has to
+have syntactic and semantic properties. Note that HPSG grammars are descriptions of
+models. Descriptions are usually partial. Everything that is not specified can vary as long as no
+appropriateness conditions on types are violated \citep{King99a-u}. For example, a theory of German could leave the
+actual case value of the German noun \emph{Frau} `woman' unspecified since it is clear that the
+type \type{case} has the four subtypes \type{nom}, \type{gen}, \type{dat}, \type{acc}. In a model, the
+value can only vary in this limit, that is, the actual case has to be one of these four values \citep[Section~2.7]{MuellerLehrbuch1}. If
+this is applied to Wetta's theory we get infinitely many models since the syntactic properties of
+the first domain element are not specified. Since valence lists are part of syntactic descriptions
+and since they may be arbitrarily long in principle, there are infinitely many models for Wetta's
+structures. To fix this, he would have to specify the category of the element in the \vf. But what
+could the category be? In other partial compaction theories the category of the created element is
+the category of the head \citep{KP95a,Kathol2001a,Babel,Mueller99a}, but in Wetta's theory there is no common head for the compacted
+objects. He could stipulate that the newly created object would be something like the object one gets in an analysis with an empty
+verbal head. But then a relational constraint is used that creates structure out of nothing
+instead of the assumption of an empty head that basically behaves like a normal visible verb. The
+constraint introducing this verbal element would be something unseen elsewhere in the grammar. Nothing is gained by such an analysis.
+
+\citet{Wetta2014a-u} drops the relational constraint that compacts several fronted elements into one
+consituent and just states that arbitrarily many constituents can appear in front of the finite verb
+in German. This has the advantage that no stipulation of the properties of the preverbal constituent
+is needed but it leaves the fact unexplained that the material in front of the finite verb behaves
+like a verbal projection with all topological fields in them (see below). 
+
+Neither \citet{Wetta2011a} nor \citew{Wetta2014a-u} addresses data like (\ref{ex-der-maria-einen-ring}) and indeed it would be difficult to integrate such data into
+his picture, since he does assume that nonlocal frontings are handled via the \slasch
+mechanism. \citet{Wetta2018a} suggested a modification of the Filler-Head Schema that allows
+multiple elements in \slasch and inserts the \slasch elements into the order domain of the
+head.\footnote{
+  I adapted the schema and put the C inside of the angle brackets.
+}
+\ea
+\label{schema-f-g-wetta}
+\type{filler-s-p-cxt} \impl\\*
+\ms{
+mtr & \ms{ syn \ms{ cat & y \\
+                    val & \eliste\\
+                    gap & \eliste\\
+                  }\\
+         }\\
+dtrs & \sliste{ H } $\bigcirc$ L$_1$ $\bigcirc$ L$_2$ $\bigcirc$ \sliste{ C }\\
+hd-dtr & \upshape H: \ms{ syn \ms{ cat & Y: \ms{ vf & fin\\
+                                      }\\
+                          val & L$_1$ $\oplus$ \sliste{ C: \ms[clause]{
+                                                           syn & \ms{ gap & L$_2$\\
+                                                                    } } }\\
+                       }\\
+}
+} 
+\z
+H is the head of the matrix clause, the finite verb, C is the clausal complement of H, L$_1$ is the
+list of other arguments of H and L$_2$ is the list of gaps coming up from the embedded clause. The
+\dtrsl of the complete construction consists of the shuffeling of lists containing the head and the
+complement clause and L$_1$ and L$_2$. Shuffling means that the elements of the involved lists can be
+ordered in any order as long as the relative order of elements in the lists remains constant \citep{Reape94a}. That
+is, elements from L$_1$ can be ordered before or after any elements from the other lists as long as
+the order of elements in L$_1$ is not changed.\footnote{
+  In fact this makes wrong predictions as far as the order of arguments in L$_1$ is
+  concerned. German is a scrambling language and hence all orders of arguments of a head are allowed
+  for in principle. For example both the orderings of the subject and object of \emph{gebeten} in
+  (i) are possible.
+\eal
+\ex 
+\gll [Über dieses Thema]$_i$ hat noch niemand den Mann gebeten,~~~~~~~~~~~~~ [[einen Vortrag \_$_i$ zu halten].\\
+     \spacebr{}about this topic  has yet  nobody.\nom{}  the man.\acc{}  asked    \hspaceThis{[[}a
+         talk {} to give\\
+\glt `Nobody asked the man yet to give a talk about this topic.'
+\ex 
+\gll [Über dieses Thema]$_i$ hat den Mann noch niemand gebeten,~~~~~~~~~~~~~ [[einen Vortrag \_$_i$ zu halten].\\
+     \spacebr{}about this topic  has the man.\acc{} yet  nobody.\nom{}    asked    \hspaceThis{[[}a
+         talk {} to give\\    
+\zl
+  Since the schema in (\ref{schema-f-g-wetta}) can account for only one of these orders, it is not empirically
+  adequate. The same problem applies to several schemata in \citew{Wetta2014a-u}, for example to the
+  schema he gives on page 164: the elements of L can be scrambled but the schema does not account
+  for this. The problem can be solved by assuming a special constraint that maps
+  a list to all lists containing permutations of its elements. Rather than combining L$_1$ with the other lists in
+  (\ref{schema-f-g-wetta}), one would then combine permutations(L$_1$) with the lists. Of course
+  stipulating such a constraint that is not used anywhere else in Wetta's grammar adds to the complexity of his approach.
+}
+
+This makes it possible to account for sentences like (\ref{ex-der-maria-einen-ring}) but this analysis does not explain that the elements that
+appear in front of the finite verb have to be clause mates. \citew[\page 171]{Wetta2014a-u} captures
+the same-clause restriction by analyzing Vn orders as local reorderings. Since in the 2014 approach nonlocal dependencies
+are not involved in Vn constructions, it follows that the elements have to be clause mates
+(dependents of the verbs in the highest clause). In order to deal with examples like (\ref{ex-der-maria-einen-ring}), \citet{Wetta2018a} drops the constraint that relates Vn to local reorderings. But as soon as
+nonlocal dependencies are allowed in Vn constructions, the problem of mixing material depending on
+different heads creeps back in again. Rui Chaves (p.\,c.\,2018) suggested that
+one could fix this problem by information-structural constraints on the fronted material. He
+suggested that all fronted elements are marked as [\textsc{prominent}+] and that all \textsc{prom}+
+elements have to depend on the same semantic predicate. Note that such a constraint would be violated
+in sentences in which a V2 sentence is embedded into another V2 sentence:
+\ea
+\gll Peter denkt, Klaus kommt morgen.\\
+     Peter thinks Klaus comes tomorrow\\
+\glt `Peter thinks that Klaus is coming tomorrow.'
+\z
+\emph{Peter} is fronted and hence \textsc{prom}+ and \emph{Klaus} is also fronted and
+\textsc{prom}+. Both depend on different verbs and both are fronted but within separate
+clauses. The fronted elements do not share a common \vf. So, the constraint that is supposed to rule
+out (\mex{1}) would also rule out (\mex{0}).
+\ea[*]{
+\gll Peter Klaus denkt, kommt morgen.\\
+     Peter Klaus thinks comes tomorrow\\
+}
+\z
+There may be ways to formalize the intuition behind the original proposal but this cannot be done
+exclusively on the semantic/""information structural level. One would have to find ways to know which
+\vf one is talking about, that is, whether the constituents are in the same \vf or in different
+ones. The empty verbal head seems to be better suited to capture such constraints than any other
+device one may think of.
+%
+% Rui 20.01.2018
+% 2. A way to solve the problem you raise wrt to my
+%% information-structural hypothesis and examples in (15) and (16) would
+%% be to relativize it to each clause: for a given clause either all
+%% fronted elements are linked to the same local verb, or all fronted
+%% elements are linked to the same verb via SLASH.  Hence (15) would be
+%% fine because the rule applies twice, for each clause.  Another way
+%% would be to distinguish between scrambling prominence and extraction
+%% prominence and require that fronted elements be of the same kind of
+%% prominence (i.e. no need to refer to the verb).
+%
+% St: OK, may work. But how do you ensure that the SLASHes are coming from the same verb?
+
+Note that information structural approaches that assume that several independent items are fronted
+and that these fronted elements have certain special information structure functions also fail on examples
+like the Claudia Perez sentence in (\ref{bsp-ihnen-für-heute-drei}) on page~\pageref{bsp-ihnen-für-heute-drei}, which was discussed in
+Section~\ref{sec-assignment-to-top-foc}. Sentences like (\ref{ex-los-damit}) from page~\pageref{ex-los-damit}--repeated here as
+(\mex{1})--are also problematic since it is not the case that the fronted elements have a special 
+information structural status. It is not appropriate to just label \emph{los} and \emph{damit} as
+\textsc{prom}+ and state that all \textsc{prom}+ elements are ordered before the finite verb.  It is the fronted phrase that has to be taken care of. Without the
+assumption of a phrase there, there is no straight-forward way to do this.
+\ea
+\label{ex-los-damit-zwei} 
+\gll \emph{Los} damit \emph{geht} es schon am 15. April.\footnotemark\\
+	  off there.with goes it PRT on 15. April\\
+\footnotetext{
+        taz, 01.03.2002, p.\,8.
+    }
+\glt `The whole thing starts on the 15th April.'
+\z
+Note also that the order of the elements before the finite verb corresponds to the order that we
+would see without fronting. \emph{los} is a right sentence bracket and \emph{damit} is
+extraposed. Any theory that assumes that \emph{los} and \emph{damit} are in the same order domain as
+the finite verb would run into deep trouble since it would have to assume a right sentence bracket
+(\emph{los} `off') and a \nf (\emph{damit} `there.with') to the left of the left sentence bracket (\emph{geht} `goes').\footnote{
+  There is a technical solution to the problem: one could set up linearization constraints that only apply to constituents with the same
+  \textsc{prom} value. \textsc{prom}+ would be the \vf, \textsc{prom}$-$ the rest of the clause. In
+  order to avoid the problems with information structural properties of the elements in the \vf, the
+  \textsc{prom} feature could be renamed into \textsc{vorfeld}. 
+\eal
+\ex Mittelfeld [\textsc{vorfeld}  \ibox{1}] $<$ right bracket [\textsc{vorfeld}  \ibox{1}]
+\ex right bracket [\textsc{vorfeld}  \ibox{1}] $<$ Nachfeld [\textsc{vorfeld}  \ibox{1}]
+\zl         
+See \citew*{KKP95} on linearization constraints with structure sharing.
+}
+
+Another problem that \slasch-based approaches have is also present again for Wetta's revised
+proposal: it is difficult to restrict the fronting of idiom parts. It is possible to construct
+nonlocal frontings that are parallel to the examples that were discussed in Section~\ref{sec-phraseolog}.
+\ea 
+\gll {}[Öl] [ins Feuer] behauptete der Vorsitzende, dass gestern das Rote-Khmer-Radio gegossen habe.\\
+	 \spacebr{}oil \spacebr{}in.the fire claimed the chairman that yesterday the
+         Rote-Khmer-Radio poured has \\
+\glt `The chairman claimed that Rote-Khmer-Radio fanned the flames yesterday.'
+\z
+As was explained in Section~\ref{sec-idiom-parts-mf}, fronting of \emph{ins Feuer} `in.the fire'
+without \emph{Öl} `oil' results into a literal reading. It is not obvious how this constraint can be formalized in an
+extraction-based approach while the restriction that certain idiom parts want to stick together in a
+verbal projection falls out immediately from an approach using an empty verbal head. I argued that the head
+is the same head as is used in the verb movement analysis. So no new empty elements are needed to
+get the data discussed in this section.
+
+In what follows I have a look at other verb movement analyses that have been suggested in HPSG.
+
+
+\section{Binary branching and linearization domains}
+
+\citet{Kathol2000a} suggests an analysis with binary branching structures in which all arguments are
+inserted into a linearization domain and can be serialized there in any order provided no LP rule is
+violated. Normally one would have the elements of the \compsl in a fixed order, combine the head
+with one element from the \compsl after the other, and let the freedom in the \doml be responsible
+for the various attested orders. So both sentences in (\mex{1}) would have analyses in which the
+verb \emph{erzählt} is combined with \emph{Geschichten} first and then \emph{Geschichten erzählt} is
+combined with \emph{den Wählern}. Since the verb and all its arguments are in the same linearization
+domain they can be ordered in any order including the two orders in (\mex{1}):
+\eal
+\label{ex-waehlern-geschichten-erzaehlt}
+\ex weil er den Wählern Geschichten erzählt
+\ex weil er Geschichten den Wählern erzählt
+\zl
+The problem with this approach is that examples like (\mex{1}) show that grammars have to account
+for combinations of any of the objects to the exclusion of the other:
+\eal
+\label{ex-geschichten-erzaehlen}
+\ex Geschichten erzählen sollte man den Wählern nicht.
+\ex Den Wählern erzählen sollte man diese Geschichten nicht.
+\zl
+\citet{Kathol2000a} accounts for examples like (\mex{0}) by relaxing the order of the objects in the
+valence list. He uses the shuffle operator in the valence representation:
+\ea
+\sliste{ NP[nom] } $\oplus$ \sliste{ NP[dat] } $\bigcirc$ \sliste{ NP[acc] }
+\z
+This solves the problem with examples like (\mex{-1}) but it introduces a new one: sentences like
+(\ref{ex-waehlern-geschichten-erzaehlt}) now have two analyses each. One is the analysis we had before and another one is the one
+in which \emph{den Wählern} is combined with \emph{erzählt} first and the result is then combined
+with \emph{Geschichten}. Since both objects are inserted into the same linearization domain, both
+orders can be derived. So we have too much freedom: freedom in linearization and freedom in the
+order of combination. The proposal that I suggested has just the freedom in the order of combination
+and hence can account for both (\ref{ex-waehlern-geschichten-erzaehlt}) and
+(\ref{ex-geschichten-erzaehlen}) without spurious ambiguities.
+
+\section{Binary branching in different directions}
+
+
+\mbox{}\citet[\page 159]{Steedman2000a-u}, working in the framework of Categorial Grammar, proposed
+an analysis with variable branching for Dutch\il{Dutch}, that is, there are two lexical entries for
+\emph{at} `eat': an initial one with its arguments to the right, and another occupying final
+position with its arguments to its left. 
+
+\eal
+\ex \emph{at} `eat' in verb-final position: (s\sub{+SUB}$\backslash$np)$\backslash$np
+\ex \emph{at} `eat' in verb-initial position: (s\sub{$-$SUB}/np)/np
+\zl
+Steedman uses the feature \textsc{sub} to differentiate between subordinate and non-subordinate
+sentences. Both lexical items are related via lexical rules.\is{lexical rule}
+
+Such approaches were criticized by \citet{Netter92} since the branching in verb-initial sentences
+is the mirror image of verb-final sentences. The scope facts in sentences like (\ref{bsp-absichtlich-nicht-anal-v1}) on
+page~\pageref{bsp-absichtlich-nicht-anal-v1} cannot be explained easily, while they fall out
+automatically in a verb movement approach as is shown in the examples in (\mex{1}):
+\eal
+\label{bsp-absichtlich-nicht-anal-v1-zwei}
+\ex 
+\gll Er lacht$_i$ [absichtlich [nicht \_$_i$]].\\
+     he laughs \spacebr{}intentionally \spacebr{}not\\
+\glt `He is intentionally not laughing.'
+\ex 
+\gll Er lacht$_i$  [nicht [absichtlich \_$_i$]].\\
+     he laughs \spacebr{}not \spacebr{}intentionally\\
+\glt `He is not laughing intentionally.'
+\zl\is{scope}
+Now, it has to be said that the scoping is the same in SVO languages like French\il{French} even though no
+movement took place. So there may be a more general analysis of adjunct scope that covers both SVO
+languages and the two verb placements that are possible in V2 languages with SOV order.
+
+Independent of the scope question is the analysis of apparent multiple frontings: if there is no
+empty head it is not obvious how the phenomenon that was discussed in
+Chapter~\ref{chapter-mult-front} can be analyzed. The proposals with binary branching structures and
+different branching directions are basically similar to the GPSG proposal with flat structures and
+two alternative serializations of the finite verb. See Section~\ref{sec-flat-free-linearization-of-verb-gpsg}.
+
+
+\section{Alternative verb-movement analyses}
+\label{sec-alternative-verbbewegung}
+\label{sec-kopfbewegung-vs-fernabhaengigkeit}
+
+The rule for verb-first placement in German proposed here is similar to that of
+\citet{KW91a}, \citet[Chapter~2.2.4.2]{Kiss95a} and \citet{Frank94}. However, there are differences
+and these will be discussed in what follows.
+
+\citet{Kiss95a} views \dsl not as a head feature (as I do here), but rather as a
+\nonloc-feature. His head trace has the following form, which is parallel to the extraction trace:
+
+\ea
+Head trace \citep[\page 72]{Kiss95a}:\\*
+\ms{
+synsem & \onems{ loc \ibox{1}\\
+                 nonloc$|$inher$|$dsl \menge{ \ibox{1} }\\
+               }\\
+}
+\z
+Kiss uses the same percolation mechanism for head movement as for extraction, namely percolation
+via \textsc{nonloc|inher}.
+
+The lexical rule which licenses the verb in initial position is represented as follows:\footnote{
+		I have omitted a superfluous structure sharing between the \textsc{head} value in the input
+		of the rule and the \textsc{head} value of the element in \subcat. The respective
+		restrictions follow on from the specification of the trace.%
+}
+
+\eas
+\label{kiss-dsl-lr}
+\ms{ synsem$|$loc & \ibox{3} \onems{ cat$|$head \ibox{1} \ms{ vform & fin \\
+                                                       } \\
+                              } \\
+   } $\mapsto$ \\
+\ms{ synsem & \ms{ loc & \onems{ cat \ms{ head & \ibox{1} \\
+                                         subcat & \liste{ \onems{ loc  \onems{ cat$|$subcat \liste{} \\
+                                                                                    cont \ibox{2} \\
+                                                                                  }  \\
+                                                                          nl$|$inher$|$dsl  \{ \ibox{3} \} \\
+                                                                        }
+                                                        } \\
+                                       } \\
+                              cont \ibox{2} \\
+                             } \\
+                    nl & \ms{ to-bind$|$dsl & \textrm{\upshape \{ \ibox{3} \}} \\
+                                } \\
+                 } \\
+}
+\zs
+
+\noindent
+\citet{Frank94} has criticized Kiss' analysis as it does not predict the locality
+restrictions of head movement.\footnote{
+		For further discussion see \citew[\page 231--234]{Kiss95b}. Kiss proposes
+		the exclusion of sentences such as (\mex{1}) by stating that complementizers
+		always require that embedded sentences have an empty list as the value
+		\textsc{nl$|$inher$|$dsl}. It is assumed in \citew{BFGKKN96a} that \dsl is  
+		a \textsc{nonloc} feature, but that it is projected along a head path only.%
+}
+Without further assumptions, a sentence such as (\mex{1}a) 
+would be predicted to be grammatical:
+
+\eal
+\ex[*]{
+\gll Kennt$_i$ Peter glaubt,  dass Fritz Maria \_$_i$?\\
+     knows     Peter believes that Fritz Maria\\
+}
+\ex[]{
+\gll Glaubt$_i$ Peter \_$_i$,  dass Fritz Maria kennt?\\
+     believes   Peter {}      that Fritz Maria knows\\
+}
+\zl
+In the incorrect analysis of (\mex{0}a), the lexical rule (\ref{kiss-dsl-lr}) is applied
+to \emph{kennt}. It is however not ensured that the element in \textsc{dsl} that is bound off by
+\emph{kennt} (\,\ibox{3} in (\mex{-1})) is the head of the verbal projection that is selected by
+\emph{kennen} `to know'. In the analysis of the well-formed (\mex{0}b) \emph{glaubt} is combined
+with \emph{Peter \_$_i$,  dass Fritz Maria kennt} and the verb trace \_$_i$ is in the same local
+domain as the verb \emph{glaubt}: \_$_i$ is the head of the clause that is combined with
+\emph{glaubt}; it is the head of both \emph{Peter} and \emph{dass Fritz Maria kennt}. In the analysis of (\mex{0}a) the information about the verb trace crosses a clause
+boundary. There is nothing that prevents the percolation of \dsl information from a more deeply
+embedded clause. 
+
+Frank has developed an analysis which creates a finer-grained distinction between functional
+and lexical elements and suggests therefore the following solution for the locality issue:
+the semantic content of the input for a lexical rule is identified with the semantic content
+in the output of the lexical rule. When applied to Kiss' analysis, it would look like this:
+
+\ea
+\label{kiss-dsl-lr-2}
+\begin{tabular}[t]{@{}l@{}}
+\ms{ synsem$|$loc & \ibox{3} \onems{ cat$|$head  \ibox{1} \ms{ vform & fin \\
+                                                       } \\
+                                  cont  \ibox{2}\\
+                              } \\
+   } $\mapsto$ \\
+\ms{ synsem & \ms{ loc & \onems{ cat \ms{ head & \ibox{1} \\
+                                         subcat & \liste{ \onems{ loc  \onems{ cat$|$subcat \liste{} \\
+                                                                                    cont \ibox{2} \\
+                                                                                  }  \\
+                                                                          nl$|$inher$|$dsl  \{ \ibox{3} \} \\
+                                                                        }
+                                                        } \\
+                                       } \\
+                              cont \ibox{2} \\
+                             } \\
+                    nl & \ms{ to-bind$|$dsl & \textrm{\upshape \{ \ibox{3} \}} \\
+                                } \\
+                 } \\
+}
+\end{tabular}
+\z
+This analysis fails, however, as soon as we have to deal with adjuncts. These are combined
+with the verb trace and the \contv of the verb trace projection is therefore no longer
+identical to the the \contv contained in \textsc{dsl}. See Figure~\vref{fig-verb-movement-adjunkt-sem}
+for the exact representation of this.
+
+The most simple solution to restrict verb movement to head domains is to make the corresponding
+information a head feature, and for this reason only available along the head projection. \citet{Oliva92b}
+and \citet{Frank94,Frank94b} have suggested representing valence information under \textsc{head} and
+accessing this information inside the verb trace. As shown in Section~\ref{sec-v1}, valence information
+alone is not enough to model verb movement correctly and we should therefore, as \citet{Kiss95a} suggests, 
+assume that all local information , i.e. semantic content as well as syntactic information, percolates.
+
+
+Furthermore, placing the head movement information inside of \textsc{local} features is
+necessary for the analysis of cases of supposed multiple fronting as a verb trace is present
+in initial position in such cases, \ie the verb trace is part of a filler in a long-distance dependency. A \textsc{dsl} value
+which is percolated inside of \textsc{nonloc} in the constituent in initial position could not be checked at the extraction
+site since only the features under \textsc{local} are shared by the extraction trace and filler.
+
+
+\section{V1 via argument composition}
+
+\citet{Jacobs91a}, working in Categorial Grammar, and \citet{Netter92}, working in HPSG, suggest an
+analysis in which an empty head selects for the arguments of the verb and the verb itself. This
+analysis is basically using the technique of argument composition that is also used for the analysis
+of verbal complexes in German (see Section~\ref{sec-pred-compl}). The analysis of the example sentence in (\mex{1}) is shown in
+Figure~\vref{fig-verb-head-argument-composition}.
+\ea
+\gll Isst er ihn?\\
+     eats he him\\
+\glt `Does he eat it/him.'
+\z
+\begin{figure}
+\begin{forest}
+sm edges
+[{V[ \subcat \eliste ]}
+  [ {\ibox{3} V[\subcat \sliste{ \ibox{1}, \ibox{2} } ]}
+    [ \ibox{3} [isst;eats]] ]
+  [ {V[ \subcat \sliste{ \ibox{3} } ]}
+    [ \ibox{2} {NP[\type{nom}]} [ er;he ] ]
+    [ {V[ \subcat \sliste{ \ibox{2}, \ibox{3} } ]}
+      [ \ibox{1} {NP[\type{acc}]}[ ihn;him ] ]
+      [ {V[ \subcat \sliste{ \ibox{1}, \ibox{2}, \ibox{3} } ]}
+        [ \trace ]]]]]
+\end{forest}
+\caption{\label{fig-verb-head-argument-composition}Analysis of verb-initial sentences according to Jacobs and Netter}
+\end{figure}
+The trace is the head in the entire analysis: it is first combined with the accusative object and then with the subject. In a final step,
+it is combined with the transitive verb in initial-position. A problem with this kind of analysis is that the verb \emph{isst} `eats', as well as \emph{er} `he' and
+\emph{ihn} `him'/`it', are arguments of the verb trace in (\mex{1}).
+\ea
+\gll Morgen [isst [er [ihn \_]]]\\
+	 tomorrow \spacebr{}eats \spacebr{}he \spacebr{}him\\
+\glt `He will eat it/him tomorrow.'
+\z
+Since adjuncts can occur before, after or between arguments of the verb in German, one would expect that \emph{morgen} `tomorrow' can occur before the verb
+\emph{isst}, since \emph{isst} is just a normal argument of the verbal trace in final position. As adjuncts do not change the categorial status of a projection, the phrase \emph{morgen isst er ihn} `tomorrow he eats him' should be able to
+occur in the same positions as \emph{isst er ihn}. This is not the case, however. If we replace
+\emph{isst er ihn} by \emph{morgen isst er ihn} in (\mex{1}a) the result is (\mex{1}b), which is ungrammatical.
+\eal
+\ex[]{
+\gll Deshalb isst er ihn.\\
+     therefore eats he him\\
+\glt `Therefore he eats it/him.'
+}
+\ex[*]{
+\gll Deshalb morgen isst er ihn.\\
+	 therefore tomorrow eats he him\\
+}
+\zl
+If one compares the analysis in Figure~\ref{fig-verb-head-argument-composition} with the one
+suggested in this book it is clear how this problem can be avoided: in the analysis suggested in Section~\ref{sec-v1},
+the verb in initial position is the head that selects for a projection of the empty verb in final
+position. Since adjuncts attach to head-final verbs only, they cannot attach to \emph{isst er ihn}
+`eats he him' in a normal head-adjunct structure. The only way for an adjunct to be combined with
+\emph{isst er ihn} is as a filler in a V2 structure.
+
+
+\section{V1 as underspecification}
+
+\citet{Frank94} has suggested to eliminate the lexical rule for verb-placement and instead use
+underspecification and model both order variants in the type system. The advantage of this would be
+that one would not have to claim that one order is more basic and the other one is derived from
+it. Frank's starting point is a version of the V1 lexical rule as it was developed by Tibor Kiss in
+his dissertation \citep[\page 144]{Kiss93}. This version is given in (\mex{1}):
+\eas
+\onems{ loc  \ibox{3} \ms{ cat & \ms{ head \ibox{1} \ms{ vform & fin\\
+                                                     }\\
+                                  }\\
+                         cont & \ibox{2} \\
+                       }\\
+   }
+$\mapsto$\\
+\onems{ loc  \ms{ cat & \ms{ head & \ibox{1}\\
+                           subcat & \liste{ \ms{ loc$|$cat$|$head \ibox{1}\\
+                                               nonloc$|$inher$|$dsl \{ \ibox{3} \}\\
+                                             } }\\
+                         }\\
+                cont & \ibox{2}\\
+              }\\
+    nonloc$|$to-bind$|$dsl \{ \ibox{3} \}\\
+}
+\zs
+Frank develops a type hierarchy in which there is a general type that both subsumes lexical verbs as
+they are used in verb-final sentences and lexical verbs as they would be used in verb-initial
+sentences. That is the result of the lexical rule application is encoded as a type. The lexical
+entries for verbs would contain an underspecified description and since all feature structures in
+actual models have to be maximal, it is ensured that actual instantiations of the lexical entries in
+the lexicon are either verb-initial or verb-final verbs. (\mex{1}) shows the two AVMs that result if
+information from the subtypes is filled in.
+\eal
+\ex \locv of the verb-final version of \emph{kennen} `to know':
+\ms{ cat & \ms{ head   & \ms[verb]{ vform  & fin \\
+                                    subcat & \sliste{ \ibox{1} NP[\type{nom}]\ind{2}, \ibox{3} NP[\type{acc}]\ind{4} }\\
+                                  } \\
+                subj   & \sliste{ \ibox{1} }\\
+                comps  & \sliste{ \ibox{3} }\\
+              } \\
+    cont &  \ms[kennen]{
+             arg1 & \ibox{2}\\
+             arg2 & \ibox{4}\\
+             }\\
+}
+\ex 
+\begin{tabular}[t]{@{}l}
+\locv of verb-initial version of \emph{kennen}:\\
+\ms{ cat & \ms{ head & \ibox{3} \ms[verb]{ vform & fin \\
+                                           subcat & \sliste{ \ibox{1} NP[\type{nom}]\ind{2}, \ibox{3} NP[\type{acc}]\ind{4} }\\
+                                         } \\
+                subj  & \eliste\\
+                comps & \liste{ \ms{ loc$|$cat$|$head \ibox{1}\\
+                                      nonloc$|$inher$|$dsl \{ \ldots{} \}\\
+                                             } }}\\
+         cont & \ms[kennen]{
+             arg1 & \ibox{2}\\
+             arg2 & \ibox{4}\\
+             }\\
+       }
+\end{tabular}
+\zl
+The \dslv is not given in (\mex{0}b) since it is identical to (\mex{0}a). Frank assumes that there
+is a separate head feature \subcat, which contains all arguments. Such a feature is also used in more
+recent versions of HPSG, but it is called \argst and it is usually not a head feature.
+
+Now, the problem with this approach, as with Kiss' original formalization of the lexical rule is
+that the \contv that is contributed by the projection of the verb trace may differ from the
+contribution of the verb (compare the analysis in Figure~\ref{fig-verb-movement-adjunkt-sem} on
+page~\pageref{fig-verb-movement-adjunkt-sem}). This means that the semantics of the verb in initial
+position has to be taken over from the element that is selected via \comps. This leaves us in the
+rather unpleasant state that the argument-linking cannot be stated at a common supertype, since the
+\contv of (\mex{0}a) is different from the \contv of (\mex{0}b).
+
+It may be possible to rescue this analysis if one assumes a sort of default inheritance which allows overwriting information in subtypes \citep{LC99a}.
+These kinds of defaults are however not compatible with all assumptions about the formal principles
+of HPSG and in the case at hand, it would lead to a ``misuse'' anyway, as we want to express that there are
+always two different \contvs, which means that we are not dealing with one general case which does not
+hold true for certain exceptions.  
+%% For the example discussed here, we would certainly need a special kind of
+%% default treatment, which allows values to be overwritten in the syntax by another type. With the
+%% default unification described in \citep{LC99a}, the necessary concessions for the \contvs of
+%% subtypes cannot be made.
+
+Another possibility to rescue the underspecification analysis comes in the form of the introduction of a feature
+\textsc{cont2} for general types. The linking would be done with respect to the \textsc{cont2} value. The verb-final type would have a \contv identical to
+\textsc{cont2}. The \contv of the verb-initial type would be independent of the \textsc{cont2}
+value and hence conflicts would be avoided.
+
+\citet{Frank94b} discusses the problem that adjuncts pose and notes that the adjunct problem is not shared by
+approaches that assume an underspecified semantics and a modified Semantics Principle\is{Semantics Principle} which does
+not project the meaning of the mother node from the daughter of the head, but rather combines lists
+with the semantic contribution of all daughters (Frank uses Underspecified DRS \citep{FR95a-u}, but using MRS
+as suggested in the previous Chapter would be an alternative option). The adjunct problem does not arise because the semantic
+content of adjuncts is included in the VP, which is in turn combined with the verb in first
+position. The verb in initial position contributes the meaning encoded in the lexicon. For this to
+work, the actual relation that is contributed by the verb has to be represented outside of the
+\contv that is shared with the projection of the verbal trace and it has to be ensured that only the
+event variable is shared.
+
+All these solutions fail however when one considers the coordination data discussed in
+footnote~\vref{fn-koord-vm}, which is repeated here for convenience:
+\ea
+\gll Karl kennt und schätzt diesen Mann.\\
+     Karl knows and values this man\\
+\glt `Karl knows and values this man.'
+\z
+The example shows that it is not sufficient to develop accounts that explain the placement of single
+verbs in initial position. To assume that (\mex{0}) is analyzed involving the coordination of V1 versions of lexical items like (\mex{-1}b) is not
+appropriate, since the semantics of the initial verb has to be connected to the semantics of the
+verb trace. In the original proposals the complete semantic representation of the verb was shared
+with the trace, in approaches with underspecified semantics it would be an event variable that is
+shared. If V1 versions of \emph{kennt} and \emph{schätzt} would be coordinated in the analysis of
+(\mex{0}), the event variables of the two verbs would be wrongly identified. What is needed instead is an
+event variable that refers to the conjoined event that includes both the \emph{kennen} and the
+\emph{schätzen} event. This event variable is then present at the verb trace and adjuncts can refer
+to it.
+
+So either single verbs or arbitrarily complex coordinations of single verbs
+can be placed in initial position. As was explained in the footnote referenced above, this can be
+captured by a unary projection that relates single verbs or coordinations of single verbs to the
+properties that are required for elements in initial position. If one uses a single underspecified
+type for the description of lexical verbs that are supposed to be used either in initial or in final
+position, this will never extend to complex coordinations as the one in (\mex{0}).
+
+
+\section{A little bit of movement}
+\label{crysmann}
+
+In \citew[Chapter~11.5.2]{Mueller99a} and \citew{Mueller2004b}, I suggested that systematic bottom-up
+processing is rather costly for grammars with empty verb heads due to the fact that any number of phrases
+can be combined with empty verb heads. This follows from the fact that the valence and semantic content of
+the verb trace remains unknown up to the point where its projection is combined with the verb in initial
+position.
+Berthold Crysmann took the grammar I developed as part of the \verbmobil-project \citep{MK2000a} and modified
+it to improve it from a processing perspective \citep{Crysmann2003b}. Furthermore, he removed the unary-branching grammatical rules
+which mimic the verb trace (see Chapter~\ref{chap-empty}) and -- rather than for an analysis with uniform right-branching -- opted for a left-branching 
+analysis when the right verbal bracket is empty, and a right-branching one when the right bracket is occupied. The sentences in  
+(\mex{1}) would have structures with different directions of branching:
+\eal
+\ex 
+\gll {}[[[Gibt er] dem Mann] das Buch]?\\
+      \hspaceThis{[[[}gives he the man the book\\
+\glt `Is he going to give the man the book?'
+\ex 
+\gll {}[Hat [er [dem Mann [das Buch gegeben]]]]?\\
+     \spacebr{}has \spacebr{}he \spacebr{}the man \spacebr{}the book given\\
+\glt `Has he given the man the book?'
+\zl
+% Leider läßt sich die Linksversetzung wohl nicht auf einfache pronominale Referenz zurückführen.
+% Das folgende Beispiel zeigt, daß Argumente, die zur linksversetzten Phrase gehören, im Satz mit
+% dem Demonstrativpronomen realisiert werden können.
+% \ea
+% Artig finden, das kann Jan den Langweiler nicht.\footnote{
+%         \citet[\page 33]{Neeleman94a}\iafdata{Neeleman} gibt ein analoges
+%         niederländisches Beispiel.
+% }
+% \z
+%}
+In this sense, there is verb movement in Crysmann's analysis when there is a verbal complex in the sentence.
+There is no verb movement, however, if the right verbal bracket is not filled. For similar suggestions, see
+\citew*[\page 225]{KW91a} and \citew*{SRTD96a}. This avoids the processing problems that
+an empty verb head brings with it, but then we are no longer able to explain the cases of supposed
+multiple fronting by means of an empty verb head.
+
+Instead of modifying the analysis of verb position, one should, for practical applications, turn to statistical components 
+which predict the position of verb traces \citep{BFGKKN96a,FBCKS2003a}. If one processes the traces according
+to their probability, one gets first readings quickly and dispreferred readings later. The structures which use traces
+classified as `improbable' by the statistical component will be computed last.\footnote{
+	Berthold Crysmann has pointed out that the changes to the grammar he proposed
+	have reduced the running time by a factor of 14, whereas the techniques described
+	in \citew{BFGKKN96a} only resulted in a reduction of 46\,\% (less than a factor of 2)
+	for the grammar they were using.
+
+        However, the grammar that was used for the experiments done by \citew{BFGKKN96a} had a
+        smaller coverage than grammars like the one that was developed in Saarbrücken by me, Walter
+        Kasper and Berthold Crysmann and BerliGram, which is used in the CoreGram project. Therefore
+        the use of a statistical component that was described by Batliner and colleagues probably
+        would result in an even higher factor in the reduction of the run time. However, this would
+        have to be studied experimentally. It seems unlikely though that a factor of 14 will be reached.
+	
+	It could then be the case that one still gets an overall slower system despite the application of the processing
+	methods above than if one had modified the grammar.
+}
+
+Crysmann argues that his analysis ``leads to a more general grammar, if the
+formalism does not support empty categories.'' He reduced the number of grammar rules which were needed for the
+implementation of the LKB"=system \citep{Copestake2002a-unlinked} for verb movement (see Section~\ref{sec-verb-movement-LKB}) from 24 to 6.
+The 24 rules were needed in the grammar for the exact reasons that empty elements were not allowed. The decision
+to outlaw empty elements is, in that sense, a conscious decision on the part of the developer of the system and
+is not necessarily driven by linguistic or computational necessities. As the implementation of the
+analysis that is described here
+in the TRALE system \citep*{MPR2002a-u,Penn2004a-u} demonstrates,\footnote{
+        The grammar is freely available at \url{http://hpsg.fu-berlin.de/Fragments/b-ger-gram.html}.
+        } it is most certainly possible to use an empty
+head in the implementation of the verb-movement analysis that was developed in \verbmobil.
+
+In order to describe verb movement, one empty element is required and one lexical rule. This kind of
+grammar is therefore more compact than that of Crysmann, who needs six rules to achieve
+this. Processing is unproblematic as empty elements are automatically removed from the grammar
+before parsing while still remaining transparent for the developer of the grammar. The result of the
+compilation of the grammar is identical to what developers who use grammar development systems such
+as the LKB system had to produce tediously by hand. For more on empty elements, see
+Chapter~\ref{chap-empty}.
+
+
+
+\section{Special valence features for arguments forming a complex}
+
+A special valence feature (\textsc{gov}) has been suggested by \citet*{Chung93a} for Korean\il{Korean} and
+\citet*{Rentier94} for Dutch\il{Dutch} which is used for the selection of elements which form a 
+verbal complex with their head. This approach was adopted by \citet{Kathol98b,Kathol2000a} and \citet{Mueller97c,Mueller99a}
+for German. In \citew{Mueller2002b}, I expanded my earlier analysis to include resultative
+constructions and subject and object predicatives of the \emph{jemanden für etwas/jemanden halten} `consider somebody for somebody/something' kind. 
+Embedded predicates are also seen as being selected by a special valence feature (\vcomp) in this analysis.
+
+
+The theory suggested here does not require this kind of additional feature. This has the advantage
+that optional coherence can be analyzed as a special case of coherence as suggested by \citet{Kiss95a}.
+We only need one lexical entry for verbs such as \emph{versprechen} `to promise' rather than two, which would be
+needed for both coherent and incoherent constructions. 
+
+By reducing the number of valence features, it is possible to considerably simplify the
+analysis of multiple fronting. In \citew{Mueller2005d}, I suggest a lexical rule for
+sentences such as (\ref{bsp-smvfb}) on page~\pageref{bsp-smvfb}, which is parallel to the verb-movement
+rule in (\ref{lr-verb-movement2}) on page~\pageref{lr-verb-movement2}. 
+Previous multiple fronting analyses of mine \citep{Mueller2002f,Mueller2002c}
+have made use of the special valence feature \vcomp and this was the reason why the parallels of both of these verb-movement rules
+remained hidden. With the feature geometry used here, cases of putative multiple fronting can be understood as
+an optional variant of simple verb movement, which forms a complex. The details of the analysis are
+discussed in Chapter~\ref{chapter-mult-front}.
+
+
+
+
+
+
+
+%      <!-- Local IspellDict: en_US-w_accents -->

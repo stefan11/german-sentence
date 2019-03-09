@@ -1,0 +1,447 @@
+%% -*- coding:utf-8 -*-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%   $RCSfile: grammatiktheorie-include.tex,v $
+%%  $Revision: 1.13 $
+%%      $Date: 2010/11/16 08:40:32 $
+%%     Author: Stefan Mueller (CL Uni-Bremen)
+%%    Purpose: 
+%%   Language: LaTeX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\chapter{Empty elements}
+\label{chap-empty}
+
+
+%\citew[Chapter~6.2.5.1]{Mueller2002b}; \citew{Mueller2004e}
+
+
+
+In some frameworks there is a dogma that empty elements should not be used in analyses. The argument
+is that they are invisible and hence cannot be acquired from the input. I think this argumentation
+is not correct in general since some empty elements correspond to visible entities and hence the
+knowledge that is required to deal with such ommisions can be acquired. I distinguish between good
+and bad empty elements: the good ones are the ones that correspond to visible entities in the
+langauge under considerations and the bad ones are those that are semantically empty or that are
+motivated by overt items in other languages. Empty expletives are suggested in GB and Minimalism and
+empty functional heads like AgrO and other categories have been suggested for German on the basis of
+evidence from Basque. I think for the latter examples the criticism by proponents of Construction
+Grammar is fully legitimate, but I want to argue that this criticism went too far in throwing out the
+good empty elements with the bath water.
+
+
+In this chapter, I want to discuss the relation of grammars with empty elements to those
+without empty elements. This will enable us to compare the solution with an empty verb head 
+to solutions without empty elements.
+
+
+\section{Empty elements in the German NP}
+
+I want to start with a simple example and motivate the use of empty elements in the German noun
+phrase. Consider the following nominal structures:
+
+\eal
+\ex 
+\gll die Frauen\\
+     the women\\
+\ex 
+\gll die klugen Frauen\\
+     the smart  women\\
+\ex 
+\gll die klugen Frauen aus Greifswald\\
+     the smart  women  from Greifswald\\
+\ex 
+\gll Frauen\\
+     women\\
+\ex\label{bsp-kluge-frauen} 
+\gll kluge Frauen\\
+     smart women\\
+\ex 
+\gll die klugen\\
+     the smart\\
+\glt `the smart ones'
+\ex 
+\gll die klugen aus Greifswald\\
+     the smart  from Greifswald\\
+\glt `the smart ones from Greifswald'
+\ex 
+\gll kluge aus Greifswald\\
+     smart from Greifswald\\
+\glt `smart ones from Greifswald'
+\ex 
+\gll kluge\\
+     smart\\
+\glt `smart ones'
+\zl
+As in English, the determiner may be omitted in the plural and with mass nouns. In addition, the
+noun may be omitted in elliptical structures:
+\eal
+\ex 
+\gll Ich kenne die klugen.\\
+     I know the smart\\
+\glt `I know the smart ones.'
+\ex 
+\gll Ich kenne kluge aus Greifswald.\\
+     I know smart from Greifswald\\
+\glt `I know smart ones from Greifswald.'
+\ex 
+\gll Ich kenne kluge.\\
+     I know smart\\
+\glt `I know smart ones.'
+\zl
+I think that the description I just gave, namely that the noun or the determiner or both may be
+omitted is the most straightforward description of the phenomenon. This is what children have to
+acquire. Of course the omitted elements do have a meaning. The noun may only be omitted, if the
+whole nominal expression refers to somthing/somebody. If one uses the phrase \emph{kluge aus
+  Greifswald} `smart from Greifswald', women, man or children or something else that can be smart
+have to be mentioned in the preceeding discourse. Formally this can be represented in the following
+small grammar:\footnote{
+The grammar predicts that all bare determiners can function as full NPs, which is
+not empirically correct:
+\begin{exe}\exi{(i)}\begin{xlist}[iv.]
+\ex[]{
+\gll Ich helfe den Männern.\\
+     I help the men\\
+}
+\ex[*]{
+\gll Ich helfe den.\\
+     I   help  the\\
+}
+\ex[]{
+\gll Ich helfe denen.\\
+     I help those\\
+}
+\zllast
+}
+\ea
+\begin{tabular}[t]{@{}l@{ $\to$ }l}
+NP    & Det \nbar\\
+\nbar & Adj \nbar\\
+\nbar & \nbar PP\\
+\nbar & \trace\\
+Det   & \trace\\
+Det & die\\
+Adj & klugen\\
+\nbar & Frauen\\
+\end{tabular}
+\z
+\nbar is an abbreviation for nouns that require a determiner and the rules \nbar $\to$
+\trace{} and Det $\to$ \trace{} state that \nbar and Det may be omitted. The grammar is not
+complete. Lexical entries and rules for the PP are missing. Furthermore, the grammar is not precise
+enough since all inflectional information is left out. But it is sufficient for the discussion of
+the advantages of empty elements.
+
+The grammar licenses for instance the structures in Figure~\ref{abb-np}.
+\begin{figure}
+\oneline{\begin{forest}
+sm edges
+[NP
+       [Det [die;the] ]
+       [\nbar [Frauen;women] ] ]
+\end{forest}
+\hfill
+\begin{forest}
+sm edges
+[NP
+       [Det [die;the] ]
+       [\nbar 
+         [Adj [klugen;smart] ]
+         [\nbar [Frauen;women] ] ] ]
+\end{forest}
+\hfill
+\begin{forest}
+sm edges
+[NP
+       [Det [die;the] ]
+       [\nbar 
+         [Adj [klugen;smart] ]
+         [\nbar [\trace] ] ] ]
+\end{forest}
+\hfill
+\begin{forest}
+sm edges
+[NP
+       [Det [\trace] ]
+       [\nbar 
+         [Adj [kluge;smart] ]
+         [\nbar [Frauen;women] ] ] ]
+\end{forest}
+\hfill
+\begin{forest}
+sm edges
+[NP
+       [Det [\trace] ]
+       [\nbar 
+         [Adj [kluge;smart] ]
+         [\nbar [\trace] ] ] ]
+\end{forest}}
+
+\caption{\label{abb-np}Various nominal structures}
+\end{figure}
+\citet*[\page 153, Lemma~4.1]{BHPS61a} developed a procedure to transform grammars that use empty
+elements into grammars without empty elements. To that end one has to insert all rules that have the
+form X $\to$ \trace{} into all rules in which X appears on the right hand side. This results in new
+rules, into which new empty elements may be inserted. If one does this long enough, one gets a
+grammar without empty elements. For the grammar in (\mex{0}) one gets:\footnote{
+  In principle the grammar in (\mex{0}) allows for completely empty NPs. This has to be blocked by
+  features in the grammar. \citep[\page 81, Exercise~3]{MuellerGT-Eng1}.
+}
+\ea
+\begin{tabular}[t]{@{}l@{ $\to$ }l}
+NP    & Det \nbar\\
+NP    & Det\\
+NP    & \nbar\\
+\nbar & Adj \nbar\\
+\nbar & Adj\\
+\nbar & \nbar PP\\
+\nbar & PP\\
+Det & die\\
+Adj & klugen\\
+\nbar & Frauen\\
+\end{tabular}
+\z
+This grammar licenses among others the structures in Figure~\ref{abb-np2}.
+\begin{figure}
+%\oneline
+{\begin{forest}
+sm edges
+[NP
+       [Det [die;the] ]
+       [\nbar [Frauen;women] ] ]
+\end{forest}
+\hfill
+\begin{forest}
+sm edges
+[NP
+       [Det [die;the] ]
+       [\nbar 
+         [Adj [klugen;smart] ]
+         [\nbar [Frauen;women] ] ] ]
+\end{forest}
+\hfill
+\begin{forest}
+sm edges
+[NP
+       [Det [die;the] ]
+       [\nbar 
+         [Adj [klugen;women] ] ] ]
+\end{forest}
+\hfill
+\begin{forest}
+sm edges
+[NP
+       [\nbar 
+         [Adj [kluge;smart] ]
+         [\nbar [Frauen;women] ] ] ]
+\end{forest}
+\hfill
+\begin{forest}
+sm edges
+[NP
+       [\nbar 
+         [Adj [kluge;smart] ] ] ]
+\end{forest}}
+
+\caption{\label{abb-np2}Verschiedene Nominalstrukturen ohne leere Elemente}
+\end{figure}
+The branches with empty elements were simply omitted. Comparing the two grammars it can be noted
+that the grammar without empty elements contains more rules. It contains seven rules, whereas the one
+with empty elements contains only three rules.
+Even if one includes the lexical items for empty elements in the counting, one gets a proportion of
+seven to five. In the end the grammar with empty elements is a more compact description of the
+phenomenon and it covers directly what has to be acquired: the noun and the determiner can be
+left unpronounced under certain circumstances.
+
+Several attempts were made to account for noun phrases without empty elements. For inctance
+\citet[\page 78]{Michaelis2006a} suggested a special lexical rule for nouns in the plural. The
+plural items that are licensed by this lexical rule differ from other lexical items for nouns in not selecting for a
+determiner. Thus one would have two lexical items for \emph{Frauen} `women': one of category \nbar
+and one of category NP. The problem is that \emph{Frauen} `women' can be modified by \emph{kluge}
+`smart' (\ref{bsp-kluge-frauen}) even when no determiner is present. If one admits adjectives to
+modify NPs, phrases like (\mex{1}) cannot be excluded any longer:\footnote{
+  See also \citew*[\page 265, Problem~2]{SWB2003a}.
+}
+\ea[*]{
+\gll kluge die Frauen\\
+     smart the women\\
+}
+\z
+
+
+
+
+
+\section{Empty elements for verb movement}
+\label{sec-verb-movement-LKB}
+
+
+To demonstrate more clearly what the consequences of trace elemination are, I want to discuss
+a transformation of the grammar that I suggest in this book for the German sentence structure: a grammar that uses a trace
+for extraction and trace for verb movement.
+\citet[p.\,92]{Kathol2000a} argues against head movement approaches for the verb position,
+claiming that traceless accounts are not possible.
+However, this is not correct as the following transformation of (\mex{1}) into (\mex{2}) shows:
+\ea
+\label{ex-grammar-eps-head}
+\begin{tabular}[t]{@{}ll@{}}
+\baro{v}  $\to$ \mbox{np}, v\\
+v $\to$ $\epsilon$\\
+\end{tabular}
+\z
+\ea
+\label{ex-grammar-head}
+\baro{v}   $\to$ \mbox{np}, v\\
+\baro{v}   $\to$ \mbox{np}
+\z
+Instead of using a verb trace as in (\mex{0}) one can fold it into the rule. 
+If we assume binary branching structures for head"=argument combination, head"=adjunct combination
+and head"=cluster combination, such a trace elemination results in three new schemata in which no head daughter is present
+since it was removed due to the elemination of the verbal trace.
+
+Eliminating extraction traces from a phrase structure grammar works parallel to the
+elemination of verb traces in (\mex{0}). For the grammar in (\mex{1}) we get (\mex{2}):
+\ea
+\begin{tabular}[t]{@{}ll@{}}
+\baro{v}   $\to$ \mbox{np}, v\\
+np $\to$ $\epsilon$\\
+\end{tabular}
+\z
+\ea
+\label{ex-grammar-trace-elim}
+\baro{v}   $\to$ \mbox{np}, v\\
+\baro{v}   $\to$ v
+\z
+In our HPSG grammar we get three new schemata
+since arguments, adjuncts, and parts of the predicate complex can
+be extracted. In the extraction case, the non"=head"=daughter is removed from the rule. The sentences
+in (\mex{1}) are examples in the analysis of which these six rules will be needed:
+\eal
+\ex 
+\gll Er$_i$ liest$_j$ t$_i$ ihn t$_j$.\\
+     he     reads     {}    him {}\\
+\glt `He reads it.'
+\ex
+\gll Oft$_i$ liest$_j$ er  ihn t$_i$ nicht t$_j$.\\
+     often   reads     he  him {}    not   {}\\
+\glt `He does not read it often.'
+\ex
+\gll Lesen$_i$ wird$_j$ er es t$_i$ müssen t$_j$.\\
+     read      will     he it {}    must   {}\\      
+\glt `He will have to read it.'
+\zl
+t$_j$ is the verb trace and t$_i$ is an extraction trace. In (\mex{0}a) the verb trace forms a constituent
+with an argument, in (\mex{0}b) with an adjunct and in (\mex{0}c) with \emph{müssen}, which is a part of the predicate complex.
+For these cases we need the first three rules. The second set of rules is needed for the combination with extraction
+traces of respective types: In (\mex{0}a) the extracted element is an argument, in (\mex{0}b) it is an adjunct,
+and in (\mex{0}c) it is a part of the predicate complex. 
+
+If we look at grammars containg two traces we get the following situation:
+\ea
+\label{bsp-grammar-np-v-trace}
+\begin{tabular}[t]{@{}ll@{}}
+\baro{v}   $\to$ \mbox{np}, v\\
+v $\to$ $\epsilon$\\
+np $\to$ $\epsilon$\\
+\end{tabular}
+\z
+Taking the rules from (\ref{ex-grammar-head}) and (\ref{ex-grammar-trace-elim}) we get:
+\ea
+\baro{v}   $\to$ \mbox{np}, v\\
+\baro{v}   $\to$ \mbox{np}\\
+\baro{v}   $\to$ v
+\z
+Due to the elemination of the extraction trace in (\mex{-1}) we got the rule \baro{v} $\to$ v,
+but since we have the rule v $\to$ $\epsilon$ in (\mex{-1}) this means that \baro{v} can also be $\epsilon$.
+\baro{v} is a new empty element that resulted from the combination of two other empty elements. To get
+rid of all empty elements, this empty element has to be eliminated as well. This is done in the same
+way as before. \baro{v} is removed from all righthand sides of rules were a \baro{v} appears.
+
+For our HPSG grammar this means that we get nine new grammar rules: We have three new empty
+elements that arise when a verb movement trace is directly combined with an extraction trace.
+Since the extraction trace can be the non"=head daughter in the head"=argument structure (\mex{1}a),
+head"=adjunct structure (\mex{1}b) or head"=cluster structure (\mex{1}c):
+\eal
+\ex 
+\gll Er$_i$    [schläft$_j$ t$_i$ t$_j$].\\
+     he        \spacebr{}sleeps\\
+\glt `He sleeps.'
+\ex 
+\gll Jetzt$_i$ [schlaf$_j$ t$_i$ t$_j$]!\\
+     now       \spacebr{}sleep\\
+\glt `Sleep now!'
+\ex 
+\gll Geschlafen$_i$ [wird$_j$ t$_i$ t$_j$]!\\
+     slept \spacebr{}is\\
+\glt `Sleep!'
+\zl
+Due to these new three traces we need three aditional rules where each of the new traces is folded
+into the rule instead of the argument daughter in the head"=argument schema.
+
+For the examples in (\mex{1}) and (\mex{2}) we need six new rules, since the trace combinations
+can function as heads in head"=argument structures (\mex{1}) and in head"=adjunct structures (\mex{2}):
+\eal
+\ex 
+\gll Den Aufsatz$_i$ liest$_j$ [er t$_i$ t$_j$].\\
+     the paper       reads     \spacebr{}he\\
+\ex 
+\gll Oft$_i$ liest$_j$ er [ihn t$_i$ t$_j$].\\
+     often reads he \spacebr{}it\\
+\glt `He reads it often.'
+\ex 
+\gll Lesen$_i$ wird$_j$ er [ihn t$_i$ t$_j$].\\
+     read      will     he \spacebr{}it\\
+\glt `He will read it.'
+\zl
+\eal
+\ex 
+\gll Den Aufsatz$_i$ liest$_j$ er [nicht t$_i$ t$_j$].\\
+     the paper       reads     he \spacebr{}not\\
+\glt `He does not read the paper.'
+\ex 
+\gll Oft$_i$ liest$_j$ er ihn [nicht t$_i$ t$_j$].\\
+     often   reads     he it \spacebr{}not\\
+\glt `He does not read it often.'
+\ex 
+\gll Lesen$_i$ wird$_j$ er ihn [nicht t$_i$ t$_j$].\\
+     read      will    he it  \spacebr{}not\\
+\zl
+
+
+I applied this technique of epsilon elimination to the HPSG grammar that
+was developed for the \verbmobil system \citep{MK2000a}, 
+but there are processing systems, like Trale \citep*{MPR2002a-u},
+that do such grammar conversion automatically \citep{Penn99b}.
+The grammar in (\ref{bsp-grammar-np-v-trace}) and the corresponding
+HPSG equivalent directly encode the claim that the np and v can be omitted, while
+this information is only implicitly contained in the rules we get from specifying an
+epsilon free grammar by hand. 
+The same would be true for a grammar that accounts for copulaless sentences by
+stipulating several constructions for questions and declarative sentences with
+a missing finite verb.
+
+Using grammar transformations to get epsilon"=free linguistic descriptions can yield rather
+complicated rules that do not capture the facts in an insightful way. This is
+especially true in cases where two or more empty elements are eliminated by
+grammar transformation. While this is not a problem for computational algorithms
+that deal with formally specified grammars, it is a problem for linguistic specifications.
+For more discussion see Müller (\citeyear[Chapter~6.2.5.1]{Mueller2002b};
+\citeyear{Mueller2005c}; \citeyear{Mueller2004e}; \citeyear[Chapter~19]{MuellerGT-Eng1}).
+
+
+
+%% A reviewer remarked that empty elements are against the spirit of HPSG. The questions
+%% to be asked is: ``What is the spirit of HPSG?'', ``Who defines it?'', ``Does it change?''.
+%% %
+%% \citet{Bender2000a} argued in her thesis for an empty copula in
+%% African American Vernacular English. This empty copula is also discussed in
+%% \citew*[p.\,464]{SWB2003a-unlinked}. Once we admit a single empty element in our grammars,
+%% we cannot say that empty elements are ``not in the spirit of HPSG''.
+
+
+\section{Conclusion}
+
+This brief chapter showed that sometimes grammars that use empty elements can capture insights more
+directly than grammars from which the empty elements were eliminated.
+
+
+%      <!-- Local IspellDict: en_US-w_accents -->

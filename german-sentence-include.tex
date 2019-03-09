@@ -1,0 +1,181 @@
+%% -*- coding:utf-8 -*-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%   $RCSfile: grammatiktheorie-include.tex,v $
+%%  $Revision: 1.13 $
+%%      $Date: 2010/11/16 08:40:32 $
+%%     Author: Stefan Mueller (CL Uni-Bremen)
+%%    Purpose: 
+%%   Language: LaTeX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{localmetadata.tex}
+\input{localpackages.tex}
+\input{localcommands.tex}
+
+\bibliography{bib-abbr,biblio}
+
+\begin{document}
+
+
+\frontmatter
+
+\maketitle
+
+\tableofcontents
+
+
+\chapter*{Preface}
+
+This book motivates an analysis of the German clause in which the verb in initial position (verb
+first or verb second) is related to a trace in final position. Such analyses involving so"=called
+verb movement are standard in Mainstream Generative Grammar but are frowned upon by all those
+researchers that want to avoid empty elements. Working in the framework of Head-Driven Phrase
+Structure Grammar I followed a linearization"=based approach \citep{Reape90a,Reape94a} from
+1993--2003. In the year 2000 I noticed data that looked as if more than one constituent was fronted,
+which is problematic for theories of German, since German is regarded as a verb second language,
+that is, there should be exactly one constituent in front of the finite verb in declarative clauses
+(leaving aside eliptical sentences). I developed analyses in the linearization"=based framework I
+was working in, but for reasons that will be explained in this book, they were not satisfying. In
+the end I changed my mind and completely revised my theories and computer implementations and
+adopted a verb-movement analysis that is similar in spirit to the GB analysis. This analysis --
+which was developed by \citet{Meurers99a}, based on work of \citet{KW91a,Kiss95a} -- is compatible
+with the analysis of multiple frontings that is developed in this book. 
+
+The present book is based on two articles that appeared in German in the journal \emph{Linguistische
+  Berichte} in 2005 \citep{Mueller2005c,Mueller2005d}. Since these two papers belong to those of my papers
+that are cited most often, I decided that it might be a good idea to make them availible to a wider
+audience. The chapter~\ref{chap-german-sentence-structure} on German clause structure and the
+Chapter~\ref{chapter-mult-front} on apparent multiple frontings and parts of
+Chapter~\ref{chap-alternatives} on alternative analyses of the German clause are based on these
+papers.  
+The book ends with a chapter on empty elements, which is adapted from \citew{Mueller2004e}. This
+chapter is meant to be a general discussion that shows what the cost is of alternative approaches
+that try to avoid empty elements. Finally, there is an Appendix continaing a list of example
+sentences that are used as a test suite for testing the computer-processable grammar that covers the
+phenomena described in this book.
+
+
+
+\section*{Acknowledgements}
+
+I would like to thank the following people for their helpful comments and insights:
+Bettina Braun,
+Veronika Ehrich,
+Gisbert Fanselow,
+Peter Gallmann,
+Rosemarie Lühr,
+Detmar Meurers,
+Susan Olsen,
+Marga Reis, 
+Christine Römer and 
+Jan-Philipp Söhn 
+as well as the anonymous reviewers from Formal Grammar, Konvens, CSLI Publications and \emph{Linguistische Berichte}.
+I would also like to thank Anette Frank, Hans-Martin Gärtner, Tibor Kiss and Karel Oliva for their helpful discussion.
+
+I have presented the analysis developed in this book at Formal Grammar 2002 in Trento, Konvens
+2002 in Saarbrücken, at an invited talk for the SFB 441 at the University of Tübingen in 2002, at
+the HPSG"=Workshop for Germanic languages 2003 at the University of Bremen, 
+%
+the Workshop Deutsche Syntax: Empirie und Theorie 2004 in Gothenburg,
+%
+at the Institute for Linguistics of the University Leipzig in 2004,
+%
+at the Formal Grammar conference 2004 in Nancy,
+the 	Zentrum für Allgemeine Sprachwissenschaft, Typologie und
+Universalienforschung (ZAS) in Berlin 2006,
+%
+at the Institute for German Language in Wuppertal in 2011,
+%
+at the colloquium
+\emph{Der Satzanfang im Deutschen: syntaktische, semantisch-​pragmatische und
+  informationsstrukturelle Integration vs. Desintegration} 2011 in Paris,
+%
+and at the workshop \emph{Satztypen und Konstruktionen im Deutschen: Satztypen:
+  lexikalisch oder konfigurational?} at the Johannes Gutenberg-​Universität Mainz in
+2013.
+%
+Many thanks to those present at these events for the subsequent discussion and I would especially like to thank the respective people/institutions for inviting me. 
+
+The data discussed in this book come, in the most part, from my own collection of material I have
+read over the years. Examples from the Mannheimer Morgen, Frankfurter Rundschau, St.\ Galler
+Tagblatt, Tiroler Tageszeitung and the Züricher Tagesanzeiger were retrieved from the German Reference Corpus (\citealp{DeReKo}, \url{http://ids-mannheim.de/DeReKo}). Additional examples can be found at
+\url{http://hpsg.fu-berlin.de/~stefan/Pub/mehr-vf-ds.html} and in the database of annotated  examples that was constructed from DeReKo data by Felix \citet{Bildhauer2011a} in the project A6 of the Collaborative Research Center/SFB 632 (accessible at \url{http://hpsg.fu-berlin.de/Resources/MVB/}).%
+
+I would like to thank Andrew Murphy for translating \citew{Mueller2005c} and \citew{Mueller2005d},
+which are the core of the Chapters~\ref{chapter-introduction}--\ref{chapter-mult-front} and for
+proofreading these parts.
+
+
+%~\bigskip
+
+~\medskip
+
+\noindent
+Berlin, \today\hfill Stefan Müller
+
+
+
+\mainmatter
+
+\include{gs-introduction}
+\include{gs-sentence-structure}
+\include{gs-mult-fronting}
+\include{gs-clause-types}
+\include{gs-informationstructure}
+\include{gs-alternatives}
+\include{gs-empty-elements}
+\include{gs-conclusion}
+
+\appendix
+
+\include{gs-tsdb-examples}
+
+%\input{gt-index-cross}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%             Backmatter                       %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\backmatter
+
+%\bibliography{bib-abbr,biblio,crossrefs}
+\printbibliography[heading=references] 
+\cleardoublepage
+
+\small
+   
+
+\phantomsection%this allows hyperlink in ToC to work
+\addcontentsline{toc}{chapter}{Index} 
+\addcontentsline{toc}{section}{Name index}
+\ohead{Name index}
+%with biblatex
+%\printindex
+%without it 
+\printindex 
+  
+\phantomsection%this allows hyperlink in ToC to work
+\addcontentsline{toc}{section}{Language index}
+\ohead{Language index} 
+\printindex[lan] 
+  
+\phantomsection%this allows hyperlink in ToC to work
+\addcontentsline{toc}{section}{Subject index}
+\ohead{Subject index}
+\printindex[sbj]
+
+
+\end{document} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%                  END                         %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+%      <!-- Local IspellDict: en_US-w_accents -->

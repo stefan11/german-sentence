@@ -1,0 +1,595 @@
+%% -*- coding:utf-8 -*-
+
+\chapter{Clause types}
+
+This chapter is devoted to a description of the basic clause types and the integration of their
+semantic contribution with their syntax.
+
+
+\section{The phenomenon}
+\label{sec-phenomenon-clause-types}
+
+Most of the data that is covered in this chapter has been discussed in the previous chapters
+already. German has interrogative clauses that are V1 clauses (\mex{1}a), assertive clauses that are
+V2 clauses (\mex{1}b) and then there are verb-last clauses of various kinds.
+\eal
+\ex Kennt der Mann die Frau?
+\ex Der Mann kennt die Frau.
+\zl
+\eal
+\ex dass der Mann die Frau kennt
+\ex Ich frage mich, welche Frau der Mann kennt.
+\ex die Frau, die der Mann kennt
+\zl
+The example in (\mex{0}a) is a simple assertive embedded clause, (\mex{0}b) is an embedded
+interrogative clause and (\mex{0}c) a relative clause. I assume that interrogative and relative
+clauses are licensed by a schema that combines a filler that contains a \emph{wh} element or a
+relative pronoun, respectively, with a sentence in which the respective element is missing. The
+semantics is contributed by this schema. I will not discuss these clause types any further. What I
+want to discuss here are the basic V2, V1 and VL patterns that are instantiated by (\mex{-1}a,b) and
+(\mex{0}a).
+
+The V1 pattern can also be observed in imperatives (\mex{1}a) although V2 is also a form that
+imperatives can take (\mex{1}b):
+\eal
+\ex
+\gll Gib mir das Buch!\\
+     give me the book\\
+\ex
+\gll Jetzt gib mir das Buch!\\
+     now   give me the book\\
+\glt `Give me the book now!'         
+\zl
+
+Similarly questions are not restricted to V1 order. Yes/no-questions typically are V1. Other
+questions are V2:
+\eal
+\ex 
+\gll Wer kennt diese Frau?\\
+     who knows this woman\\
+\glt `Who does know this woman?'
+\ex 
+\gll Wen kennt dieser Mann?\\
+     who knows this man\\
+\glt `Who does this man know?'
+\zl
+However, with the right intonation a V2 clause can also be a yes/no question:
+\ea
+\gll Der Mann kennt die Frau?\\
+     the man  knows the woman\\
+\glt `Does the man know the woman?'
+\z
+
+To make things even more interesting German has a construction called \emph{Vorfeldellipse}
+`pre-field ellipses' or \emph{Topic Drop}. A fronted element that is recoverable from the context
+can be dropped. The following sentences from \citet{Huang84} in (\mex{1}) show that both subjects and objects
+can be dropped.
+\eal
+\ex{
+\gll {}[Ihn] hab' ich schon gekannt.\\
+       ~him  have I yet known\\
+\glt `I knew him.'
+}
+\ex{
+\gll {}[Ich] hab' ihn schon gekannt.\\
+     ~I      have him yet   known\\
+}
+\zl
+The material in brackets may be omitted.
+
+(\mex{1}) shows that adjuncts can also be omitted:
+\ea
+Die (die Pinguine) kommen so nah ran, daß man sie hätte streicheln können. Zum Fotografieren
+zu nah -- und zu schnell, unmöglich da scharf zu stellen.\\
+\gll [Da/Hier] Kann man ewig rumkucken.\footnotemark\\
+     ~there/here can one eternally around.look\\
+\glt `The penguins come so close that one could stroke them. One can look around eternally.'
+\footnotetext{
+        In an Email report from the south pole.
+      }
+\z
+The generalization is that things that can be fronted can also be dropped in the \emph{Vorfeldellipse}.\footnote{
+        This is a simplification: More oblique arguments drop less easily. Space limitations
+        prevent me from going into a detailed discussion, but see the cited references.%
+}
+
+Finally, there are also conditional clauses like \emph{kommt Peter} `comes Peter' in (\mex{1}):
+\ea
+\gll Kommt Peter, komme ich nicht.\\
+     comes Peter  come  I not\\
+\glt `If Peter comes, I will not come.'
+\z
+
+Summarizing what we have seen so far, we can say that German has V1 and V2 clauses and both can be
+questions (yes/no questions or \emph{wh} questions) and both can be declaratives (with topic drop
+and without) and both can be imperatives. V1 clauses can function as conditionals in complex
+sentences. This shows that there is no simple one to one mapping from topological mapping or clause structure to clause types. 
+
+
+
+
+
+
+
+\section{The analysis}
+
+Section~\ref{sec-analysis-v1-v2} provides the analysis of V1 and V2 clauses. A V1 clause is analyzed
+as a combination of a finite verb in initial position that selects a clause with verb final order
+from which it is missing. Sentences with a complementizer differ from the V1 sentences in that the
+position of the finite verb is taken by the complementizer. So in the examples below \emph{kennt}
+selects for \emph{der Mann die Frau \_} and \emph{dass} selects for \emph{der Mann die Frau kennt}:
+\eal
+\ex 
+\gll Kennt der Mann die Frau \_?\\
+     knows the man the woman\\
+\glt `Does the man know the woman?'
+\ex
+\gll dass der Mann die Frau kennt\\
+     that the man the woman knows\\
+\zl
+What has to be explained in this section is how Topic Drop is accounted for syntactically and how
+all the constructions that we dealt with so far are paired with a semantics.
+
+There are two options to account for Topic Drop: The first is to use an empty element \citet{Huang84} and the
+second is to use a unary branching rule. The disadvantage of the solution with the empty element
+is that it has to be ensured that it does not appear in other positions than the \vf. If the empty
+element would be allowed in the \mf or \nf, all arguments could be omitted.\footnote{
+This is only a small
+disadvantage though since there are other elements as for instance the reflexive pronouns in
+constructions with inherently reflexive verbs that cannot be put in the \vf:
+\eal
+\ex[]{ 
+\gll Er erholt sich.\\
+     he recreates \self\\
+\glt `He recreates.'
+}
+\ex[*]{
+\gll Sich erholt er.\\
+     \self{} recreates he\\
+}
+\zl
+For a general discussion of empty elements see Chapter~\ref{chap-empty}.
+}
+
+%% So far, we can distinguish between verb final and verb initial clauses by making reference 
+%% to the value of the \initialf. The value of the \initialf of lexical items of verbs is `$-$'. Only
+%% the result of the application of the verb movement lexical rule (see page~\pageref{lr-verb-movement2}) has an \initialv `+'.
+
+%% Since verb first and verb second sentences are both \textsc{initial}+,
+%% we need a further feature to be able to distinguish these clause types. I suggest naming
+%% this feature \textsc{v2}. Normal verbal projections have the \textsc{v2} value $-$ and projections
+%% that are the result of the head-filler-schema or the topic-drop-schema are \textsc{v2}+.
+
+%% Since the \textsc{v2} feature is located inside of the \textsc{synsem} value of a sign, nouns like
+%% those in (\ref{noun-scomp}) can select for verb second sentences.
+
+
+
+So rather than an empty element, I use a schema that drops an element in \slasch. The analysis of
+(\mex{1}) is shown in Figure~\vref{abb-kennt-er}.
+\ea
+\gll Kennt er.\\
+     knows he\\
+\glt `He knows him/her/it.'
+\z
+\begin{figure}
+\begin{forest}
+sm edges
+[V\feattab{\comps \eliste,\\ 
+           \textsc{inh}|\textsc{slash} \eliste}
+	[V\feattab{\comps \eliste,\\
+                   \textsc{inh}|\textsc{slash} \sliste{ \ibox{1} },\\
+                   \textsc{to-bind}|\textsc{slash} \sliste{ \ibox{1} }}
+		[V{[\comps \sliste{ \ibox{2} }]}
+			[V{[\comps \sliste{ \ibox{3}, \ibox{4} }]}, tier=trace,edge label={node[midway,right]{V1-LR}}
+				[kennt;knows]]]
+		[\ibox{2} V\feattab{\comps \eliste,\\
+                                    \textsc{inh}|\textsc{slash} \sliste{ \ibox{1} },\\
+                                    \textsc{to-bind}|\textsc{slash} \eliste}
+			[\ibox{4} \feattab{\textsc{local} \ibox{1},\\
+                                                  \textsc{inh}|\textsc{slash} \sliste{ \ibox{1} }}, tier=trace
+					[\trace]]
+			[V\feattab{\comps \sliste{ \ibox{3} },\\
+                                   \textsc{inh}|\textsc{slash} \sliste{ \ibox{1} },\\
+                                   \textsc{to-bind}|\textsc{slash} \eliste}
+				[\ibox{3} NP{[\textit{nom}]}
+				   [er;he]]
+				[V{[\comps \sliste{ \ibox{3}, \ibox{4} }]}
+					[\trace]]]]]]
+\end{forest}     
+\caption{Analysis of \emph{Kennt er.} `He knew him/her/it.'}\label{abb-kennt-er}
+\end{figure}
+The analysis is completely parallel to the analysis of (\mex{1}), which was provided in
+Figure~\ref{abb-das-buch-kennt} on page~\pageref{abb-das-buch-kennt}:
+\ea
+\gll Das Buch kennt er.\\
+     the book knows he\\
+\glt `He knows the book.'
+\z
+
+
+The top-most node in Figure~\ref{abb-kennt-er} is licensed by the following Schema:
+
+\begin{schema}[Topic-Drop Schema]
+\textit{topic-drop-phrase} \impl\\
+\onems{ head-dtr \ms{ synsem & \ms{ local$|$cat \ms{ head & \ms[verb]{ vform   & fin \\
+                                                                       initial & \upshape +\\
+                                                                     }\\
+                                                     comps &  \eliste\\
+                                                   }\\
+                                     } \\
+                             nonloc & \ms{ inher|slash   & \sliste{ \ibox{1} }  \\
+                                           to-bind|slash & \sliste{ \ibox{1} } \\ 
+                                      }\\ 
+                    }\\
+  non-head-dtrs  \eliste\\
+}
+\end{schema}
+
+\noindent
+This schema projects a projection of a finite verb in initial position with an element
+in \textsc{slash} and binds off this element in \textsc{slash}: Pollard and Sag's
+nonlocal feature principle ensures that the \textsc{inherited$|$slash} value of the resulting projection is the
+empty set. The semantic/discourse effects of this rule are ignored, but of course it is clear where
+the additional constraints would be located in a fully specified grammar: the constraints would be
+attached to the schema above. The semantics of the head daughter is enriched by the semantics that
+is contributed by the construction.
+
+The schema is similar to the Filler-Head Sschema that was introduced on page~\ref{hf-schema}.
+%% suggested by other authors for
+%% German verb second sentences (\citealp[\page 293]{Pollard90a-Eng}; \citealp[p.\,97]{Mueller99a}). 
+The only difference is that there is no non-head-daughter since the \textit{Vorfeld} is not filled.
+The commonalities of the two schemata are captured in the hierarchical organization 
+of dominance schemata without the reference to surface linearization.
+
+
+
+The discussion of the data in Section~\ref{sec-phenomenon-clause-types} showed that the clause types cannot simply be derived
+from the position of the verb since, for instance, a V1 clause can be a clause with topic drop, a
+yes/no question or a conditional. What I suggest here is different: because of the passing on of
+information about the extracted elements in a tree, the information whether an element is missing in
+a tree is directly accessible. For instance the verb in Figure~\ref{abb-das-buch-kennt} on
+page~\pageref{abb-das-buch-kennt} selects the sentence [ \trace{} er \trace{} ]. This sentence
+contains an element in \slasch and hence it is clear that the combination of \emph{kennt} `knows'
+and \emph{er} `he' has to be part of a V2 clause or a clause with topic drop.
+
+Therefore we can formulate an implicational constraint that says that verbal projections with a
+finite verb and something in \slasch must be imperatives, questions or assertions.\footnote{
+  The empty tag \etag\is{\etag} stands for some value which is not shared anywhere in the description.
+}
+
+\ea
+\ms[verb-initial-lr]{
+synsem|nonloc|inher|slash & ne\_list \\
+} \impl\\
+\flushright\ms{
+synsem|loc|cont|rels & \sliste{ [ \type{imperative-interrogative-assertion} ] } $\oplus$ \etag\\
+}
+\z
+The lexical rule that was given on page~\pageref{lr-verb-movement2} is modified in a way that includes a relation that
+represents the clause type.
+\eanoraggedright
+\begin{tabular}[t]{@{}l@{}}
+Lexical rule for verbs in initial position (including relation for clause\\types):\\
+\ms{
+synsem$|$loc & \ibox{1} \ms{ cat$|$head & \ms[verb]{ vform & fin\\
+                                                     initial & $-$\\
+                                                   }\\
+                             cont & \onems{ hook \ms{ ltop & \ibox{2} \\
+                                                      ind  & \ibox{3} \\
+                                                    }\\
+                                            rels  \ibox{4}\\
+                                       }\\
+                  }\\
+} $\mapsto$\\*
+\onems{
+synsem$|$loc \onems{ cat  \ms{ head & \ms[verb]{ vform   & fin\\
+                                                 initial & $+$\\
+                                             }\\
+                               spr & \eliste\\
+                           comps & \liste{ \onems{ loc \onems{ cat \ms{ head & \ms[verb]{
+                                                                                     dsl & \ibox{1}\\
+                                                                                 }\\
+                                                                         spr & \eliste\\
+                                                                         comps & \eliste\\
+                                                                    }\\
+                                                                cont|hook \ibox{4}\\
+                                                              }\\
+                                                  } }\\
+                         }\\
+                   cont \ms{ hook & \ibox{4}\\
+                             rels & \sliste{ \ms{ arg0 & \ibox{2} \\
+                                                  arg3 & \ibox{3} }  } $\oplus$ \ibox{4}\\
+                           }\\     
+             }\\
+}
+\end{tabular}
+\label{lr-verb-movement-clause-type}
+\z
+
+
+%%  (\mex{1}a). 
+%% \eal
+%% \ex V1-LR:[\sliste{ XP/Y }] \impl [\textsc{sem} imperative\_or\_interrogative\_or\_assertion ]
+%% \ex V1-LR:[\sliste{ XP   }] \impl [\textsc{sem} imperative\_or\_interrogative\_or\_conditional ]
+%% \zl
+%% Gibt es kein Element in \slasch (\mex{0}b), so muss es sich um einen Imperativ, einen
+%% Interrogativsatz oder einen Konditionalsatz handeln. Zwei weitere Implikationen, die auf die
+%% morphologische Form des Verbs Bezug nehmen erzwingen als Bedeutung imperativ bzw.\ schließen
+%% Imperativ aus.
+
+This means that we can infer possible clause types from the knowledge about the presence of an
+extracted element. The actual clause type remains underspecified though since imperatives,
+interrogatives and assertions can be V2 clauses. 
+In order to fully determine the clause type, one has to refer to the intonation pattern of the
+clause, one has to have information about the presence or absence of an interrogative pronoun in the
+\vf. I do not go into the details of intonation here, but since HPSG represents phonological
+information in every complex linguistic object and not just at the terminal nodes it is clear that
+phonological information can be used in implicational constraints as well. It is possible to
+formulate constraints saying: if the phonological representation has the properties X and Y, the
+semantics/information structure has to contain Z. For information on how phonological constraints
+are represented in HPSG see \citew{BK94b,Hoehle99a-u,Bildhauer2008a}. 
+
+While we can see in the lexical item whether an element is extracted or not, we cannot see whether
+the filler of the nonlocal dependency contains a \emph{wh} element or not. The reason for this is
+that the information about \emph{wh} elements is treated as nonlocal information in order to be able
+to account for pied-piping.
+\ea
+\gll Von welchem Musiker hat Peter geschwärmt?\\
+     from which musician has Peter enthused\\
+\glt `Which musician thrilled Peter?'
+\z
+The phrase \emph{von welchem Musiker} contains a \emph{w} word, but it is deeply embedded as the
+determiner of a noun phrase that is part of a PP. The information about the interrogative element is
+passed up in the tree as it is common for other nonlocal information. The feature that is used for
+this kind of nonlocal dependency ist the \quef. The information that is passed up is the semantic
+index of the interrogative pronoun. In comparison only locally relevant information is passed up in
+\slasch, that is, information about part of speech, valence, case and semantic
+information. Information about other nonlocal dependencies as for instance the \quev is not
+contained in \slasch. Therefore it is impossible to determine from within the phrase \emph{kennt jeder} `knows everybody'
+whether the constituent in the Vorfeld contains a \emph{w} element or not.\footnote{
+  \citet{HN94b} suggest an analysis in which complete signs are elements of \slasch. This makes a
+  completely lexical determination of clause types possible, since both the local information and
+  the nonlocal information of the fronted constituent can be addressed from within the partial
+  clause. I nevertheless assume the more restrictive analysis that is usually assumed in HPSG.%
+} Hence the clause type determination has to happen with reference to the constituent in the
+\vf. There are several ways to do this in HPSG. One is suggested by \citet{Sag2010b} for the
+analysis of extraction structures in English:\footnote{
+  See also \citew{Jacobs2016a} for a suggestion that can be transferred into HPSG and that would be
+  parallel to Sag's proposal.%
+} Sag uses schemata for various types of sentences (relative clauses and interrogative clauses) to
+be able to account for the idiosyncratic distribution of \emph{wh} pronouns. Each schema corresponds
+to a specific type. Types are arranged in type hierarchies and more specific types inherit
+constraints from their supertypes. This makes it possible to capture generalizations. For instance,
+Sag assumes a general type for filler-head structures and then assumes subtypes of this type for the
+specific cases he discusses. Rather than enumerating all the syntactic patterns and associating them
+with types, I would like to suggest that there is just one schema for the combinatoin of filler and
+head in German V2 clauses and that the semantic information regarding the sentence type is dependent
+on the form of the element in the prefield. If the element contains a \emph{w} element, the clause
+is an interrogative clause, if it does not, the clause is a declarative clause. Formally this can be
+expressed by implicational constraints that have a complex structure with or without \emph{w}
+element as antecedent and which specify in the consequence the semantic relation that is contributed
+by the respective utterance. Figure~\vref{abb-imp-interrogativ} shows the implication in tree notation.
+\begin{figure}
+\centerline{%
+\begin{forest}
+[{}
+       [\textsc{que} \sliste{ [ ] }]  [\vphantom{t}]
+       ]
+\end{forest}\hspace{1em}\raisebox{\baselineskip}{\impl}\hspace{1em}
+\begin{forest}
+[{}
+       [\vphantom{t}]  [int(x)]
+       ]
+\end{forest}
+}
+\caption{\label{abb-imp-interrogativ}Implicational constraint for interrogative clauses}
+\end{figure}
+If we have a tree structure with a \emph{w} element in initial position, the second daughter has to
+contribute an interrogative semantics.\todostefan{R1: What if there are several elements in \que?}
+The good thing about the representational format of HPSG is
+that tree structures are also modeled by feature structures. Since we can use complex feature
+descriptions in antecedents of implicational constraints, implications like the one sketched in
+Figure~\ref{abb-imp-interrogativ} can be formulated.
+
+The implication in Figure~\ref{abb-imp-interrogativ}  is a simplification. In addition one has to
+require in the antecedence that the interrogative semantics is possible at all since otherwise
+sentences like (\mex{1}b) -- quoted from \citet[\page
+    113]{RR92a-u} -- would result in a contradiction, since the imperative form of the verb enforces
+an imperative meaning.
+\eal
+\ex 
+\gll Sag mal, wem du die Rezension anvertraut hast!\\
+     say once who you the review trust have\\
+\glt `Who did you trust the review with?'
+\ex 
+\gll Wem sag mal, dass du die Rezension anvertraut hast!\\
+     who say once that you the review trust have\\
+\glt `Who did you trust the review with?'
+\zl\todostefan{add formal version of the implication}
+
+
+
+
+\section{Alternatives}
+
+In what follows I briefly discuss two alternatives. Section~\ref{sec-schema-based-ct} compares the
+implication"=based proposal that was suggested here with proposals that attach the respective
+constraints to very specific dominance schemata. This is a rather abstract discussion, concrete schema-based
+suggestions are discussed in Chapter~\ref{chap-alternatives}.
+Section~\ref{sec-functional-projections} deals with recent suggestions within the Minimalist
+Programm that rely on Rizzi-style functional projections \citep{Rizzi97a-u}.
+
+\subsection{Schema-based analyses}
+\label{sec-schema-based-ct}
+
+I suggested an analysis in which the relation that is needed for the clause type is introduced by a
+lexical rule (a unary branching schema). The alternative is a phrasal view that refers to a certain configuration.
+
+The approaches can be depicted as in Figure~\ref{abb-konstruktion-implikation}.
+\begin{figure}
+\hfill
+%\begin{tabular}{cc}
+\subfloat[Phrasal construction]{
+\makebox[.4\textwidth]{
+\begin{forest}
+%baseline
+[\textsc{sem} f(x) (y)
+       [\textsc{sem} y]  [\textsc{sem} x [\vphantom{\textsc{sem}},no edge]]
+       ]
+\end{forest}}}
+\hfill
+\subfloat[Implication + lexical construction]{
+\makebox[.4\textwidth]{
+\begin{forest}
+%baseline
+[\textsc{sem} f(x) (y)
+       [\textsc{sem} y]  [\textsc{sem} f(x) [\textsc{sem} x] ]
+       ]
+\end{forest}}}\hfill\mbox{}
+\caption{\label{abb-konstruktion-implikation}constructional, phrasal approach and approach with
+  implicational constraint}
+\end{figure}%
+The semantic contribution at the mother node in Figure~\ref{abb-konstruktion-implikation}a is not
+derived compositionally from the daughters since it is not the combination of $x$ and $y$ but rather
+the combination of $f(x)$ and $y$. The function $f$ is contributed by the construction. In contrast
+the additional meaning component is contributed lexically in
+Figure~\ref{abb-konstruktion-implikation}b, that is, there already is a function that is applied to
+$x$. The combination of $f(x)$ and $y$ is compositional. The exact content of $f$ depends from the
+environment in which the verb is realized. An example for a constraint that determines the function
+was given in Figure~\ref{abb-imp-interrogativ}, which shows the implication that constraints the
+semantic contribution of interrogative clauses.
+
+
+
+
+
+\subsection{Functional projections}
+\label{sec-functional-projections}
+
+This section compares the analysis of clause types that was developed in this chapter with an
+analysis that was suggested within the framework of the Minimalist Program \citep{Chomsky93b-u,Chomsky95a-u}. The analysis of V2
+clauses that is developed in this book can be sketched as in Figure~\vref{Abbildung-Fernabhaengigkeiten-HPSG}.
+\begin{figure}
+\centering
+\begin{forest}
+sm edges
+[VP
+	[NP
+		[diesen Mann$_i$;this man,roof]]
+	[VP/NP
+		[V
+			[V
+				[kennt$_k$;knows]]]
+		[VP/NP
+			[NP/NP
+				[\trace$_i$]]
+			[V$'$
+				[NP
+					[jeder;everyone]]
+				[V
+					[\trace$_k$]]]]]]
+\end{forest}
+\caption{\label{Abbildung-Fernabhaengigkeiten-HPSG}Analysis of long"=distance dependencies in HPSG}
+\end{figure}%
+This analysis is pretty similar to what \citet{Haider93a} and \citet{FL2011a} assume. The analysis
+is compatible with current Minimalist assumptions: the combination of heads with their arguments are
+licenced by the Head-Complement Schema and by the Head-Filler Schema. As I have shown in
+\citew{MuellerUnifying} these schemata correspond to the operations \emph{Move} and
+\emph{Merge}, which are assumed in Minimalism. Self-induced technical problems with Labelling and so
+on that Chomsky's analyses \citeyearpar{Chomsky2008a,Chomsky2013a} are plagued with do not exist in
+the proposal advocated here. In comparison to the analysis of \citet{Lohnstein2007a} -- which is
+depicted in Figure~\ref{abb-satz-lohnstein} -- the analysis that is developed in this book is minimal.\footnote{
+  Lohnstein's analyse is a simplification of Rizzi's analysis \citeyearpar{Rizzi97a-u}. Rizzi and
+  also \citet[\page 70]{Grewendorf2002a} assume a Force head and a Typ head, respectively.
+}$^,$\footnote{
+Chomsky emphazises in several of his publications and talks that the Minimalist Program cannot be
+criticized for not being minimal or minimalisitic, since it is a program and not a theory and the
+goals of the program correspond to usual scientific goals (\eg \citew[\page 38]{Chomsky2013a}). I am
+not criticizing the program here, but -- as many others before me -- a specific analysis, which was
+suggested within the program.
+} In what follows I want to explain why I do not consider Rizzi-style analyses minimalistic in the
+sense of the Minimalist Program.
+\begin{figure}
+\oneline{%
+\newlength\mytextheight
+\settototalheight{\mytextheight}{XpX$^0$X$'$}
+\begin{forest}
+  delay={
+    where content={}{
+      content={\phantom{X}}
+    }{},
+  },
+  for tree={
+    text height=\mytextheight,
+    fit=band,
+    parent anchor=south,
+    child anchor=north,
+    s sep=-2mm,
+  }
+[TopP
+       [SpecT [left\\dislocated\\elements, tier=word] ] 
+       [T$'$ [T$^0$ ] 
+         [FocP
+           [SpFoc [{[+wh]-phrases}, tier=word] ]
+           [Foc$'$ [Foc$^0$ ] 
+             [TopP 
+               [SpecT [{[$-$wh]-phrases}, tier=word] ] 
+               [T$'$ [Top$^0$ ] 
+                 [AgrP, s sep=-20mm [SpecAgr ]
+                   [Agr$'$, s sep=-20mm
+                     [MoodP
+                       [{} ]
+                       [Mood$'$, s sep=-5mm
+                         [TenseP
+                           [{} ]
+                           [Tense$'$ 
+                             [vP [theta-layer, tier=word] ]
+                             [Tense$^0$ ] ] ] 
+                         [Mood$^0$ [verbal mood\\factive vs.\\epistemic, tier=word] ] ] ]
+                      [Agr$^0$ ] ] ] ] ] ] ] ] ]
+\end{forest}%
+}
+\caption{\label{abb-satz-lohnstein}Rizzi-style analysis of the German clause according to \citet[\page 84]{Lohnstein2007a}}
+\end{figure}
+The goal of the Minimalist Program \citep{Chomsky95a-u} is to explain language evolution. Structures
+should be simple so that their evolution and their repeated acquisition by speakers of succeeding
+generations is plausible. Chomsky admits the possibility that the innate language-specific knowledge
+that is necessary for this is minimal (\citealt*{HCF2002a}; \citealt[\page 4]{Chomsky2007a}).
+If one compares Figure~\ref{Abbildung-Fernabhaengigkeiten-HPSG} with
+Figure~\ref{abb-satz-lohnstein}, it is obvious that there are several tree positions in the latter
+figure that do not exist in the former: there is no distinction between FocP and TopP. Clauses
+always are verbal projections. This is what is visible as far as syntactic categories are
+concerned. Focus and topic are part of the information structure of a sentence and are modelled
+separately from syntactic categories like verb(al projection), noun or noun phrase, and so on.
+In Rizzi-style\nocite{Rizzi97a-u} analyses like the one suggested by Lohnstein the topic or focus
+position may be empty in clauses of the appropriate kind. Such empty positions do not exist in my
+analysis.
+Children have to learn that certain clauses have a topic element in the \vf and others have a focus
+element. Children do not have to learn that there are clauses in which there is a topic, but the
+focus element is empty both phonologically and semantically. I consider the use of topic and focus
+projections an aberration in a syntax-centered research context that realized that language cannot
+be described adequately with syntactic categories alone and that models that assume highly separate modules
+like syntax, semantics, and information structure and pose a linear sequence of such modules with
+limited interaction are inadequate. These insights resulted in a proliferation of semantically and
+information structurally motivated functional categories.\footnote{
+ \citet{Rizzi97a-u} and \citet[\page 70]{Grewendorf2002a} assume ForceP, TopP, FocP  and
+ \citet[\page 31]{Poletto2000a-u} assumes HearerP and SpeakerP,  \citet*{WHBH2007a-u} suggest TopP, ForceP and OuterTopP
+\citet[\page 96, 99]{Cinque94a-u} assumes Quality, Size, Shape, Color, Nationality.
+See \citet[\page 76]{Webelhuth95a} for an overview. He also lists Honorific and Predicate. For a
+recent overview see \citew[Abschnitt~4.6.1]{MuellerGT-Eng1}.
+}$^,$\footnote{
+Some projections are also motivated by the presence of morphemes in other languages. Such an
+argumentation is only sound if simultaneously a rich UG is assumed since monolingual children do not
+have information about topic and focus morphemes in other languages
+\citep[Section~2]{MuellerCoreGram}.% 
+} It is clear that relevant semantic distinctions have to be modelled but this has to take place on
+respective semantic and pragmatic levels, that are related to the syntactic level. This can be
+established by the semantic or information structural contribution of single lexemes or of phrasal
+configurations. What has been shown in this section is how the semantics of clause types can be
+integrated into the architecture of grammar without mixing the semantic categories with the
+syntactic ones. We will deal with information structure in Chapter~\ref{chap-is}.
+
+
+
+%      <!-- Local IspellDict: en_US-w_accents -->

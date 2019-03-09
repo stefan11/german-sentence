@@ -1,0 +1,54 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%   $RCSfile: grammatiktheorie.tex,v $
+%%  $Revision: 1.3 $
+%%      $Date: 2010/01/18 14:55:27 $
+%%     Author: Stefan Mueller (CL Uni-Bremen)
+%%    Purpose: 
+%%   Language: LaTeX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[ number=??
+                ,series=eotms,
+                ,isbn=xxx-x-xxxxxx-xx-x,
+%                ,url=http://langsci-press.org/catalog/book/14,
+	        ,output=long    % long|short|inprep              
+	        %,blackandwhite
+	        %,smallfont
+                ,bibtex
+                ,newtxmath
+	        ,draftmode  
+		  ]{langsci/langscibook}                          
+
+
+%% \documentclass[headings=small,bibliography=totoc,index=totoc,%
+%% %oneside,% Stauffenburg Style
+%% 10pt,%    Stauffenburg Style 
+%% %cleardoublempty% unused
+%% %draft
+%% ]{scrbook}
+
+
+
+\usepackage{etoolbox}
+\newtoggle{draft}\newtoggle{finished}
+
+%\toggletrue{draft}\togglefalse{finished}
+\togglefalse{draft}\togglefalse{finished}
+
+
+\newcommand{\NOTE}[1]{}
+%\newcommand{\NOTE}[1]{\marginpar{#1}}
+
+\newcommand{\LATER}[1]{}
+
+
+%\includeonly{gs-introduction}
+%\includeonly{gs-sentence-structure}
+%\includeonly{gs-mult-fronting}
+%\includeonly{gs-clause-types}
+%\includeonly{gs-informationstructure}
+\includeonly{gs-alternatives}
+%\includeonly{gs-empty-elements}
+
+
+\input german-sentence-include

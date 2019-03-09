@@ -1,0 +1,117 @@
+%% -*- coding:utf-8 -*-
+\usepackage[latin1,utf8x]{inputenc}
+
+\usepackage[T1]{fontenc}
+\usepackage{times}
+
+\usepackage{amssymb}
+
+
+%% \setlength{\textwidth}{130mm}
+%% %\setlength{\textheight}{187mm}
+%% \setlength{\textheight}{192mm}
+%% \setlength{\headsep}{5mm}
+%% \setlength{\oddsidemargin}{17mm}
+%% \setlength{\evensidemargin}{17mm}
+
+
+%\raggedbottom
+% Fußoten unten, falls Seite nicht voll
+%\usepackage[bottom,multiple]{footmisc} 
+
+
+\deffootnote{5mm}{0mm}{\textsuperscript{\normalfont\thefootnotemark}}
+
+\displaywidowpenalty=10000\relax
+\predisplaypenalty=-200\relax
+
+
+
+\usepackage{jambox}
+\usepackage{stauffenburg}
+
+
+\newcommand{\mod}{\textsc{mod}\xspace}  % wegen beamer.cls nicht in abbrev.sty
+
+
+\usepackage{index}
+\makeatletter
+% Wie im Stylefile, aber ohne \MakeUppercase
+   \renewenvironment{theindex}{%
+        \edef\indexname{\the\@nameuse{idxtitle@\@indextype}}%
+        \if@twocolumn
+            \@restonecolfalse
+        \else
+            \@restonecoltrue
+        \fi
+        \columnseprule \z@
+        \columnsep 35\p@
+        \twocolumn[%
+            \@makeschapterhead{\indexname}%
+            \ifx\index@prologue\@empty\else
+                \index@prologue
+                \bigskip
+            \fi
+        ]%
+%        \@mkboth{\MakeUppercase\indexname}%
+%                {\MakeUppercase\indexname}%
+        \@mkboth{\indexname}%
+                {\indexname}%
+        \thispagestyle{plain}%
+        \parindent\z@
+        \parskip\z@ \@plus .3\p@\relax
+        \let\item\@idxitem
+    }{%
+        \if@restonecol
+            \onecolumn
+        \else
+            \clearpage
+        \fi
+    }
+\makeatother
+
+\makeindex
+\newindex{aut}{adx}{and}{Namensverzeichnis}
+\newindex{lan}{ldx}{lnd}{Verzeichnis der Sprachen}
+\renewindex{default}{idx}{ind}{Sachregister}
+\usepackage{my-index-shortcuts}
+
+
+
+\newgray{hell}{.85}
+\newcommand{\highlight}[1]{\psframebox[linecolor=hell,fillcolor=hell,fillstyle=solid]{#1}}
+
+
+\usepackage{authorindex}
+% This does not work with makeindex
+% It is taken care of by another perl script
+%\def\theaipage{\string\hyperpage{\thepage}}\aipagetypeorder{n}
+
+
+
+\definecolor{LinkColor}{rgb}{0,0,0.5} 
+\usepackage[bookmarks=true,hyperindex=true,%
+breaklinks=true,
+draft=false,plainpages=false,hyperfootnotes=false,%
+pdfauthor={Stefan Müller},%
+pdftitle={German Sentence Structure},%
+pdfkeywords={HPSG, German, Fronting},
+ps2pdf=true  %ohne diesen Treiber geht der Zeilenumbruch in URLs
+]{hyperref}% for pdf files
+
+\hypersetup{colorlinks=false, pdfborder={0 0 0}}
+
+%\hypersetup{colorlinks=true, linkcolor=LinkColor,citecolor=LinkColor,filecolor=LinkColor,menucolor=LinkColor,pagecolor=LinkColor,urlcolor=LinkColor} 
+
+\usepackage{breakurl}
+
+
+% use article style since csli does not want new numbers in every chapter
+\usepackage{my-gb4e-article}
+\exewidth{\exnrfont (34)}
+
+%\def\ea{\ifnum\@xnumdepth=0\begin{exe}[(234)]\else\begin{xlist}[iv.]\fi\ex}
+%\def\ea{\ifnum\@xnumdepth=0\begin{exe}[(\theequation)]\else\begin{xlist}[iv.]\fi\\ex}
+%\def\eas{\begin{samepage}\ifnum\@xnumdepth=0\begin{exe}[(234)]\else\begin{xlist}[\iv.]\fi\ex}
+%\def\eal{\begin{exe}[(234)]\ex\begin{xlist}[iv.]}
+

@@ -1,0 +1,964 @@
+%% -*- coding:utf-8 -*-
+\chapter{Information structure constraints on multiple frontings}
+\label{chap-is}
+
+% \newcommand{\lindex}[1]{$_{#1}$}
+
+Chapter~\ref{chapter-mult-front} provided the syntactic aspects of the analysis of apparent multiple frontings. Of course this analysis vastly overgenerates: it admits structures that are not well-formed. This chapter discusses information structure constraints on multiple frontings and shows how they can be formalized in HPSG. The analysis is based on \citew{BC2010a}, which is one result of the project A6 in the Collaborative Research Center SFB 632 on information structure. Felix Bildhauer and Philippa Cook are co-authors of this chapter.
+
+\section{A note on terminology}
+
+There is no general terminological consensus about information structural categories. The definitions of such categories tend to vary across different research traditions, and sometimes they are not even used consistently within the same paradigm of research (see \citealp{KruijffSteedman2003} for an overview of the evolution and interdependencies of such terms). In what follows, we adopt the view that topic-comment and focus-background are distinct, orthogonal dimensions of information structure, along the lines of \cite{Krifka2007a-u}. Thus, we think of utterances as being structured along both of these two dimensions, which serve different purposes: A focus evokes a set of alternatives and selects a particular one among them \citep{Rooth85a-u,Rooth92a-u}. On the other hand, a topic singles out a specific discourse referent as an ``address'' in the mental representation of the discourse (``aboutness topic'') or it narrows down the domain within which the comment is supposed to hold at all (``framesetting topic''; see also \citealp{Jacobs2001a-u-platte} for discussion). The kind of topic we will be dealing with in this chapter is of the ``aboutness''-type. 
+
+
+
+\section{The phenomenon}
+
+
+
+As we saw earlier in Chapter~\ref{sec-v2-phen}, German is classed as V2 language, that is, normally
+exactly one constituent occupies the position before the finite verb in declarative main clauses. In
+what have been claimed to constitute rare, exceptional cases, however, more than one constituent
+appears to precede the finite verb, as illustrated in the attested examples that were discussed in
+Section~\ref{sec-phenomenon-mult-front}. Some attested examples with two fronted objects are
+repeated here for ease of reference in (\mex{1}):\footnote{Unless otherweise indicated, corpus examples in this
+  chapter were extracted from the German Reference Corpus \citep{DeReKo}.} 
+\eal
+\ex\label{ex:saft}
+    \gll [Dem Saft] [eine kräftigere Farbe] geben Blutorangen.\footnotemark\\
+         \hspaceThis{[}the.\dat{} juice \hspaceThis{[}a.\acc{} more.vivid colour give blood.oranges\\
+\footnotetext{
+\sigle{R99/JAN.01605}.
+}
+    \glt `What gives the juice a more vivid colour is blood oranges.'
+%\footnotemark
+%\footnotetext{\fnpaper{Frankfurter Rundschau}{08/01/1999}{Alles Orange: Pomeranzen, Salusianas, Kumquats}}
+\ex
+\gll [Dem Frühling] [ein Ständchen] brachten Chöre aus dem Kreis Birkenfeld im Oberbrombacher Gemeinschaftshaus.\footnotemark\\
+\hspaceThis{[}the.\dat{} spring \hspaceThis{[}a.\acc{} little.song brought choirs from the county Birkenfeld
+    in.the Oberbrombach municipal.building\\
+\footnotetext{
+ \sigle{RHZ02/JUL.05073}.
+}
+\glt `Choirs from Birkenfeld county welcomed (the arrival of) spring with a little song in the Oberbrombach municipal building.'\label{fruehling-zwei}
+
+\ex
+\gll [Dem Ganzen] [ein Sahnehäubchen] setzt der Solist Klaus Durstewitz auf\footnotemark\\
+     \hspaceThis{[}the.\dat{} everything \hspaceThis{[}a.\acc{} little.cream.hood puts the soloist Klaus
+         Durstewitz on\\
+\footnotetext{
+ \sigle{NON08/FEB.08467}.
+}
+\glt `Soloist Klaus Durstewitz is the cherry on the cake.'\label{ex:sahne}
+\zl
+
+There has been ongoing debate in the theoretical literature concerning the status of examples seemingly violating this V2 constraint. The examples in (\ref{fanselow}) (from \citealp{Fanselow93a}) and (\ref{gmueller}) (from G.\ \citealp{GMueller2004a}), are similar to (\ref{ex:saft})--(\ref{ex:sahne}) in that both objects of a ditransitive verb are fronted. The grammaticality judgments given by these authors diverge and, as can be seen from G.\ Müller's assessment of the data, such constructed examples tend to be deemed at best marginal, or even ungrammatical if presented without context.
+
+\ea
+\gll [Kindern] [Heroin] sollte man besser nicht geben.\\
+     \hspaceThis{[}children.\dat{} \hspaceThis{[}heroin.\acc{} should one better not give\\
+\glt `One shouldn't give heroin to children.'\label{fanselow}
+\z
+\eal\label{gmueller}
+\ex[??]{
+\gll [Kindern] [Bonbons] sollte man nicht geben.\\
+      \hspaceThis{[}children.\dat{} \hspaceThis{[}candies.\acc{}  should one not give\\
+\glt `One shouldn't give candies to children.'
+}
+\ex[*]{
+\gll [Dieses billige Geschenk] [der Frau] sollte man nicht geben.\\
+      \hspaceThis{[}this.\acc{} cheap present \hspaceThis{[}the.\dat{} woman should one not give\\
+\glt `One shouldn't give the woman this cheap present.'
+        }
+
+\zl
+
+%On the basis of corpus data, \citet{Mueller2003b,Mueller2005d} shows that a large variety of syntactic categories, grammatical functions and semantic classes can occur preverbally in such Multiple Frontings (MFs). 
+Chapter~\ref{sec-analyse-mf} provided the syntactic aspects of the analysis that treats the fronted constituents as dependents of an empty verbal head, thus preserving the assumption that the preverbal position is occupied by exactly one constituent (namely a VP):\footnote{For simplicity, we continue to refer to this phenomenon as `multiple fronting', but in the light of the analysis given in Chapter~\ref{sec-analyse-mf}, the term is exchangeable with `apparent multiple fronting' or `fronting of a VP that has an empty head'. Interestingly, multiple fronting rivals regular VP fronting in frequency for certain combinations of lexical material. For a comparison of multiple fronting and regular VP fronting (i.\,e., fronting of a VP with a lexically filled head), see \citealp[Section~4]{MBC2012a}.}  
+
+\begin{exe}
+  \ex {[\sub{VP} [Dem Saft] [eine kräftigere Farbe] \_\sub{V}]\lindex{i} geben\lindex{j} Blutorangen \_\lindex{i} \_\lindex{j}.}\label{saft-struc}
+\end{exe}
+
+While this account by itself correctly predicts certain syntactic properties of MFs, such as the fact that the fronted parts must depend on the same verb, it is in need of further refinement. In particular, multiple fronting seems to require very special discourse conditions in order to be acceptable (which is why out-of-context examples often sound awkward). %  e there are cases of highly questionable acceptability that are not ruled out in the analysis as it stands, viz.\ (\ref{schoko})
+% \begin{exe}
+%   \ex[???]{\gll [Der Student] [Schokolade] \textbf{mag} gerne.\\
+%         \hspaceThis{[}The student.nom \hspaceThis{[}chocolate.acc likes very.much\\
+%         Intended: `The student likes chocolate very much.'}\label{schoko}
+% \end{exe}
+Relying on findings from a corpus of naturally occurring data, we have identified two different information-structural environments in which MFs are licensed. Section~\ref{description} briefly sketches these two patterns, which in Section~\ref{analysis} we will analyze as being licensed by two related but distinct constructions, each of them instantiating a specific pairing of form, meaning and contextual appropriateness.
+
+%In particular, we will show that MFs do not correspond to a single information structural configuration but, in fact, are motivated by different pragmatic considerations.  We  analyze these different configurations (two of which we briefly sketch below) as a set of related but distinct constructions, each of them instantiating a specific pairing of form, meaning and contextual appropriateness.  
+
+\subsection{Multiple Fronting in Context}\label{description}
+
+In this section we examine two possible contexts of MF: Section~\ref{sec-presentational-MF} deals with what we term \emph{Presentational MF} and Section~\ref{sec-propositional-ass-mf} with \emph{Propositional Assessment MF}.
+
+\subsubsection{Presentational MF}
+\label{sec-presentational-MF}
+
+One of the configurations in which MF is well attested in naturally occurring data is illustrated in
+(\ref{clown}), (\ref{deflorian}) and (\ref{eisoval}), where the (b) line contains the MF structure and the (a) and
+(c) lines provide the context before and after it, respectively. We call this type
+\textit{Presentational Multiple Fronting}.
+
+
+%\ealnoraggedright
+% \label{clown} should refer to the level of exe, not xlist
+\begin{exe}\exnrfont
+\ex\label{clown}
+\begin{xlist}[iv.]
+
+\ex Spannung pur herrschte auch bei den Trapez-Künstlern. [\ldots]  Musika\-lisch begleitet wurden die einzelnen Nummern vom Orchester des Zir\-kus Busch [\ldots]\\
+    `It was tension pure with the trapeze artists. [\ldots] Each act was musically accompanied by Circus Busch's own orchestra.'
+\ex\label{pres}
+\gll [Stets] [einen Lacher] [auf ihrer Seite] hatte \textit{die} \textit{Bubi} \textit{Ernesto} \textit{Family}\lindex{i}.\\
+ \hspaceThis{[}always  \hspaceThis{[}a laugh  \hspaceThis{[}on their side had the Bubi Ernesto Family\\
+\glt `Always good for a laugh was the Bubi Ernesto Family.'\label{clown-b}
+\ex Die Instrumental-Clowns\lindex{i} zeigten ausgefeilte Gags und Sketche [\ldots]\\
+    `These instrumental clowns presented sophisticated jokes and sketches.'\\\sigle{M05/DEZ.00214} 
+\zl
+
+
+%\ealnoraggedright 
+% \label{deflorian} should refer to the level of exe, not xlist
+\begin{exe}\exnrfont
+\ex\label{deflorian}
+\begin{xlist}[iv.]
+
+    \ex {}[\ldots] wurde der neue Kemater Volksaltar [\ldots] geweiht. Die Finan\-zie\-rung haben
+    die Kemater Basarfrauen übernommen.
+    Die Altar\-wei\-he bot auch den würdigen Rahmen für den Einstand von Msgr.\ Walter Aichner als Pfarrmoderator von Kematen.\\
+       `\ldots\ the new altar in Kemate \ldots\ was consecrated. It was financed by the Kemate bazar-women. The consecration of the altar also presented a suitable occasion for Msgr.\ Walter Aichner's first service as Kematen's parish priest'
+
+ \ex \gll [Weiterhin] [als Pfarrkurator] wird \textit{Bernhard} \textit{Deflorian}$_i$ fungieren. \\
+            \hspaceThis{[}further      \hspaceThis{[}as  curate        will Bernhard Deflorian function. \\
+ \glt `Carrying on as curate, we have Bernhard Deflorian.'\label{deflorian-b}
+
+\ex Ihn$_i$ lobte Aichner besonders für seine umsichtige und engagierte Füh\-rung der pfarrerlosen Gemeinde. Er$_i$ solle diese Funktion weiter aus\-üben, ,,denn die Entwicklung, die die Pfarrgemeinde Kematen genommen hat, ist sehr positiv''.\\
+  `Aichner praised him especially for his discreet and committed leading of the priestless congregation. He should carry on with his work, ``for the development of the Kematen congregation has been very positive.'''\\ \sigle{I97/SEP.36591} 
+\zl
+
+We take Presentational MF to be a topic shift strategy. What is typical for this construction, we claim, is that a new entity (in italics in the examples (\ref{clown-b}), (\ref{deflorian-b}) and (\ref{eisoval-b})) is first introduced into the discourse and can then better serve as a topic in the continuation of the discourse or text. We argue that this introduced element benefits from first being `presented' in a construction such as Presentational MF before then functioning as an aboutness topic precisely because at the moment it is introduced into the discourse it bears some features that are not typical for topics (e.g. focus, discourse newness). The position for this `presentation' to take place is late in the clause, where the main accent typically falls in German declaratives. Presentational MF is never obligatory though; we are simply highlighting here why a speaker or an author might choose this construction in a particular context. Conversely, this kind of presentation is also found in canonical sentences not involving multiple fronting. In the corpus data we looked at, the presented entity is frequently a subject, but not always. We have also found experiencer objects and locative dependents. Our account below is intended to capture this observed distribution of presented entities. 
+
+
+What is it then that unites (agentive) subjects on the one hand and (non-subject) experiencer or
+locative dependents on the other and makes them candidates for being presented in such a
+construction? On the basis of a close examination of a large quantity of naturally occurring
+data\footnote{In the context of the Collaborative Research Center SFB 632, a reasonably large
+  database of multiple frontings (containing more than 2400 instances, most of them extracted from
+  the German Reference Corpus \citep{DeReKo}) was compiled and annotated by the authors. Annotations
+  include topological fields, syntactic function and various information structure categories. The
+  collection is publically accessible through a search interface at
+  \url{https://hpsg.fu-berlin.de/Resources/MVB/}.},\todofelix{In footnote below: Is it a good idea
+  to point to the site at FU Berlin? For how how much longer will this be available?}
+we suggest that this presented entity
+corresponds to the dependent of the verb that is -- in general -- the most topic-worthy of all the
+verb's dependents and is thus most likely to actually be realized as a topic in some particular
+discourse context. We will refer to this dependent as the verb’s `designated topic' (DT) -- a term
+intended to apply to a verb’s most likely topical dependent outside of any particular discourse
+context. This element does not \textit{have to} instantiate the topic, but it is the \textit{most
+  likely} candidate to instantiate topic. Agents are dependents which typically are the designated
+topic (DT) of their predicates but when the subject is semantically a theme (e.\,g.\ with
+unaccusatives or some psych verbs), then we find that it is the experiencer or a locative dependent
+that has a closer affinity with topic (cf. \cite{vanOosten84a-u} for similar observations about
+topic prototypicality, but without the notion of DT).
+
+As mentioned above, since focus and newness are not prototypical topic features cross-linguistically, cf. again \cite{Krifka2007a-u}, it has been argued that new entities often have to be first `presented' before they can function as aboutness topics and we claim this is what is happening here (cf.\ \citealp{Lambrecht94a-u}, for whom the type of phrases introducing brand new referents into the discourse are lowest on the scale of `Topic Accessibility'). Interestingly, then, rather than checking/spelling out a discourse function of the fronted material, a motivating factor in Presentational MF is the tendency to realize certain material external to the post-verbal domain in order to maximize the presentational effect lower down in the clause. Note that the pattern is not characterized adequately if the description makes reference to the subject rather than to the `designated topic'. The reason is, as mentioned above, that the presented element need not be the subject in all cases, as illustrated in (7b): here, the subject is actually part of the fronted material, while the newly introduced entity is coded as a locative PP. Our analysis in terms of designated topic accommodates these data since the locative phrase, rather than the subject, plays this role in the case of \emph{herrschen} `to reign' (in the relevant `existential' reading). 
+%We take Presentational MF to be a topic shift strategy. A new entity (in italics) is introduced into
+%the discourse and serves as a topic in the continuation. On the basis of a close examination of a
+%large quantity of naturally occurring data, we suggest that this presented entity corresponds to the
+%dependent (argument or adjunct) of the verb that is most topic-worthy and is thus most likely to be
+%realized as a topic in other circumstances. We will refer to it as the verb's `designated topic',
+%and it is, typically, the grammatical subject, but non-subjects may take on this role -- as we
+%illustrate immediately below -- in the case of e.\,g.\ unaccusatives/psych verbs which presumably
+%favor spatio-temporal or experiencer topics. Since focus and newness are not prototypical topic
+%features cross-linguistically, it has been argued that brand new/focal entities often have to be
+%first ``presented'' before they can function as aboutness topics \cite[cf.][for whom the type of
+%  phrases introducing brand new referents into the discourse are lowest on the scale of `Topic
+%  Accessibility']{Lambrecht94a-u}. Interestingly, then, rather than checking/spelling out a discourse
+%function of the fronted material, the motivating factor here is the need to shift material away from
+%the post-verbal domain to maximize the presentational effect.  Note that the pattern is not
+%characterized adequately if the description makes reference to the subject, rather than to the
+%`designated topic'. The reason is that the presented element need not be the subject in all cases,
+%as illustrated in (\ref{eisoval}): here, the subject is actually part of the fronted material, while
+%the newly introduced entity is coded as a locative PP. Our analysis in terms of designated topic
+%accommodates these data, since the locative phrase, rather than the subject, plays this role in the
+%case of \textit{herrschen} `to reign' (in the relevant ``existential'' reading). 
+%
+It also predicts that a subject can occur among the fronted material in a MF construction if it is not the verb's designated topic. %\todofelix{I guess this could be extended a bit.}
+ 
+
+%\ealnoraggedright
+%  \label{eisoval} should refer to the level of exe, not xlist
+\begin{exe}\exnrfont
+\ex\label{eisoval}
+\begin{xlist}[iv.]
+\ex Gesucht? Schnelle Sprinter\\
+    `Wanted: fast sprinters'
+\ex
+\gll [Weiterhin] [Hochbetrieb] herrscht am \textit{Innsbrucker} \textit{Eisoval}.\\
+    \hspaceThis{[}further \hspaceThis{[}high.traffic reigns at.the Innsbruck icerink\\
+\glt `It's still all go at the Innsbruck icerink.'\label{eisoval-b}
+\ex Nach der Zweibahnentournee am Dreikönigstag stehen an diesem Wochenende die Österreichischen Staatsmeisterschaften im Sprint am Pro\-gramm.\\
+ `Following the two-rink tournament on Epiphany-Day there's now the Austrian National Championship in Sprinting coming up at the weekend.' \sigle{I00/JAN.00911}
+\zl
+
+%  \begin{exe}
+%    \ex
+%    \begin{xlist}
+%      \ex Mit tieferen Kursen als zuletzt eröffnete Wall Street: Der Dow-Jones-Index rutschte innerhalb der ersten dreißig Minuten nach Börseröffnung um 9,39 Punkte auf 3052,33 Einheiten. (\ldots)
+% \ex{\gll [Weiterhin] [freundliche Stimmung] \textbf{herrscht} indes an der Tokioter Börse. \\
+%           \hspaceThis{[}further \hspaceThis{[}friendly climate reigns though at the Tokyo {stock market}\\
+%           {\glt `At the Tokyo stock market, the climate is still buisiness-friendly.'}} 
+%  \ex Der Nikkei-Index schloß mit 24.439,85 Punkten und lag damit 105,18 Zähler dem Mittwoch. \\
+%    {\glt `The Nikkei-index closed at 24439.85, thus 105.18 points higher than on Wednesday.'}\\
+% \sigle{N91/OKT.16548}
+
+%    \end{xlist}
+% \label{nikkei}
+%  \end{exe}
+
+
+
+
+\subsubsection{Propositional Assessment MF}
+\label{sec-propositional-ass-mf}
+
+The second configuration in which MF occurs is best described as \textit{Propositional Assessment MF}. Examples (\ref{knecht}) and (\ref{berliner}) illustrate this type of structure. 
+
+\ealnoraggedright
+\ex Bauern befürchten Einbußen\\
+   `Farmers fear losses'
+\ex{\gll [Nach Brüssel] [zum Demonstrieren] ist Gerd Knecht \textit{nicht} gefahren\\
+          \hspaceThis{[}to Brussels   \hspaceThis{[}to  demonstrate  is Gerd Knecht not gone\\
+   {\glt `G. K. did not go to Brussels for the demo'}}
+%\footnotetext{\fnpaper{Mannheimer Morgen}{26/02/1999}{Umlandseite(n)}}
+\ex aber gut verstehen kann der Vorsitzende des Lampertheimer Bauernverbands die Proteste der Kollegen.\\
+    `but the president of the Lampertheim Farmers' Association can well understand his colleagues' protest.' \sigle{M99/FEB.12802} \label{knecht}
+\zl
+
+\ealnoraggedright
+\ex Im Schlussabschnitt war den Berlinern das Bemühen durchaus an\-zu\-mer\-ken, vor ausverkauftem Haus ein Debakel zu verhindern.\\
+    `During the last phase of the match, it was clearly visible that the Berlin players were struggling to fight off a debacle in the packed arena.'
+\ex
+\gll [Dem Spiel] [eine Wende] konnten sie aber \emph{nicht} mehr geben.\\
+      \hspaceThis{[}to.the match \hspaceThis{[}a turn could they however not more give\\
+\glt `However, they didn't manage to turn the match around.'
+
+\ex  Rob Shearer (46.) traf noch einmal den Pfosten, das nächste Tor erzielten aber wieder die Gäste.\\
+     In the 46th minute, Rob Shearer hit the post again, but it was the guests who scored the next goal.'  \sigle{NUZ07/MAI.01360} 
+\label{berliner}
+\zl
+
+We analyze Propositional Assessment MF as involving a Topic-Comment structure plus an assessment of the extent to which the Comment holds of the Topic. More precisely, we are dealing with an inverted Topic-Comment configuration, in which the fronted material constitutes (part of) the Comment, while the Topic is instantiated by a discourse-given element in the middlefield (\emph{Gerd Knecht} in (\ref{knecht}), \emph{sie} in (\ref{berliner})). Also in the middlefield, we regularly find an `evaluative' expression, generally an adverb or particle, frequently but not exclusively negation. It must be prosodically prominent (i.\,e., it must probably receive the main stress of the sentence), and it expresses/highlights the degree to which the Comment holds for the Topic. Besides \textit{nicht} `not', particles/adverbs frequently found in \textit{Propositional Assessment MF} include \textit{nie} `never', \textit{selten} `rarely', \textit{oft} `often'. 
+%We analyze Propositional Assessment MF as involving an inverted Topic-Comment structure. The fronted material constitutes (part of) the Comment, while the Topic is instantiated by a discourse-given element in the middlefield. A stressed evaluative particle (\textit{nicht} `not') in the middlefield expresses/highlights the degree to which the Comment holds for the Topic. Other such evaluative particles include \textit{nie} `never', \textit{selten} `rarely', \textit{oft} `often' etc. 
+
+
+\section{The analysis}\label{analysis}
+
+Before we turn to the analysis of the interaction between syntax and information structure in apparent multiple frontings in Section~\ref{sec-inf-struc-and-mf}, we have to introduce the notation that we use for representing constraints on information structure (Section~\ref{sec-information-structure-general}). Before we can do this, we have to introduce the representational format of Minimal Recursion Semantics (Section~\ref{sec-intro-MRS}). MRS is particularly well-suited for
+modelling information structure constraints since embedding of predicates is not done in the representation directly, but rather elementary predications are represented in a list and embedding is expressed by pointers.
+
+\subsection{Introduction to Minimal Recursion Semantics}
+\label{sec-intro-MRS}
+
+This introduction is divided into two parts: first, we introduce the basic representation of semantic information and explain how scope can be represented in an underspecified way and then we turn to the analysis of non-compositional constructions in which some semantic information is contributed by a certain phrasal pattern itself.
+
+\subsubsection{Basic representation and compositional semantics}
+ 
+(\mex{1}) shows the examples for the semantic contribution of a noun and a verb in Minimal Recursion
+Semantics (MRS):
+\ea
+\label{le-buch}
+\begin{tabular}[t]{@{}l@{~}ll@{~}l@{}}
+a. & \emph{dog}  & b. & \emph{chases} \\
+   & \ms[mrs]
+           { ind  & \ibox{1} \ms[index]{ per & 3 \\
+                                  num & sg \\
+                                } \\
+             rels & \liste{ \ms[dog]{ inst & \ibox{1} \\ }} \\
+           } & & 
+\ms[mrs]
+           { ind  & \ibox{1} event \\
+             rels & \liste{ \ms[chase]{ event & \ibox{1} \\
+                                        agent & index \\
+                                        patient & index \\ }} \\
+           }
+\end{tabular}
+\z
+
+\noindent
+An MRS consists of an index, a list of relations, and a set of handle constraints, which will be
+introduced below. The index can be a referential index\footnote{
+  Phrases like \emph{no dog} also have a referential index in this sense. These referential indices
+  are like variables.%
+} of a noun (\mex{0}a) or an event variable (\mex{0}b). In the examples above the lexical items contribute the \relation{dog} relation and the \relation{chase} relation. The relations can be modeled with feature structures by turning the semantic roles into features. The semantic index of nouns is basically a variable, but it comes with an annotation of person, number, and gender since this information is important for establishing correct pronoun bindings.
+%
+%\subsection{Linking}
+
+The arguments of each semantic relation (e.g. agent, patient) are linked to their syntactic realization (e.g. NP[nom], NP[acc]) in the lexicon. (\mex{1}) shows an
+example. NP[\type{nom}]\ind{1} stands for a description of an NP with the semantic index identified with \ibox{1}. The semantic indices of the arguments are structure shared with the arguments of the semantic relation \relation{chase}.
+\ea
+\label{le-chase}
+\emph{chase}:\\
+\onems
+{ synsem|loc \ms{ cat & \ms{ head & \ms[verb]
+                                    { vform & fin \\} \\
+                             arg-st & \liste{ NP[\type{nom}]\ind{1}, NP[\type{acc}]\ind{2}   } \\
+                           } \\
+                  cont &  \ms{ ind  & \ibox{3} event \\
+                               rels & \liste{ \ms[chase]{ event   & \ibox{3} \\
+                                                          agent   & \ibox{1} \\
+                                                          patient & \ibox{2} \\ }} \\
+                             }\\
+               }\\
+}
+\z
+Generalizations over linking patterns can be captured elegantly in inheritance hierarchies (see
+%Section~\ref{sec-generalizations} on inheritance hierarchies and
+\citew{Davis96a-u,Wechsler91a-u,DK2000b-u} for further details on linking in HPSG).
+
+
+Before turning to the compositional analysis of (\mex{1}a), we want to introduce some additional machinery that is needed for the underspecified representation of the two readings in (\mex{1}b,c).
+\eal
+\label{every-dog-chased}
+\ex\label{ex-every-dog-chased}
+Every dog chased some cat.
+\ex $\forall x (dog(x) \to \exists y (cat(y) \wedge chase(x,y)))$
+\ex $\exists y (cat(y) \wedge\forall x  (dog(x) \to chase(x,y)))$
+\zl
+Minimal Recursion Semantics assumes that every elementary predication comes with a
+label. Quantifiers are represented as three place relations that relate a variable and two so-called handles. The handles point to the restriction and the body of the quantifier, that is, to two labels of other relations. (\mex{1}) shows a (simplified) MRS representation for (\mex{0}a).
+\ea
+$\langle$ h0, \{ \begin{tabular}[t]{@{}l@{}}
+                  h1: every(x, h2, h3), h2: dog(x), h4: chase(e, x, y), \\
+                  h5: some(y, h6, h7), h6:  cat(y) \} $\rangle$\\
+                  \end{tabular}
+\z
+The three-place representation is a syntactic convention. Formulae like those in
+(\ref{every-dog-chased}) are equivalent to the results of the scope resolution process that is described below.
+
+The MRS in (\mex{0}) can best be depicted as in Figure~\ref{fig-dominance-graph-chanse}. h0 stands for the top element. This is a handle that dominates all other handles in a dominance graph. The restriction of \emph{every} points to \emph{dog} and the restriction of \emph{some} points to \emph{cat}. The interesting thing is that the body of \emph{every} and \emph{some} is not fixed in (\mex{0}). This is indicated by the dashed lines in Figure~\ref{fig-dominance-graph-chanse} in contrast to the straight lines connecting the restrictions of the quantifiers with elementary predications for \emph{dog} and \emph{cat}, respectively.
+\begin{figure}
+\centering
+\begin{tabular}{@{}ccc@{}}
+                               & \mybox[h0]{h0}                & \\[8ex]
+\mybox[h1]{h1:every(x, \mybox[h1h3]{h2}, \mybox[h1h2]{h3})}      &                              & \mybox[h5]{h5:some(y, \mybox[h5h7]{h6}, \mybox[h5h6]{h7})}\\[8ex]
+\mybox[h3]{h2:dog(x)}           & ~~~~~\mybox[h7]{h6:cat(y)}         & \\[6ex]
+                               & \mybox[h4]{h4:chase(e, x, y)}\\
+\end{tabular}
+\begin{tikzpicture}[overlay,remember picture] 
+\draw[dashed](h0.south)--(h1.north); 
+\draw[dashed](h0.south)--(h5.north);
+\draw[dashed](h5h6.south)--(h4.north);
+\draw[dashed](h1h2.south)--(h4.north);
+\draw(h1h3.south)--(h3.north);
+\draw(h5h7.south)--(h7.north);
+\end{tikzpicture}
+%% {\psset{linestyle=dashed}%
+%% \ncline{h0}{h5}%
+%% \ncline{h0}{h1}%
+%% \ncline{h5h6}{h4}%
+%% \ncline{h1h2}{h4}%
+%% }%
+%% \ncline{h1h3}{h3}%
+%% \ncline{h5h7}{h7}%
+\caption{\label{fig-dominance-graph-chanse}Dominance graph for \emph{Every dog chases some cat.}}
+\end{figure}
+There are two ways to plug an elementary predication into the open slots of the quantifiers:
+\eal
+\ex Solution one: h0 = h1 and h3 = h5 and h7 = h4.\\
+  (\emph{every dog} has wide scope)
+
+\ex Solution two: h0 = h5 and h7 = h1 and h3 = h4.\\
+  (\emph{some cat} has wide scope)
+\zl
+The solutions are depicted as Figure~\ref{fig-forall} and Figure~\ref{fig-exists}.
+
+\begin{figure}
+\centering
+\begin{tabular}{@{}ccc@{}}
+                               & \mybox[h0]{h0}                & \\[8ex]
+\mybox[h1]{h1:every(x, \mybox[h1h3]{h2}, \mybox[h1h2]{h3})}      &                              & \mybox[h5]{h5:some(y, \mybox[h5h7]{h6}, \mybox[h5h6]{h7})}\\[8ex]
+\mybox[h3]{h2:dog(x)}           & ~~~~~\mybox[h7]{h6:cat(y)}         & \\[6ex]
+                               & \mybox[h4]{h4:chase(e, x, y)}\\
+\end{tabular}
+\begin{tikzpicture}[overlay,remember picture] 
+\draw(h0.south)--(h1.north); 
+\draw(h5h6.south)--(h4.north);
+\draw(h1h2.south) .. controls +(0,-1) and +(-1,1).. (h5.north);
+\draw(h1h3.south)--(h3.north);
+\draw(h5h6.south)--(h4.north);
+\draw(h5h7.south)--(h7.north);
+\end{tikzpicture}
+\caption{\label{fig-forall}%
+%$\forall x (dog(x) \to \exists y (cat(y) \wedge chase(x,y)))$
+every(x,dog(x),some(y,cat(y),chase(x,y)))
+}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{tabular}{@{}ccc@{}}
+                               & \mybox[h0]{h0}                & \\[8ex]
+\mybox[h1]{h1:every(x, \mybox[h1h3]{h2}, \mybox[h1h2]{h3})}      &                              & \mybox[h5]{h5:some(y, \mybox[h5h7]{h6}, \mybox[h5h6]{h7})}\\[8ex]
+\mybox[h3]{h2:dog(x)}           & ~~~~~\mybox[h7]{h6:cat(y)}         & \\[6ex]
+                               & \mybox[h4]{h4:chase(e, x, y)}\\
+\end{tabular}
+\begin{tikzpicture}[overlay,remember picture] 
+\draw(h0.south)--(h5.north); 
+\draw(h5h6.south).. controls +(0,-1) and +(-1,1).. (h1.north);
+\draw(h1h2.south)--(h4.north);
+\draw(h1h3.south)--(h3.north);
+\draw(h5h7.south)--(h7.north);
+\end{tikzpicture}
+\caption{\label{fig-exists}%$\exists y (cat(y) \wedge\forall x  (dog(x) \to chase(x,y)))$\newline
+some(y,cat(y),every(x,dog(x),chase(x,y)))}
+\end{figure}
+There are scope interactions that are more complicated than those we have been looking at so far. In
+order to be able to underspecify the two readings of (\mex{1}) both slots of a quantifier have to stay open.
+\eal
+\ex Every nephew of some famous politician runs.
+\ex every(x, some(y, famous(y) ∧ politician(y), nephew(x, y)), run(x))
+\ex some(y, famous(y) ∧ politician(y), every(x, nephew(x, y), run(x)))
+\zl
+In the analysis of example (\ref{ex-every-dog-chased}), the handle of \relation{dog} was identified
+with the restriction of the quantifier. This would not work for (\mex{0}a) since either
+\relation{some} or \relation{nephew} can be the restriction of \relation{every}. Instead of direct
+specification so-called handle constraints are used (\type{qeq} oder $=_q$). A qeq constraint
+relates an argument handle and a label: \mbox{h $=_q$ l} means that the handle is filled by the label
+directly or one or more quantifiers are inserted between \emph{h} and \emph{l}. Taking this into
+account, we can now return to our original example. A more accurate MRS representation of
+(\ref{ex-every-dog-chased}) is given in (\mex{1}).
+\ea
+$\langle$ h0, \{ \begin{tabular}[t]{@{}l@{}}
+                  h1:every(x, h2, h3), h4:dog(x), h5:chase(e, x, y), \\
+                  h6:some(y, h7, h8), h9:cat(y) \}, \{ h2 $=_q$ h4, h7 $=_q$ h9 \} $\rangle$\\
+                  \end{tabular}
+\z
+The handle constraints are associated with the lexical entries for the respective
+quantifiers. Figure~\vref{fig-every-dog-chases-a-cat-syntax} shows the analysis. 
+\begin{figure}
+\resizebox{!}{\textheight}{%
+\begin{sideways}
+\begin{forest}
+sm edges
+[V\feattab{
+         \spr \sliste{ },\\
+         \comps \eliste\\
+         \rels  \relliste{ h1:every(x, h2, h3), h4:dog(x), h5:chase(e, x, y), h6:some(y, h7, h8), h9:cat(y) },\\
+         \hcons \relliste{ h2 $=_q$ h4, h7 $=_q$ h9 } }
+          [\ibox{1} NP\feattab{
+                        \rels  \relliste{ h1:every(x, h2, h3), h4:dog(x) },\\
+                        \hcons \relliste{ h2 $=_q$ h4 } }
+               [Det\feattab{
+                     \rels  \relliste{ h1:every(x, h2, h3) },\\
+                     \hcons \relliste{ h2 $=_q$ h4 } } [every] ] 
+               [N\feattab{
+                   \rels  \relliste{ h4:dog(x) },\\
+                   \hcons \eliste } [dog] ] ]
+          [V\feattab{
+              \spr \sliste{ \ibox{1} },\\
+              \comps \eliste\\
+              \rels  \relliste{ h5:chase(e, x, y), h6:some(y, h7, h8), h9:cat(y) },\\
+              \hcons \relliste{ h7 $=_q$ h9 } }
+              [V\feattab{
+                  \spr  \sliste{ \ibox{1} },\\
+                  \comps \sliste{ \ibox{2} },\\
+                  \rels  \relliste{ h5:chase(e, x, y) },\\
+                  \hcons \eliste } [chases] ]
+              [\ibox{2} NP\feattab{
+                            \rels  \relliste{ h6:some(y, h7, h8), h9:cat(y) },\\
+                            \hcons \relliste{ h7 $=_q$ h9 } }
+                [Det\feattab{
+                      \rels  \relliste{ h6:some(y, h7, h8) },\\
+                      \hcons \relliste{ h7 $=_q$ h9 } } [some] ]
+                [N\feattab{
+                     \rels  \relliste{ h9:cat(y) },\\
+                     \hcons \eliste } [cat] ] ] ] ]
+\end{forest}%
+\end{sideways}
+} %oneline
+\caption{\label{fig-every-dog-chases-a-cat-syntax}Analysis for \emph{Every dog chases some cat.}}
+\end{figure}
+For compositional cases as in Figure~\ref{fig-every-dog-chases-a-cat-syntax}, the \relsv of a sign
+is simply the concatenation of the \relsvs of the daughters. Similarly the \hconsv is a
+concatenation of the \hconsvs of the daughters. 
+
+
+\subsubsection{The Analysis of ``Non-Compositional'' Constructions}
+\label{sec-non-compositional}
+
+\citew*{CFPS2005a} extended the basic analysis that concatenates \rels and \hcons to cases in which
+the meaning of an expression is more than the meaning that is contributed by the daughters in a
+certain structure. They use the feature \feat{c-cont} for the representation of constructional
+content. While usually the semantic functor (the head in head argument combinations and the adjunct
+in head adjunct structures) determines the main semantic contribution of a phrase, the \ccontf can
+be used to specify a new main semantic contribution. In addition relations and scope constraints may
+be introduced via \ccont. The feature geometry for \ccont is given in (\mex{1}):
+\ea
+\ms[c-cont]{
+hook  & \ms{ 
+        index & event-or-index\\
+        ltop  & handle\\
+        }\\
+rels  & list of relations\\
+hcons & list of handle constraints\\
+}
+\z
+The \feat{hook} provides the local top for the complete structure and a semantic index, that is a
+nominal index or an event variable. In compositional structures the \hookv is structure shared with
+the semantic contribution of the semantic functor and the \relsl and the \hconsl is the empty
+list. As an example for a non-compositional combination \citew{CFPS2005a} discuss determinerless
+plural NPs in English. For the analysis of \emph{tired squirrels} they assume an analysis using a unary branching
+schema. Their analysis corresponds to the one given in (\mex{1}):\footnote{
+    We do not assume a unary branching schema for bare plurals but an empty determiner, since using
+    an empty determiner captures the generalizations more directly: while the empty determiner is
+    fully parallel to the overt ones, the unary branching schema is not parallel to the binary
+    branching structures containing an overt determiner. See also \citew{AB2012a} for a similar
+    point regarding relative clauses in Modern Standard Arabic\il{Modern Standard Arabic} with and without a complementizer.
+}
+\ea
+\onems{
+synsem|loc|cont \ms{ hook  & \ibox{1}\\
+                     rels  & \ibox{2} $\oplus$ \ibox{3} \\
+                     hcons & \ibox{4} $\oplus$ \ibox{5} \\
+                   }\\
+c-cont   \ms{ hook & \ibox{1} \ms{ ind & \ibox{0}\\
+                                   } \\
+                rels & \ibox{2} \relliste{ \ms[udef-rel]{
+                                    arg0 & \ibox{0}\\
+                                    restr & \ibox{6}\\
+                                    body  & handle\\
+                                   } } \\[10mm]
+                hcons & \ibox{4} \relliste{ \ms[qeq]{
+                                     harg & \ibox{6}\\
+                                     larg & \ibox{7}\\
+                                     } }
+              }\\
+head-dtr  \onems{ synsem|loc|cont  \ms{ ind & \ibox{0}\\
+                                       ltop & \ibox{7}\\
+                                     }\\
+                rels    \ibox{3} \relliste{ \ms[tired]{ lbl  & \ibox{7}\\
+                                                arg1 & \ibox{0}\\
+                                              },
+                                     \ms[squirrel]{ lbl  & \ibox{7}\\
+                                                    arg0 & \ibox{0}\\
+                                                  } }\\
+                hcons  \ibox{5} \eliste\\
+              }\\
+}
+\z
+The semantic content of the determiner is introduced constructionally in \ccont. It consists of the
+relation \relation{udef-rel}, which is a placeholder for the quantifier that corresponds to
+\emph{some} or \emph{every} in the case of overt determiners. The \rels and \hconsvs that are
+introduced constructionally (\ibox{2} and \ibox{4}) are concatenated with the \rels and \hconsvs of
+the daughters (\ibox{3} and \ibox{5}).
+
+The Semantics Principle can now be specified as follows:
+\begin{principle}[Semantics Principle]
+The hook value of a phrase (containing the main index and the local top) is identical to the value of \textsc{c-cont|hook}. The
+\relsv is the concatenation of the \relsv in \ccont and the concatenation of the \rels values of the
+daughters. The \hconsv is the concatenation of the \hconsv in \ccont and the concatenation of the \hcons values of the
+daughters. 
+\end{principle}
+
+
+
+
+
+
+
+\subsection{Information structure features}
+\label{sec-information-structure-general}
+
+Various approaches to information structure have been proposed within HPSG, differing both in the features that are assumed to encode aspects of IS, and in the sort of objects these features take as their value \cite[among others,][]{EV96a,Wilcock2001a,deKuthy2002a,Paggio2005a-u,Webelhuth2007a-u}. The representation we use here is based on \cite{Bildhauer2008b}. As mentioned above, we take topic/comment and focus/background to be two information structural dimensions that are orthogonal to one another. We thus introduce both a \textsc{topic} and a \textsc{focus} feature, bundled under a \textsc{is} feature on \textit{synsem}-objects.\footnote{Information-structure should be inside \textit{synsem} because at least information about focus must be visible to elements (such as focus sensitive particles) that select their sister constituent via some feature (\textsc{mod}, \textsc{spec}, \textsc{comps}/\textsc{subcat}). Possibly, the situation is different with topics: we are not aware of data showing that topicality matters for selection by modifiers or heads. We leave open the question whether \textsc{topic} is better treated as an attribute of, say, \textit{sign} rather than \textit{synsem}.} These take as their value a list of lists of \textit{elementary predications}. In the basic case, i.\,e.\ in a sentence with a single topic and a single focus, the \textsc{topic} and
+\textsc{focus} lists each contain one list of \textit{EPs}, which are structure shared with elements on the sign's \textsc{rels}-list. In other words, we are introducing pointers to individual parts of a sign's semantic content. By packaging the \textit{EP}s pertaining to a focus or topic in individual lists, we are able to deal with multiple foci/topics. The feature architecture just outlined is shown in (\ref{arch}), and (\ref{arch-exe}) illustrates a possible instantiation of the
+\textsc{topic}, \textsc{focus} and \textsc{cont} values.
+
+%multiple fronting must be appropriately constrained. e properties Our account involves an IS (information structure) feature on signs along with an appropriate subtyping of the value it takes, illustrated in (\ref{is-sig}). 
+
+\ea
+\label{arch}
+\ms[sign]{
+  synsem & \ms{ loc & local\\
+                nonloc & nonloc\\
+                is & \ms[is]{
+                      topic & list\\
+                      focus & list\\
+                }\\
+  }\\
+}
+\z
+\ea
+\label{arch-exe}
+\ms[sign]{
+  synsem & \onems{ is \ms[is]{
+                        topic & \sliste{ \sliste{ \ibox{1} } }\\
+                        focus & \sliste{ \sliste{ \ibox{2}, \ibox{3} }, \sliste{ \ibox{4} } }\\
+                       }\\
+                   loc|cont|rels \sliste{ \ibox{1}, \ibox{2}, \ibox{3}, \ibox{4}, \ibox{5} }\\
+                 }\\
+}
+\z
+
+Next, we introduce a subtyping of \textit{is}, given in Figure~\vref{fig-types-is}. These subtypes can then be used to refer more easily to particular information-structural configurations, that is, to specific combinations of \textsc{topic} and \textsc{focus} values.\footnote{These types are thus used as abbreviations or labels for specific combinations of attributes and their values. From a technical perspective, they are not strictly necessary, but we use them here for clarity of
+  exposition.}
+The subtypes that are relevant for our purpose are \textit{pres} (`presentational')
+and \textit{a-top-com} (`assessed-topic-comment', a subtype of the more general
+\textit{topic-comment} type. 
+\begin{figure}
+\begin{forest}
+  typehierarchy
+  [is
+    [pres
+      [\ldots]
+      [\ldots]]
+    [topic-comment
+      [a-top-com]
+      [\ldots]]
+      [\ldots]]
+\end{forest}
+\caption{\label{fig-types-is}Type hierarchy of information structure types}
+\end{figure}
+
+
+Those \textit{head-filler} phrases that are instances of multiple fronting can then be restricted to have an \textsc{is}-value of an appropriate type, as shown in (\ref{constraint-mf}).
+
+\ea
+\label{constraint-mf}
+\ms[head-filler-phrase]{
+  non-hd-dtrs & \sliste{ [ head|dsl  \type{local} ] }\\
+  } \impl
+   \ms{
+     is & pres $\vee$ a-top-com $\vee$ \ldots
+   }
+\z
+
+\subsection{Information structure and apparent multiple frontings}
+\label{sec-inf-struc-and-mf}
+
+Having introduced MRS and the general representation of information structure constraints, we can
+now go on and demonstrate how two of the MF patterns that we identified can be modeled in
+HPSG. Section~\ref{sec-identifying-mf} highlights the syntactic property of MF structures, which can
+be used to enforce information structure constraints, Section~\ref{sec-presentationl-mf} discusses Presentational MFs
+and Section~\ref{sec-propositional-assessment-mf} Propositional Assessment MFs.
+
+\subsubsection{Identifying cases of MF}
+\label{sec-identifying-mf}
+
+%For HPSG analysis, we build on \cites{Mueller2005d} syntactic analysis and enrich it with discourse information as needed.
+To account for the multiple fronting data within HPSG, it is necessary to appropriately constrain syntactic, semantic, and information-structural properties of a sign whenever it instantiates a multiple fronting configuration. Thus, in order to be able to specify any constraints on their occurrence, instances of multiple fronting must be identified in the first place. Since we base our proposal on \citew{Mueller2005d} syntactic analysis of multiple fronting, this is not a major
+problem: on this approach, the occurrence of elements in the preverbal position in general is
+modeled as a filler-gap-relation, where the non-head daughter corresponds to the preverbal material
+(prefield) and the head daughter corresponds to the rest of the sentence (in the topological model
+of the German sentence, this would be the finite verb, the middlefield, and the right bracket, and
+the final field). In the analysis of multiple frontings that is presented in Section~\ref{sec-analyse-mf}, filler daughters in multiple fronting
+configurations (and only in these) have a \textsc{head|dsl} value of type \type{local}, that is,
+conforming to the analysis sketched in (\ref{saft-struc}) above, they contain information about an
+empty verbal head, as shown in (\mex{1}).
+
+
+\ea
+\ms[head-filler-phrase]{
+  non-hd-dtrs & \liste{ [ \textsc{head|dsl} \type{local} ] }\\
+}
+\z
+This specification then allows us to pick out exactly the subset of \textit{head-filler}-phrases we are interested in, and to formulate constraints such that they are only licensed in some specific information-structural configurations, to which we turn next.
+
+%  out of a small set of possible ones (the dots stand for further values that we have not discussed here). The relevant constraint is given in (\ref{constraint}).      
+
+
+
+\subsubsection{Modeling Presentational MF}
+\label{sec-presentationl-mf}
+
+In order to model Presentational MF, we introduce a pointer to the designated topic as a head feature of the verb that subcategorizes for it. The feature \textsc{DT} takes a list (empty or singleton) of \type{synsem}-objects as its value, and it states which element, if any, is normally realized as the Topic for a particular verb. This is not intended to imply that the designated topic must in fact be realized as the topic in all cases. Rather, it merely encodes a measurable preference in topic realization for a given verb. The statement in (\ref{ex:verbs}) is intended as a general constraint, with further constraints on verbs (or classes of verbs) determining which element on \textsc{arg-st} is the Designated Topic.
+
+
+\ea
+\label{ex:verbs}
+\type{verb-stem} \impl \ms{ head|dt & \eliste } $\vee$ \ms{ head|dt &  \sliste{ \ibox{1} }\\
+                                                           arg-st  & \etag $\oplus$  \sliste{ \ibox{1} } $\oplus$ \etag\\
+                                                         }
+\z
+                                      
+The constructional properties of Presentational MF are defined in (\ref{ex:hfill}): the designated topic must be located within the non-head daughter and must be focused. % (and thus bear an accent, which is independently enforced).
+ Figure \ref{clown-analysis} shows the relevant parts of the analysis of sentence (\ref{clown}) above.
+
+
+\ea\label{ex:hfill}
+\ms[head-filler-phrase]{
+  is & pres\\
+} \impl
+%\flushright
+\ms{
+  synsem|l|cat|head|dt \sliste{ [ l|cont|rels \ibox{1} ] }\\
+  head-dtr|synsem|is|focus \sliste{ \ibox{1} }\\
+}
+\z
+
+\begin{figure}
+\centerfit{
+    \begin{forest}
+      for tree={
+        parent anchor=south,
+        child anchor=north,
+        anchor=north,
+        align=center
+      }
+      [ {\ms[head-filler-phrase]{
+          phon & \phonliste{ stets einen Lacher auf ihrer Seite hatte die Bubi Ernesto Family }\\
+          synsem & \ms{ is & \ms[pres]{
+                              focus & \sliste{ \ibox{1} }\\
+                             }\\
+                        loc & \onems{ cat|head|dt \sliste{ \ibox{4} [ l|cont|rels \ibox{1} ] }\\
+                                      cont|rels \ibox{3} $\oplus$ \ibox{2} $\oplus$ \ibox{1} \\
+                                    }\\
+                      }\\
+          }}
+        [ \onems{
+          phon \phonliste{ stets einen Lacher auf ihrer Seite }\\
+          synsem|loc  \onems{ cat|head|dsl \type{local}\\
+                              cont|rels \ibox{3} \\
+            }\\
+        } ]
+        [, phantom, calign with current]
+        [ \ms{
+          phon & \phonliste{ hatte die Bubi Ernesto Family }\\
+          synsem & \ms{ is|focus & \sliste{ \ibox{1} }\\
+                        loc & \ms{ cat|head|dt \sliste{ \ibox{4} }\\
+                                   cont|rels \ibox{2} $\oplus$ \ibox{1} \\
+                                 }\\
+                      }\\
+          },
+        % http://tex.stackexchange.com/questions/255104/aligning-nodes-at-the-right-periphery-of-the-text-area-in-forest?noredirect=1#comment610300_255104
+      parent anchor=east,
+      anchor=north east,
+      for descendants={
+        where n'=1{
+          calign with current,
+          anchor=north east,
+        }{},
+      },
+      before drawing tree={
+        parent anchor=south,
+        for descendants={
+          if n'=1{
+            child anchor=north,
+            parent anchor=south,
+          }{}
+        }
+      }
+          [ \ms{
+             phon & \phonliste{ hatte }\\
+             synsem & \onems{ is|focus  \sliste{ \ibox{1} }\\
+                              loc  \onems{ cat \ms{ head|dt & \sliste{ \ibox{4} }\\
+                                                    subcat  & \sliste{ \ibox{4}, \ldots } }\\
+                                           cont|rels \ibox{2}  \\
+                                         }\\
+                            }\\
+          } ]
+          [ \ms{
+             phon & \phonliste{ die Bubi Ernesto Family }\\
+             synsem & \ibox{4} \onems{ is|focus \sliste{ \ibox{1} }\\
+                                       loc|cont|rels \ibox{1} \\
+                                 }\\
+          } ] ] ]
+\end{forest}
+}
+\caption{Sample analysis of \textit{Presentational Multiple Fronting}}\label{clown-analysis}
+\end{figure}
+
+
+
+\subsubsection{Modeling Propositional Assessment MF}
+\label{sec-propositional-assessment-mf}
+
+For Propositional Assessment MF, we use a special subtype of \type{topic-comment}, namely
+\type{a(ssessed)-top-com}. We then state that the designated topic must in fact be realized as the
+topic, and that it must occur somewhere within the head daughter (which comprises everything but the
+prefield). Most importantly, the head-daughter must also contain a focused element that has the
+appropriate semantics (i.\,e.\ one which serves to spell out the degree to which the comment holds
+of the topic; glossed here as \textit{a-adv-rel}). However, the mere presence of such an element on
+the \textsc{rels} list does not guarantee that it actually modifies the highest verb in the clause
+(e.\,g., it could modify a verb in some embedded clause as well.) Therefore, the construction also
+adds a handle constraint specifying that the focused element takes scope over the main verb. This
+handle constraint needs to be added rather than just be required to exist among the head-daughter's
+handle constraints because the \textit{outscoped} relation need not be an immediate one, i.\,e.,
+there can be more than one scope-taking element involved. An appropriate handle constraint can be
+introduced via the \textsc{c\_cont}-feature, i.\,e.\ as the construction's contribution to the overall
+meaning. If the relevant element does not in fact outscope the main verb, the MRS will contain
+conflicting information and cannot be scope-resolved. In that case, the phrase's semantics will not
+be well-formed, which we assume will exclude any unwanted analysis due to focussing of the wrong
+element. The necessary specifications are stated in (\ref{a-top-com}). A sample analysis of sentence
+(\ref{knecht}) above is given in Figure \ref{knecht-analysis}.\todostefan{Alignment number AVM is broken}
+%(More precisely, the constraint below says that the designated topic must be the topic of the head daughter, in order to ensure that it is contained within the head daughter, not the filler daughter. However, \textsc{topic} values are shared between mother and head daughter due to principles that cannot be discussed here for reasons of space).
+
+
+\eas%
+%\begin{tabular}[t]{@{}p{\linewidth}@{}}
+\ms[head-filler-phrase]{
+  is & a-top-com\\
+} \impl\\
+\flushright
+\onems{
+  synsem \onems{ l|cat|head|dt \sliste{ [ l|cont|rels \ibox{1} ] }\\[1mm]
+                   is \ms{ topic & \sliste{ \ibox{1} }\\
+                           focus & \sliste{ \sliste{ \ibox{3} } }\\
+                   }\\
+               }\\
+  c\_cont|hcons \liste{ \ms[qeq]{
+                        harg & \ibox{5}\\
+                        larg & \ibox{4}\\
+                        } }\\
+  head-dtr|synsem|cont \ms{ ltop & \ibox{4} \\
+    rels & \liste{ \ibox{3} \ms[a-adv-rel]{
+                            arg & \ibox{5} \\
+                            }} $\bigcirc$ \ibox{1}  $\bigcirc$ \etag \\
+                 \\
+                          }
+}%
+%\end{tabular}
+\label{a-top-com}
+\zs
+
+
+
+
+
+
+
+
+
+\begin{figure}
+\centerfit{
+  \begin{forest}
+      for tree={
+        parent anchor=south,
+        child anchor=north,
+        anchor=north,
+        align=center
+      }
+    [
+      \onems{
+        phon \phonliste{ nach Brüssel zum Demonstrieren ist Gerd Knecht nicht gefahren }\\
+        synsem \onems{ l \onems{ cat|head|dt \sliste{ \ibox{1} [ l|cont|rels \ibox{2} ] }\\[1mm]
+                                 cont|rels \ibox{8} $\oplus$ \ibox{7} $\oplus$ \ibox{2} $\oplus$ \liste{ \ibox{3} \ms[nicht-rel]{
+                                              arg & \ibox{5} \\
+                            } } $\oplus$ \ibox{6} \\
+                            }\\
+                       is \ms{ topic & \sliste{ \ibox{1} }\\
+                               focus & \sliste{ \sliste{ \ibox{3} } }\\
+                             }\\
+                     }\\
+        c\_cont|hcons \liste{ \ms[qeq]{
+                        harg & \ibox{5}\\
+                        larg & \ibox{4}\\
+                        } }\\
+       }
+      [ \onems{
+        phon \phonliste{ nach Brüssel zum Demonstrieren }\\
+        cat|head|dsl \type{local} \\
+        cont|rels  \ibox{8}  \\
+      } ]
+      [, phantom, calign with current]
+      [   \onems{
+        phon \phonliste{ ist Gerd Knecht nicht gefahren }\\
+        cat|head|dt \sliste{ \ibox{1} }\\[1mm]
+                                 cont \ms{ ltop & \ibox{4}\\
+                                           rels & \ibox{7} $\oplus$ \ibox{2} $\oplus$ \liste{ \ibox{3} \ms[nicht-rel]{
+                                                                                                           arg & \ibox{5} \\
+                                                                                                          } } $\oplus$ \ibox{6}  \\
+                                             }\\
+        },
+        % http://tex.stackexchange.com/questions/255104/aligning-nodes-at-the-right-periphery-of-the-text-area-in-forest?noredirect=1#comment610300_255104
+      parent anchor=east,
+      anchor=north east,
+      for descendants={
+        where n'=1{
+          calign with current,
+          anchor=north east,
+        }{},
+      },
+      before drawing tree={
+        parent anchor=south,
+        for descendants={
+          if n'=1{
+            child anchor=north,
+            parent anchor=south,
+          }{}
+        }
+      }
+        [ \onems{
+        phon \phonliste{ ist  }\\
+        cat|head|dt \sliste{ \ibox{1} }\\[1mm]
+        cont|rels  \ibox{7}  \\
+                               }
+         ]
+        [ \onems{
+        phon \phonliste{ Gerd Knecht nicht gefahren }\\
+        cont|rels   \ibox{2} $\oplus$ \sliste{ \ibox{3} } $\oplus$ \ibox{6} \\
+        is|focus \sliste{ \sliste{ \ibox{3} } }\\
+         }
+          [ \onems{
+        phon \phonliste{ Gerd Knecht }\\
+        synsem \ibox{1} [ l|cont|rels  \ibox{2} ] \\
+          } ]
+          [ \onems{
+        phon \phonliste{ nicht gefahren }\\
+        cont|rels \sliste{ \ibox{3} } $\oplus$ \ibox{6} \\
+                       is|focus \sliste{ \sliste{ \ibox{3} } }\\
+            }
+            [ \onems{
+        phon \phonliste{ nicht  }\\
+        cont|rels \sliste{ \ibox{3} } \\
+        is|focus \sliste{ \sliste{ \ibox{3} } }\\
+        } ]
+            [ \onems{
+        phon \phonliste{ gefahren }\\
+        cat|head|dt \sliste{ \ibox{1} }\\[1mm]
+        cont|rels \sliste{ \ibox{3} } $\oplus$ \ibox{6}\\
+        } ] ] ] ] ]
+\end{forest}
+            
+
+}
+\caption{Sample analysis of \textit{Propositional Assessment MF}}\label{knecht-analysis}
+\end{figure}
+
+
+
+%%% What remains to be done is ensure that all instances of multiple fronting actually have one of these \type{is} values. In \citew{Mueller2005d} formalization, filler daughters in multiple fronting configurations (and only in these) have a \textsc{dsl} value of type \type{local}.\footnote{The \textsc{dsl} (`double slash') feature is needed to model the HPSG equivalent of verb movement from the sentence final position to the V2 position. Cf.\ the indices in example (\ref{saft-struc}) above.} The constraint in (\ref{constraint}) will thus enforce that instances of multiple fronting will have one out of a small set of possible \textsc{is} values (the dots stand for further values that we have not discussed here).
+
+
+% \begin{figure}[h]
+%   \begin{exe}
+% \ex\label{constraint}
+%     \begin{avm}
+%       \[\tp{head-filler-phrase}\\
+%         non-hd-dtrs & \< \[head|dsl & local \]\>\]
+%     \end{avm}~~$\Rightarrow$\\[2ex]
+%     \begin{avm}
+%       \[is & pres $\vee$ a-top-com $\vee$ \ldots\]
+%     \end{avm}
+%   \end{exe}
+% \end{figure}
+
+
+
+\section{Conclusion}
+
+In the way outlined above, the relative freedom of the fronted material in the analysis of
+multiple frontings that was provided in Chapter~\ref{sec-analyse-mf} is appropriately restricted
+with respect to the contexts in which multiple frontings can felicitously
+occur. While we are not claiming to have identified these contexts exhaustively, the two
+configurations modeled here, if taken together, account for the majority of naturally occurring
+examples in our database. In sum, then, this chapter underlines the importance of examining
+attested examples in context and demonstrates that it is possible to further constrain a syntactic
+phenomenon which in the past has even been deemed ungrammatical in many (decontextualized) examples.
+
+%      <!-- Local IspellDict: en_US-w_accents -->
+
+

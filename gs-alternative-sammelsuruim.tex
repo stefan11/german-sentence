@@ -1,0 +1,525 @@
+%% -*- coding:utf-8 -*-
+\chapter{Alternatives}
+\label{chap-alternatives}%
+
+
+
+
+
+\section{Binary branching structures and linearization domains}
+
+Works by \citet{Reape94a} paved the way for linearization grammars that assume binary-branching
+structures with flat linearization domains. A verb and its arguments are located in the same linearization
+domain and can -- despite not belonging to the same local tree -- be ordered according to linearization 
+restrictions. These kinds of models have been used by \citet{Kathol95a,Kathol2000a} and myself \citep{Mueller95c,Mueller99a,Mueller2002b}.
+For a discussion of the advantages of linearization grammars from a computational linguistic perspective, see \citew{Mueller2004b}.
+
+These analyses face the same drawbacks as those discussed in the previous section:
+it is difficult to motivate the fact that multiple fronted constituents form a single 
+constituent. \citet{Kathol97a} argues for a non"=abstract syntax as it would otherwise
+not be possible to explain how children acquire language. He directly links the linear order of
+constituents to clause type. If one wishes to avoid null elements, this sort of approach is doomed
+to fail as there are topic drop constructions in which the initial position is not filled but the
+sentences nevertheless have the same clause type as cannonical V2 clauses.  A  grammatical model which focuses exclusively 
+on surface order can deal with neither these facts nor the data from cases of supposed multiple fronting
+\citep{Mueller2004e}. If, then, it is  not possible to develop a grammar which complies with Kathol's concepts, which
+still adequately explains the data, one cannot simply use considerations of learnability to argue in
+their favour. Kathol's surface"=based syntax will be discussed in more detail in Chapter~\ref{chap-empty}.
+
+Furthermore, linearization analyses with binary-branching structures have the disadvantage of
+not being able to explain why dative objects as well as accusative objects can occur with the verb
+in the prefield. The examples in (\mex{1}) show that there are different fronting possibilities with the same verb 
+depending on how one fills the argument slots:\todostefan{more detailed explanation}
+\eal
+\label{bsp-acc-dat-pvp}
+\ex 
+\gll Den Wählern erzählen sollte man diese Geschichte nicht.\\
+	 the voters tell should one this story not\\
+\glt `One shouldn't tell this story to the voters.'
+\ex 
+\gll Märchen erzählen sollte man den Wählern nicht.\\
+	 fairy.tales tell should one the voters not\\
+\glt `One shouldn't tell the voters fairy tales.'
+\zl
+
+In linearization grammars, one has to combine the arguments of a head in a fixed sequence as the combination
+order is independent from the surface order. If one were to allow arbitrary combination orders, one would yield
+false ambiguities. If one assumes a \subcatl of the form $\langle$ NP[{\it nom}], NP[{\it acc}],
+NP[{\it dat}] $\rangle$ for \emph{erzählen} `tell', then it is only possible to analyse (\mex{0}a).
+(\mex{0}b) cannot be analyzed since \emph{Märchen} `fairy tale' can only be combined with \emph{erzählen} after it has 
+been combined with the dative object. 
+
+
+In order to solve this problem, \citet[\page 242]{Kathol2000a} suggests not specifying a 
+fixed order for these objects in the \subcatl. The sentences (\mex{0}) would be able to
+be analyzed, on the other hand a sentence such as (\mex{1}) would have two possible analyses:
+\ea
+\gll dass er den Wählern Märchen erzählt\\
+	 that he the voters fairy.tales told\\
+\glt `that he told the voters fairy tales/tall stories'
+\z
+As the order of constituents in the clause is independent from the elements in \subcatl in linearization
+grammars, it is possible to derive every possible surface order for every possible order in \subcatl
+and thereby generating unwanted spurious ambiguities.
+
+The data in (\ref{bsp-acc-dat-pvp}) are unproblematic for the analysis presented here as the head-argument schema
+on page \,\pageref{schema-bin} allows the combination of arguments and their heads in any order.
+
+Does this mean that we should abandon linearization grammars for more restrictive grammar models? Before jumping to
+this conclusion, one has to demonstrate how we can deal with phenomena which have been analyzed using discontinuous
+constituents. An example of this is so-called `intermediate placement', where a verb is ordered in the middle of a
+government chain (\mex{1}) (see (\citealp[\page 182]{dBE83a}\ia{den Besten}\ia{Edmondson};
+Meurers, \citeyear[Chapter~3.2.2]{Meurers97a}; \citeyear[Chapter~3.2.1.3]{Meurers2000b})).
+\ea
+\gll daß er das Examen bestehen wird können.\\
+     that he the exam pass  will be.able\\
+\glt `that he will be able to pass the exam'
+\z
+An analysis of this phenomenon that makes do without discontinuous constituents was suggested by \citet{Meurers2000b}.
+
+Discontinuous constituents have also been assumed by \citew{Mueller2002b} for a co-indexation analysis of
+depictive predicates. If we assume that \emph{nackt} `naked' and \emph{hilft} `helps' form a discontinuous
+constituent, then the subject of \emph{nackt} can be co-indexed with the subject of \emph{hilft} in the argument
+structure.
+\ea
+\gll weil er nackt der Frau hilft\\
+	 because he naked the woman helps\\
+\glt `because he is helping the woman (while) naked'
+\z
+
+
+
+As pointed out by \citet[\page 87--88]{Kaufmann95a}, examples such as (\mex{0}) are already problematic if one assumes that
+the subject of a depictive predicate is co-indexed with some element from the argument structure of the verb and furthermore
+that information about argument structure is only available in lexical elements. These data can however be satisfactorily 
+explained if we assume that the subject of a depictive predicate is co-indexed with an element from the \subcatl (of a projection)
+of the head. It follows on from this analysis that depictive predicates can only refer to elements to the left of themselves
+\citep[Chapter~4.1.4.1]{Mueller2002b}. The elements to the right of a depictive predicate are of course already combined with
+the head and therefore no longer present in \subcatl of the projection in question.
+Apparent exceptions to this sequence are actually instances of I"=topicalization.\footnote{
+		Note that analyses which assume a different branching structure for (i) than for (\mex{0}) are
+		incompatible with this kind of analysis of depictive predicates since the antecedent for
+		\emph{nackt} is not longer present in the \subcatl of \emph{hilft er}.
+		\ea
+		\gll Hilft er nackt der Frau?\\
+		     helps he naked the woman\\
+		\glt `Is he helping the woman naked?'
+		\z
+		For a discussion of these kinds of suggestions see Section~\ref{crysmann}.%
+}\todostefan{echt? Nicht arg-st projection? Abbildung}
+For the details of this analysis, see \citew{Mueller2004c}.
+
+A further phenomenon which I suggested for the use of discontinuous constituents are 
+Werner's dialect data \citep[\page 349, 355]{Werner94a} in (\mex{1}):
+\eal
+\label{bsp-sonneberg-partikel-modal}
+\ex\iw{abplagen}
+\gll so ham  sich die Leut  oumüßploug\label{bsp-abmussplagen}\\
+%     so have \textsc{refl} the people \textsc{part}.must.plague\\ 
+    so have  \textsc{refl} the people \textsc{part}.must.struggle\\
+\glt `People had to struggle so much'
+\ex\iw{anhören}
+\gll Wos  da       sich          ölles       aahotmüßhör!\\
+     what this.one \textsc{refl} everything  \textsc{part}.must.listen.to\\
+%\glt `What he had to listen to!'
+\glt `All these things he had to listen to!'
+\ex
+\gll wall    e  in  Brander vollstn    ümhotwöllstimm\\
+    because he the Brander completely \partic.has.want.to.tune\\
+\glt `because he wanted to change Brander's mind completely'
+\zl
+In these data from the Franconian and Thüringen dialects, the verb particle is left of
+the verbal complex, separated from its base verb by superordinate verbs. \citet{BvN98} have analyzed
+parallel data from Dutch using flat structures: all verbs, their arguments and verb particles are 
+realised in the same local tree and can therefore be ordered according to linearization rules. In
+\citew{Mueller2002b}, I developed an analysis of the data in (\mex{0}), which assumes a binary-branching
+structure and allows discontinuous verbal complexes. \emph{Anhören} in (\mex{0}b) is analyzed as a discontinuous 
+particle verb.
+
+If we want to avoid positing both completely flat structures and discontinuous constituents,
+then we have to resort to an analysis which raises the particle inside the verbal complex.
+The difference between Standard German and the Franconian/""Thüringen dialect can be accounted
+for under the assumption that verb particles in Standard German always have to be lexical
+elements (\textsc{lex}+), whereas they have the status of a maximal projection in the discussed
+dialects -- that is, they have to be \textsc{lex}$-$.
+
+There is, therefore, no area of the description of German sentence structure where linearization
+grammars are superior to traditional grammars. However, there are some aspects (those discussed above), 
+where they are mostly certainly inferior. For this reason, the analysis presented here is preferred
+over them. 
+
+
+\section{To do: Wetta}
+
+\citet{Wetta2011a}
+
+
+\section{Multiple frontings as multiple frontings}
+
+\citet{Mueller2000d}
+
+
+
+\citet{Kathol95a,Kathol97a,Kathol2000a,Kathol2001a} developed a theory of German clause types that
+is based on the Topological Fields model known from descriptive linguistics 
+\citep{Drach37,Reis80a,Hoehle86,Askedal86}. He suggests relating the clause type of sentences 
+to serialization patterns of overtly realized material. \citet{Kathol97a} refutes
+CP/IP analyses of German clause structure on the basis of learnability arguments and
+argues for a non-abstract syntax, i.e.\ a syntax where surface
+order plays a crucial role and the reference to abstract syntactic objects such as
+functional heads is avoided in favor of observationally accessible properties (p.\,89).
+
+In this paper, I show that an entirely surface-based conception of syntax is not tenable and
+that Kathol's proposal faces problems with certain elliptical constructions.
+
+In the first section, I very briefly repeat his key assumptions. In Section~\ref{sec-problems}, I will
+discuss certain declarative sentences that do not fit the
+pattern suggested by Kathol. I then suggest an analysis that
+does not rely on the surface order of constituents for the classification of clause types,
+but on the relations expressed by immediate dominance schemata.
+
+\section{Constructional Constraints and Topological Fields}
+
+The examples in (\mex{1}) show various linearization patterns that are
+attested in German clauses:
+\eal
+\ex
+\gll daß Lisa eine Blume gepflanzt hat\\
+     that Lisa a flower planted has\\
+\glt `that Lisa planted a flower.'
+
+\ex 
+\gll was Lisa  gepflanzt hat\\
+     what Lisa planted has\\
+\ex
+\gll Hat Lisa eine Blume gepflanzt?\\
+     has Lisa a flower planted\\
+\glt `Did Lisa plant a flower?'
+\ex 
+\gll Eine Blume hat Lisa gepflanzt.\\
+     a flower   has Lisa planted\\
+\glt `Lisa planted a flower.'
+\zl
+(\mex{0}a) is an example for sentences that are introduced by a complementizer
+and (\mex{0}b) is an example for embedded interrogative sentences. Both sentences
+are verb-final. (\mex{0}c--d) are verb-initial sentences: (\mex{0}c) is a yes/no question
+and (\mex{0}d) is a declarative sentence. Declarative sentences usually differ from
+yes/no questions in that one constituent fills the position before the finite
+verb.
+
+\subsection{Topological Fields, Linearization Rules, and Uniqueness Constraints}
+
+
+\citet[p.\,50]{Kathol2001a} gives the following devision into topological fields
+for the sentences in (\mex{1}):
+\begin{table*}[htbp]
+\resizebox{\linewidth}{!}{
+\begin{tabular}{@{}|l|l|l|l|l|@{}}\hline
+       & Vorfeld         & linke          & Mittelfeld      & rechte \\
+       & `initial field' & Satzklammer    & `middle field'  & Satzklammer\\
+       &                 & `left bracket' &                 & `right bracket'\\
+       & 1               & 2              & 3               & 4\\\hline
+Vfinal &                 & daß            & Lisa eine Blume & gepflanzt hat\\\hline
+       &                 & was            & Lisa            & gepflanzt hat\\\hline
+V1     &                 & hat            & Lisa eine Blume & gepflanzt\\\hline
+V2     & eine Blume      & hat            & Lisa            & gepflanzt\\\hline
+\end{tabular}}
+\end{table*}
+
+\noindent
+This is the classical terminology with additional labels 1--4 to refer to the respective
+positions.
+
+He then formulates the following linearization constraints:
+\ea
+Topological Linear Precedence Constraint\\
+1 $<$ 2 $<$ 3 $<$ 4
+\z
+\ea
+Topological Uniqueness Conditions\\
+a. 1 $<$ 1\\
+b. 2 $<$ 2
+\z
+The first constraint ensures that all elements that are assigned to the field
+1 are serialized before 2 and so on. The second is a trick from the GPSG literature
+\citep*[p.\,55]{GKPS85a} to rule out multiple occurrences of elements assigned to the
+fields 1 or 2. Since constraint (\mex{0}a) requires that all elements with 
+the field 1 have to precede the other elements assigned to field 1 
+this constraint is necessarily violated if there is more than one element assigned to 1.
+
+\subsection{A Hierarchy of Clause Types}
+
+Kathol follows \citet{Reape90a,Reape92a,Reape94a}, who introduced linearization
+domains into the HPSG framework. Daughters which are combined by the usual dominance
+schemata may be non-adjacent. The daughters are inserted into a domain list named \textsc{dom}.
+The elements of this list may be permuted in any order provided no LP constraint is violated.
+The order of the elements corresponds to the surface order. This makes it possible to
+assign both sentences in (\mex{1}) the dominance structure in (\mex{2}).
+\eal
+\ex der Mann das Buch liest
+\ex Liest der Mann das Buch?
+\zl
+\ea
+{}[\sub{V} der Mann [\sub{V} das Buch liest]]
+\z
+The sentences differ only in the order of the elements in their linearization domain. In
+the analysis of (\mex{-1}a) the verb is serialized finally and in the analysis of (\mex{-1}b)
+it is serialized initially.
+
+\citet{Kathol2001a} defines clause types with reference to elements in the constituent
+order domains. He assumes that all clauses are subtypes of the following three
+types:
+\eal
+\label{clause-types}
+\ex\label{v1-clause-type} {\it V1-clause\/} $\to$ \ms{
+                                                     S[\textit{fin}]\\
+                                                     dom & \liste{ \ms{ \textit{2}\\ 
+                                                                        V[{\it fin\/}]\\
+                                                                      }, \ldots }
+                                                  }
+
+\ex\label{v2-clause-type} {\it V2-clause\/} $\to$ \ms{
+                                                     S[\textit{fin}]\\
+                                                     dom & \liste{ \ms{  \textit{1} }, 
+                                                                   \ms{  \textit{2}\\ 
+                                                                         V[{\it fin\/}] }, \ldots }
+                                                     }
+\ex\label{subord-clause-types} {\it subord-clause\/} $\to$ \ms{
+                                                           S[\textit{fin}]\\
+                                                           dom & \sliste{ \ldots, \ms{ \textit{2}\\ 
+                                                                                       \textsc{head}
+                                                                                       $\neg$ V[{\it
+                                                                                           fin\/}]\\ },
+                                                             \ldots }
+                                                           }
+\zl
+These types impose restrictions on possible orderings of elements in constituent
+order domains or stipulate that finite verbs may not appear in the field 2 in subordinated
+clauses. The first type states that a verb first clause has a finite verb as the
+first element in its domain list and the second states that there is an element in 1 (the \textit{Vorfeld}) 
+before the finite verb in 2.
+
+Kathol cross-classifies the types in (\mex{0}) with the types \type{declarative}, \type{wh"=interrogative}, and
+\type{polar}. He provides the hierarchy shown in Figure~\vref{fig-clausal-types}.
+% For this paper it is sufficient to know that {\it v2-clause} and {\it declarative} have a common
+% subtype and that {\it v1-clause\/} and {\it polar\/} have a common subtype. {\it v2-clause} and {\it polar\/}
+% and {\it v1-clause\/} and {\it declarative} are incompatible, respectively.
+
+
+\begin{figure}
+\centering
+\oneline{%
+%% \begin{forest}
+%% typehierarchy
+%% [\type{finite-clause}
+%%   [\type{internal-syntax}
+%%     [\type{root}
+%%       [\type{v2}
+%%         [\type{r-wh-int}, tier=leaf]
+%%         [\type{r-decl}, tier=leaf]]
+%%       [\type{v1}
+%%         [\type{r-pol-int}, tier=leaf]]]
+%%     [\type{subord} 
+%%       [\type{s-wh-int}, tier=leaf]
+%%       [\type{s-pol-int}, tier=leaf]
+%%       [\type{s-decl}, tier=leaf]]]
+%%   [\type{clausality} 
+%%     [\type{inter}
+%%       [\type{wh}]
+%%       [\type{polar}, tier=polar]]
+%%     [\type{decl}, tier=polar]]]
+%% \end{forest}
+\begin{tabular}{cccccc}
+    & & \mynode{fc}{\type{finite-clause}}\\[3ex]
+\multicolumn{2}{c}{\mynode{is}{\framebox{\type{internal-syntax}}}} &  & &\mynode{cl}{\framebox{\type{clausality}}}\\[2ex]
+\mynode{root}{\type{root}} & \mynode{subord}{\type{subord}} &     & \multicolumn{2}{c}{\mynode{inter}{\type{inter}}}\\[2ex]
+\mynode{v2}{\type{v2}}   & \mynode{v1}{\type{v1}}     &     & \mynode{wh}{\type{wh}} & \mynode{polar}{\type{polar}} & \mynode{decl}{\type{decl}}\\[6ex]
+\mynode{r-wh-int}{\type{r-wh-int}} & \mynode{r-decl}{\type{r-decl}} & \mynode{r-pol-int}{\type{r-pol-int}} & \mynode{s-wh-int}{\type{s-wh-int}} & \mynode{s-pol-int}{\type{s-pol-int}} & \mynode{s-decl}{\type{s-decl}}\\
+\end{tabular}
+\begin{tikzpicture}[overlay,remember picture,shorten <=2pt,shorten >=2pt] 
+\draw
+(fc.south)--(is.north)(fc.south)--(cl.north)
+(is.south)--(root.north)(is.south)--(subord.north)
+(root.south)--(v1.north)(root.south)--(v2.north)
+(v2.south)--(r-wh-int.north)(v2.south)--(r-decl.north)
+(v1.south)--(r-pol-int.north)
+(cl.south)--(inter.north)(cl.south)--(decl.north)
+(inter.south)--(wh.north)(inter.south)--(polar.north)
+(wh.south)--(r-wh-int.north)(wh.south)--(s-wh-int.north)
+(decl.south)--(r-decl.north)(decl.south)--(s-decl.north)
+(polar.south)--(r-pol-int.north)(polar.south)--(s-pol-int.north)
+(subord.south)--(s-wh-int.north)(subord.south)--(s-pol-int.north)(subord.south)--(s-decl.north);
+\end{tikzpicture}
+}
+\caption{\label{fig-clausal-types}Clausal Types}
+\end{figure}
+Such a linearization-based approach to clause type determination would be very attractive
+if there were a one-by-one mapping from the surface order of constituents to clause types,
+but as I will show in Section~\ref{sec-problems}, this is not the case.
+
+
+\subsection{Competition of Complementizer and Finite Verb}
+
+Kathol follows ideas by \citet{Thiersch78a} and \citet{denBesten83a} and assumes that
+the complementizer and the finite verb compete for the position in the left sentence bracket. 
+If no complementizer is present, the verb may move into the left sentence bracket. 
+If the left sentence bracket is occupied, it has to stay in the right sentence bracket.
+
+Kathol enters verbs into the lexicon with a specification of the potential topological fields they may appear
+in. He specifies finite verbs for the fields 2 or 4. Complementizers are always located in the left sentence bracket:
+They are specified for 2.
+%Because of the type constraint in (\ref{subord-clause-types}),
+%the finite verb cannot appear in 2 in subordinated clauses. 
+If a linearization domain contains a complementizer, the Topological Uniqueness Condition b ensures that
+no other element can be serialized in 2, hence the field 4 is the only option for the finite verb.
+
+\section{Problematic Aspects of this Approach}
+\label{sec-problems}
+
+In the following section I want to discuss four problematic aspects of this proposal.
+
+
+
+\subsection{Topic Drop}
+
+While the cases of copula ellipsis can be found in novels, news papers, magazines, and
+everyday speech, a construction, which is called {\it Vor\-feld\-ellip\-se\/} or Topic Drop or Pronoun Zap is more
+restricted to a certain register/style. 
+\citet{Huang84}, \citet{Fries88b}, and \citet{Hoffmann97a}
+discuss this construction in some detail.
+Topic drop is also problematic for Kathol's approach:
+Sentences with Topic Drop look like polar questions at the surface. If an obligatory
+complement is dropped, the sentence is distinguishable from questions since the complement is
+missing in the \textit{Mittelfeld} (\mex{1}a). If optional complements or adjuncts are dropped, the form of the sentence
+is absolutely identical to the form of yes/no questions (\mex{1}b).
+\eal
+\ex 
+\gll Hab' ich auch gekannt.\\
+     have I   also known\\
+\glt `I also knew him/her/it.'
+\ex
+\gll Hab' ich auch gegessen.\\
+     have I   also eaten\\
+\glt `I also eat him/her/it.' or (with different intonation) `Did I also eat?' 
+\zl
+Such topic drop utterances and polar questions differ
+only in intonation and not in the sequence of elements.
+
+In order to save the clause type determination one could assume a phonologically empty element
+in the \textit{Vorfeld}. As was discussed in Section~\ref{sec-verbless-clauses},
+Kathol explicitly rejects empty elements.
+
+Alternatively one could stipulate just one more type that constrains the domain list
+to contain a slashed verb, as was suggested by a reviewer of HPSG 2002. While this is technically
+possible, the commonalities of sentences with a filled \emph{Vorfeld} and those that are
+the result of Topic Drop would not be captured.
+
+
+% However, \citet[p.\,{\bf check}]{Kathol95a} explicitly designs the relational constraint
+% that computes \textsc{domain} values in a way that excludes phonetically empty material from linearization
+% domains. In \citep[p.\,38]{Kathol2001a} he argues against empty elements so that for him the necessity to
+% stipulate an empty element seems to be an unwanted consequence of his proposal.
+
+
+
+\subsection{Sentential Complements}
+
+\citet[p.\,152]{Kathol2000a} assumes that in (\mex{1}) the V2 clauses in brackets
+are complement clauses:
+\eal
+\ex
+\gll Otto glaubt   [die Erde sei flach].\\
+     Otto believes ~the earth is flat\\
+\glt `Otto believes that the earth is flat.'
+\ex\label{noun-scomp}
+\gll die Überzeugung /  der Glaube / \ldots{} [die Russen würden nicht in Polen eingreifen]\footnotemark\\
+     the conviction  {} the belief {} {}    ~the Russians would not in Poland intervene\\
+\footnotetext{
+\citew[p.\,287]{Reis85b}.
+}
+\glt `the conviction/belief/\ldots that the Russians would not intervene in Poland.'
+\zl
+On page 153 he formulates a Head-V2-Complement Schema that combines a head that takes
+a finite unmarked clause as complement with that complement. The schema restricts the
+clause type of the complement to be {\it root-decl\/}, i.e., a sentence with the verb
+in second position. Kathol's clausal types are subtypes of the type {\it sign\/}. They refer
+to the domain values of a sign which are represented at the outermost level of a feature structure
+and therefore the clause types could not be subtypes of {\it synsem\/}
+or other types inside of the feature structures contained under \textsc{synsem} and hence
+the clause type of complements cannot be selected by governing heads. Therefore
+Kathol is forced to encode this combinatorial property in the immediate dominance schemata.
+In order to avoid spurious ambiguities Kathol has to restrict the general head argument
+schema so that it does not apply when the Head-V2-Complement Schema applies.
+
+A grammar that uses sufficient subcategorization information and one head argument schema 
+instead of stipulating several special sche\-ma\-ta is more general than what is suggested by Kathol and
+should therefore be regarded the better alternative.
+
+
+
+\subsection{Multiple Constituents in the \emph{Vorfeld}}
+
+As far as learnability and non-abstractness are concerned the following data
+pose a problem for Kathol:\footnote{
+  (\mex{1}b--c) are quoted from \citew{Mueller2002c}.%
+}
+\eal
+\ex
+\gll [Nichts] [mit  derartigen     Entstehungstheorien] hat es natürlich zu tun, wenn \ldots\footnotemark\\
+     ~nothing ~with those.kinds.of creation.theories    has it of.course  to do   when\\
+\glt `Of course it has nothing to do with that kind of creation theory when \ldots'%
+\label{bsp-nichts-mit-derartigen}
+\footnotetext{
+        K. Fleischmann, {\em Verbstellung und Relieftheorie\/}, München, 1973, p.\,72.
+        quoted from \citep[p.\,135]{vdVelde78a}.
+        }
+\ex 
+\gll [Trocken] [durch   die Stadt] kommt man am     Wochenende auch mit  der BVG.\footnotemark\\
+     ~dry      ~through the town   comes one at.the weekend    also with the BVG\\
+\footnotetext{
+        taz berlin, 10.07.1998, p.\,22
+      }\label{bsp-trocken-durch-die-stadt}
+\glt `The BVG (Berlin public transport system) will also get you about town on the weekend without getting wet.'%
+\ex\label{bsp-alle-traeume}
+\gll [Alle Träume] [gleichzeitig]  lassen sich nur  selten verwirklichen.\footnotemark\\
+     ~all  dreams   ~simultaneously let   self only rarely realize\\
+\footnotetext{
+        Brochure from Berliner Sparkasse, 1/1999
+        }
+\glt `All dreams can seldom be realized at once.'
+\zl
+These examples seem to violate the V2 constraint. In a purely surface-based model without
+any abstract entities, there is no way to explain sentences like (\mex{0}). One could stipulate
+constructions that combine the elements before the finite verb so that they form a constituent and
+the V2 constraint is saved. However, the data discussed in \citealp{Mueller2003b} shows that various 
+combinations of material in the \emph{Vorfeld} are possible. For instance, we have a depictive
+secondary predicate and a directional PP argument in (\ref{bsp-trocken-durch-die-stadt}) and
+an argument and an adverbial in (\ref{bsp-alle-traeume}).
+This means that the stipulation of several
+constructions would be necessary in order to provide the correct meaning for the combination
+of material infornt of the finite verb. 
+%% A construction that assigns constituent status to
+%% \emph{Trocken durch die Stadt} and anotherone that assigns constituent status to
+%% \emph{Alle Träume gleichzeitig} would be needed.
+
+If one uses one abstract entity, an empty verbal head as suggested
+by \citet{Mueller2002c}, a stipulation of several constructions would be unnecessary. The
+empty verbal head is related to a verb in the remaining clause by a non-local dependency,
+which constraints the elements that can appear together in the Vorfeld and makes possible a compositional
+assignment of meaning to the sentence.
+\citet{Mueller2002c} uses a linearization-based model of the Reape/""Kathol style
+to account for verb-initial and verb-final sentences. In such a model the use of an empty
+head is a stipulation. If one returns to a verb movement analysis as suggested 
+for instance by \citew{KW91a,Kiss95a} the empty head that is used for verb movement in general
+can also be used for the multiple fronting cases in (\mex{0}). The details of the multiple
+fronting analysis for (\mex{0}) together with a verb movement analysis can be found in \citew{Mueller2005c,Mueller2005d}.
+%
+\nocite{Reape90a,Reape94a}
+
+
+
+\section{Dependency structures and topological fields}
+
+
+
+
