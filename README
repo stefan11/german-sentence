@@ -1,0 +1,84 @@
+These files are version controled. The URL for the project is 
+
+svn+ssh://home.hpsg.fu-berlin.de/home/stefan/.svn-books/German-sentence
+
+If you configured ssh correctly (key authorization), you do not need a login name and a password.
+
+For Mac OS I tested version.app as a SVN client. 
+
+http://versionsapp.com/
+
+It works.
+
+If you do not want to see the auxiliary files that are produced by LaTeX (and some other files), you can add the following line to the file ~/.subversion/config
+
+global-ignores = *.o *.lo *.la #*# .*.rej *.rej .*~ *~ .#* .DS_Store *.sav *.bak .alec_throw .trale_user_cmd* *.old *.toc *.aux *.snm *.blg *.dvi *.nav *.ps *.pdf *.log .trale_interface* CVS* *.adx *.adx.hyp *.and *.ilg *.out *.idx *.ind *.*pk *.ldx *.lnd *.cut 
+
+
+
+
+The styles are part of the repository. You have to set up your tex system in a way that these styles
+and headers are found before other styles with the same name that maybe installed on your system.
+
+When you look at the LaTeX ouput you should see something like:
+
+(./styles/jambox.sty
+\jamwidth=\dimen106
+) (./styles/article-ex.sty
+\c@smtempcnt=\count94
+\widelabel=\dimen107
+) (./styles/makros.2e.sty
+(./styles/merkmalstruktur.sty
+
+For the tcsh you can put the following into .cshrc:
+
+setenv TEXINPUTS .:./styles//:
+
+ 
+You may check the effectiveness of your settings by typing:
+
+tlmgr conf
+
+
+
+Details regarding SVN:
+
+The svn repository is located on home.hpsg.fu-berlin.de you have to login there with the user name
+that Stefan told you. In order to do this automatically you have to modify your ~/.ssh/config (on
+Linux and Mac) to include the following:
+
+Host home home.hpsg.fu-berlin.de
+    HostName home.hpsg.fu-berlin.de
+    User your-user-name
+
+
+You can then type:
+
+svn checkout svn+ssh://home.hpsg.fu-berlin.de/home/stefan/.svn-books/German-sentence 
+
+
+
+
+I used the following:
+
+
+ssh home.hpsg.fu-berlin.de svnadmin create /home/stefan/.svn-books/German-sentence
+
+
+svn import -m "" German-sentence svn+ssh://home.hpsg.fu-berlin.de/home/stefan/.svn-books/German-sentence
+
+svn checkout svn+ssh://home.hpsg.fu-berlin.de/home/stefan/.svn-books/German-sentence 
+
+
+svn propedit svn:externals .
+styles svn+ssh://home.hpsg.fu-berlin.de/home/stefan/.svn-books/styles
+Bibliography svn+ssh://home.hpsg.fu-berlin.de/home/stefan/.svn-books/Bibliography
+
+
+For a quickcheck do "make check" or even quicker: latex check-danish ; dvips check-danish ; bibtex check-danish.aux
+
+
+Or if you prefer to look at two pages simultanously:
+ 
+latex check-danish ; make check-danish.2.ps ; bibtex check-danish.aux
+
