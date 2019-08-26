@@ -11,12 +11,12 @@
                 ,series=eotms,
                 ,isbn=xxx-x-xxxxxx-xx-x,
 %                ,url=http://langsci-press.org/catalog/book/14,
-	        ,output=long    % long|short|inprep              
+	        ,output=book    % long|short|inprep              
 	        %,blackandwhite
 	        %,smallfont
-                ,bibtex
+                ,nonflat
                 ,newtxmath
-	        ,draftmode  
+	        %,draftmode  
 		  ]{langsci/langscibook}                          
 
 
@@ -27,7 +27,10 @@
 %% %draft
 %% ]{scrbook}
 
-
+\usepackage{ifthen}
+\provideboolean{draft}
+%\setboolean{draft}{true}
+\setboolean{draft}{false}
 
 \usepackage{etoolbox}
 \newtoggle{draft}\newtoggle{finished}
@@ -47,8 +50,8 @@
 %\includeonly{gs-mult-fronting}
 %\includeonly{gs-clause-types}
 %\includeonly{gs-informationstructure}
-\includeonly{gs-alternatives}
-%\includeonly{gs-empty-elements}
+%\includeonly{gs-alternatives}
+\includeonly{gs-empty-elements}
 
 
 \input german-sentence-include

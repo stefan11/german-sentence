@@ -26,7 +26,10 @@
 %% %draft
 %% ]{scrbook}
 
-
+\usepackage{ifthen}
+\provideboolean{draft}
+%\setboolean{draft}{true}
+\setboolean{draft}{false}
 
 \usepackage{etoolbox}
 \newtoggle{draft}\newtoggle{finished}
