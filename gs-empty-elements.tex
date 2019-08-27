@@ -133,7 +133,10 @@ the advantages of empty elements. To facilitate discussion, let me introduce ter
 describes which symbols can be rewritten by other symbols. Some symbols are considered as special in
 the sense that they are never rewritten by other symbols. They end the replacement process and are
 therefore called \emph{terminal symbols}\is{symbol!terminal}. These are the words in the grammar in
-(\mex{0}) and the empty element \trace. All other symbols are so-called \emph{non-terminal symbols}.
+(\mex{0}) and the empty element \trace. All other symbols are so-called \emph{non-terminal
+  symbols}. The rules in (\mex{0}) that have a terminal symbol on the right"=hand side are basically
+lexical entries: they specify the category symbol for a specific word. The other rules are grammar
+rules that combine two non"=terminals. There are two grammar rules in (\mex{0}) and four lexical items.
 
 The grammar licenses for instance the structures in Figure~\ref{abb-np}.
 \begin{figure}
@@ -183,12 +186,12 @@ sm edges
 \caption{\label{abb-np}Various nominal structures}
 \end{figure}
 \citet*[\page 153, Lemma~4.1]{BHPS61a} developed a procedure to transform grammars that use empty
-elements into grammars without empty elements. To that end one has to insert all rules that have the
-form X $\to$ \trace{} into all rules in which X appears on the right hand side. This results in new
-rules, into which new empty elements may be inserted. If one does this long enough, one gets a
+elements into grammars without empty elements. To that end one has to compute all symbols from which
+the empty word can be derived. These symbols can then be inserted into the right"=hand
+sides of rules resulting in new rules. The grammar that one obtains by such replacements is a
 grammar without empty elements. For the grammar in (\mex{0}) one gets:\footnote{
   In principle the grammar in (\mex{0}) allows for completely empty NPs. This has to be blocked by
-  features in the grammar. \citep[\page 81, Exercise~3]{MuellerGT-Eng1}.
+  features in the grammar \citep[\page 81, Exercise~3]{MuellerGT-Eng1}.
 }
 \ea
 \begin{tabular}[t]{@{}l@{ $\to$ }l}
@@ -204,7 +207,10 @@ Adj & klugen\\
 \nbar & Frauen\\
 \end{tabular}
 \z
-This grammar licenses among others the structures in Figure~\ref{abb-np2}.
+The rule \nbar $\to$ \trace from (\mex{-1}) can be used to derive the empty word. The \nbar was
+inserted into the rule NP $\to$ Det \nbar in (\mex{-1}) and the rule NP $\to$ Det in (\mex{0}) resulted. 
+
+The grammar in (\mex{0}) licenses among others the structures in Figure~\ref{abb-np2}.
 \begin{figure}
 %\oneline
 {\begin{forest}
@@ -249,9 +255,9 @@ sm edges
 \caption{\label{abb-np2}Verschiedene Nominalstrukturen ohne leere Elemente}
 \end{figure}
 The branches with empty elements were simply omitted. Comparing the two grammars it can be noted
-that the grammar without empty elements contains more rules. It contains seven rules, whereas the one
-with empty elements contains only three rules.
-Even if one includes the lexical items in the counting and hence takes into account the lexical items for different empty elements, one gets a proportion of
+that the grammar without empty elements contains more rules. It contains seven rules without terminals, whereas the one
+with empty elements contains only three such rules.
+Even if one includes the rules for lexical items in the counting and hence takes into account the lexical items for different empty elements, one gets a proportion of
 nine to seven. In the end the grammar with empty elements is a more compact description of the
 phenomenon and it covers directly what has to be acquired: the noun and the determiner can be
 left unpronounced under certain circumstances.
@@ -348,19 +354,25 @@ v $\to$ $\epsilon$\\
 np $\to$ $\epsilon$\\
 \end{tabular}
 \z
-Taking the rules from (\ref{ex-grammar-head}) and (\ref{ex-grammar-trace-elim}) we get:
+The categories that can be rewritten as $\epsilon$ are v and np but also \baro{v} since both elements
+on the right"=hand side of the first rule can be rewritten as $\epsilon$. If we omit all those
+categories from right"=hand sides that can be rewritten to $\epsilon$, we get the following rules:
+%% In order to facilitate eposition, I organize these rules in the set (\mex{1}a). Inserting the v
+%% $\to$ $\epsilon$ into all places where v appears on the right"=hand side, we get (\mex{1}b).
+%% \eal
+%% \ex \{ \baro{v}   $\to$ \mbox{np}, v; v $\to$ $\epsilon$; np $\to$ $\epsilon$ \}
+%% \ex \{ \baro{v}   $\to$ \mbox{np}, v; \baro{v} $\to$ \mbox{np}; np $\to$ $\epsilon$ \}
+%% \zl
+%Taking the rules from (\ref{ex-grammar-head}) and (\ref{ex-grammar-trace-elim}) we get:
 \ea
 \baro{v}   $\to$ \mbox{np}, v\\
 \baro{v}   $\to$ \mbox{np}\\
 \baro{v}   $\to$ v
 \z
-Due to the elemination of the extraction trace in (\mex{-1}) we got the rule \baro{v} $\to$ v,
-but since we have the rule v $\to$ $\epsilon$ in (\mex{-1}) this means that \baro{v} can also be $\epsilon$.
-\baro{v} is a new empty element that resulted from the combination of two other empty elements. To get
-rid of all empty elements, this empty element has to be eliminated as well. This is done in the same
-way as before. \baro{v} is removed from all righthand sides of rules were a \baro{v} appears.
+Due to the elimination of the extraction trace in (\mex{-1}), we get the rule \baro{v} $\to$ v and
+the elimination of the verbal trace results in \baro{v}   $\to$ \mbox{np}.
 
-For our HPSG grammar this means that we get nine new grammar rules: We have three new empty
+For our HPSG grammar this means that we get nine new grammar rules: we have three new empty
 elements that arise when a verb movement trace is directly combined with an extraction trace.
 Since the extraction trace can be the non"=head daughter in the head"=argument structure (\mex{1}a),
 head"=adjunct structure (\mex{1}b) or head"=cluster structure (\mex{1}c):

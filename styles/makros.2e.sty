@@ -431,7 +431,7 @@ Abbildung~\ref{#1}\vpageref[]{#1} und Abbildung~\ref{#2} \vpageref{#2}%
 % http://tex.stackexchange.com/questions/207259/passing-a-command-as-an-argument
 \newcommand\drawtrace{\raisebox{0.2ex}{\_}\rule{0cm}{0.7em}}
 
-\newcommand\trace{\usebox\tracebox}
+\newcommand\trace{\usebox\tracebox\xspace}
 \newsavebox\tracebox
 \AtBeginDocument{
   \savebox\tracebox{\drawtrace}
@@ -469,7 +469,7 @@ Abbildung~\ref{#1}\vpageref[]{#1} und Abbildung~\ref{#2} \vpageref{#2}%
 
 
 
-
+\RequirePackage{etoolbox}
 
 % to be able to use this in glosses in forest trees
 \robustify\textsc

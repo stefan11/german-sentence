@@ -1229,8 +1229,8 @@ Storage and cataloguing done by FU Berlin \\[3ex]
 \let\oldFootnote\footnote
 \newcommand\nextToken\relax
 
-% \renewcommand\footnote[1]{% breaks more footnotes than it fixes
-% \oldFootnote{\xspace#1}\futurelet\nextToken\isFootnote}
+%\renewcommand\footnote[1]{% breaks more footnotes than it fixes
+%\oldFootnote{\xspace#1}\futurelet\nextToken\isFootnote}
 
 \newcommand\isFootnote{%
 \ifx\footnote\nextToken\textsuperscript{,}\fi}
