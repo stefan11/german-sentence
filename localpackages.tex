@@ -1,30 +1,7 @@
-%\usepackage{bigfoot}
-
+\usepackage{csquotes}
 
 % http://tex.stackexchange.com/questions/38607/no-room-for-a-new-dimen
 \usepackage{etex}\reserveinserts{28}
-
-% http://tex.stackexchange.com/questions/229500/tikzmark-and-xelatex
-% temporary fix, remove later
-%\newcount\pdftexversion \pdftexversion140 \def\pgfsysdriver{pgfsys-dvipdfm.def} \usepackage{tikz} \usetikzlibrary{tikzmark}
-
-%\usepackage[section]{placeins}
-
-\usepackage{eurosym} % should go once Berthold fixes unicode
-
-
-% http://tex.stackexchange.com/questions/284097/subscript-like-math-but-without-the-minus-sign?noredirect=1#comment685345_284097
-% for subscripts
-\usepackage{amsmath}
-%\usepackage{unicode-math} breaks the CCG derivations, the horizontal lines are too high
-
-
-% \justify to switch of \raggedright in translations
-%\usepackage{ragged2e}
-
-% Haitao Liu
-\usepackage{xeCJK}
-\setCJKmainfont{SimSun}
 
 
 
@@ -48,16 +25,34 @@
 
 \usepackage{bookmark}
 
-\usepackage{styles/my-ccg-ohne-colortbl}
-
-\usepackage{langsci/styles/jambox}
 
 % This has side effects on my-ccg commands do no know why
-%\usepackage{langsci/styles/langsci-optional}
+%\usepackage{./langsci/langsci-optional}
 
-\usepackage{styles/oneline}
+% used to be in this package
+\providecommand{\citegen}{}
+\renewcommand{\citegen}[2][]{\citeauthor{#2}'s (\citeyear*[#1]{#2})}
+\providecommand{\lsptoprule}{}
+\renewcommand{\lsptoprule}{\midrule\toprule}
+\providecommand{\lspbottomrule}{}
+\renewcommand{\lspbottomrule}{\bottomrule\midrule}
+\providecommand{\largerpage}{}
+\renewcommand{\largerpage}[1][1]{\enlargethispage{#1\baselineskip}}
 
-\usepackage{langsci/styles/langsci-lgr}
+\providecommand{\tablevspace}{}
+% vertical space to structure tables
+\renewcommand{\tablevspace}{\\[-.5em]}
+
+
+\usepackage{./styles/oneline}
+
+\usepackage{langsci-lgr}
+
+% \newcommand{\nom}{\NOM}
+% \newcommand{\gen}{\GEN}
+% \newcommand{\dat}{\DAT}
+% \newcommand{\acc}{\ACC}
+
 
 \usepackage{graphicx}
 
@@ -68,75 +63,41 @@
 
 
 
-\usepackage{styles/ogonek}        % For Ewa Dabrowska
+\usepackage{./styles/mycommands}% \spacebr
 
 
-\usepackage{styles/mycommands}% \spacebr
+\usepackage{langsci-gb4e}
 
 
-% still needed
-% for direction of government examples
-% for CoreGram classes
-% and one \Tree in mts.tex
-\usepackage{tikz-qtree}
-
-\usepackage{langsci/styles/langsci-gb4e}
-
+% not needed as of texlive 2020
+%\usepackage{jambox}
 
 \usepackage{subfig}
 
 %\renewcommand{\xbar}{X̅\xspace}
 
 
-%\usepackage[external,linguistics]{styles/forest/forest}
-
-
 % for reasons I do not understand this cannot be moved further down and 
 % the loading of forest further down cannot be removed. St. Mü. 26.01.2017
 % It breaks the dependency grammar trees in forest.
-\usepackage{langsci/styles/langsci-forest-setup}
-
-
-\forestset{
-      terminus/.style={tier=word, for children={tier=tabular}, for tree={fit=band}, for descendants={no path, align=left, l sep=0pt}},
-      sn edges original/.style={for tree={parent anchor=south, child anchor=north,align=center,base=top}},
-      no path/.style={edge path={}},
-      set me left/.style={calign with current edge, child anchor=north west, for parent={parent anchor=south west}},
-}
-
-
-
+\usepackage{langsci-forest-setup}
 
 
 % has to be loaded after forest-setup because of incompatibilities with the dg-style.
+% sorry folks, this has to be loaded. All this babel-shorthands stuff is way too complicated and
+% does not work for my abbreviations. It does not work in bibtex items since it is language dependent.
 \usepackage{german}\selectlanguage{USenglish}
 
-\usepackage{styles/merkmalstruktur,styles/abbrev,styles/makros.2e,styles/my-xspace,styles/article-ex,styles/additional-langsci-index-shortcuts,
+\usepackage{styles/merkmalstruktur,styles/abbrev,styles/makros.2020,styles/my-xspace,styles/article-ex,styles/additional-langsci-index-shortcuts,
 styles/eng-date,styles/my-theorems}
 
 % loaded in macros.2e \usepackage[english]{varioref}
 % do not stop and warn! This will be tested in the final version
 %\vrefwarning
+\let\vref\ref
 
 
 \setcounter{secnumdepth}{4}
-
-
-\usepackage{styles/dgmacros,pst-tree,styles/trees,styles/dalrymple} % Mary Dalrymples macros
-
-%\nodemargin5pt%\treelinewidth2pt\arrowwidth6pt\arrowlength10pt
-\psset{nodesep=5pt} %,linewidth=0.8pt,arrowscale=2}
-\psset{linewidth=0.5pt}
-
-
-
-%%% trick for using adjustbox
-\let\pstricksclipbox\clipbox
-\let\clipbox\relax
-
-% http://tex.stackexchange.com/questions/206728/aligning-several-forest-trees-in-centered-way/206731#206731
-% for aligning TAG trees
-\usepackage[export]{adjustbox}
 
 % draw a grid for getting the coordinates
 \usepackage{styles/tikz-grid}
@@ -187,11 +148,6 @@ styles/eng-date,styles/my-theorems}
 
 %\usepackage{caption}
 
-
-
-\usepackage{langsci/styles/langsci-tbls}
-% do not need identation for enumerate since we are in a box anyway.
-\usepackage{enumitem}
 
 
 

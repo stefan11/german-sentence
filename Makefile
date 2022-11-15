@@ -1,6 +1,8 @@
 MKINDEX=makeindex -gs index.format   # dfki (German Order)
-DVIPS_OPTIONS=-j0 -Pwww
 #DVIPS_OPTIONS=-Ppdf
+STYLE-PATH= ${HOME}/Library/texmf/tex/latex/
+LANGSCI-PATH=~/Documents/Dienstlich/Projekte/LangSci/Git-HUB/latex/
+
 
 all: german-sentence.pdf
 
@@ -87,6 +89,26 @@ kkk-danish.pdf: $(SOURCE)
 	makeindex -gs index.format -o danish.and danish.adx.hyp
 	pdflatex danish 
 
+
+install:
+	cp -p ${STYLE-PATH}makros.2020.sty styles/
+	cp -p ${STYLE-PATH}abbrev.sty    styles/
+	cp -p ${STYLE-PATH}mycommands.sty    styles/
+	cp -p ${STYLE-PATH}fixcitep.sty  styles/
+	cp -p ${STYLE-PATH}eng-date.sty   styles/
+	cp -p ${STYLE-PATH}oneline.sty   styles/
+	cp -p ${STYLE-PATH}unified-biblatex.sty          styles/
+	cp -p ${STYLE-PATH}unified-biblatex/stmue-langsci-unified.bbx styles/
+	cp -p ${STYLE-PATH}unified-biblatex/stmue-langsci-unified.cbx styles/
+	cp -p ${STYLE-PATH}Ling/article-ex.sty           styles/
+	cp -p ${STYLE-PATH}Ling/merkmalstruktur.sty      styles/
+	cp -p ${STYLE-PATH}Ling/my-xspace.sty            styles/
+	cp -p ${STYLE-PATH}Ling/my-ccg-ohne-colortbl.sty styles/
+	cp -p ${STYLE-PATH}Ling/forest.sty               styles/
+	cp -p ${STYLE-PATH}Ling/my-gb4e-slides.sty       styles/
+	cp -p ${STYLE-PATH}Ling/cgloss.sty               styles/
+	cp -p ${STYLE-PATH}Ling/jambox.sty               styles/
+	cp -p ${LANGSCI-PATH}langsci-forest-setup.sty    .
 
 
 /Users/stefan/public_html/PS/german-sentence.pdf: german-sentence.pdf

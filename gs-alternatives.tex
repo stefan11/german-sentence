@@ -548,7 +548,7 @@ be marked \textsc{prom}+ and their \domvs will be combined via $\bigcirc$ and th
 in Wetta's paper but he assumes that domain objects are of type \type{sign}, so this object has to
 have syntactic and semantic properties. Note that HPSG grammars are descriptions of
 models. Descriptions are usually partial. Everything that is not specified can vary as long as no
-appropriateness conditions on types are violated \citep{King99a-u}. For example, a theory of German could leave the
+appropriateness conditions on types are violated \citep{King99a-u,Richter2021a}. For example, a theory of German could leave the
 actual case value of the German noun \emph{Frau} `woman' unspecified since it is clear that the
 type \type{case} has the four subtypes \type{nom}, \type{gen}, \type{dat}, \type{acc}. In a model, the
 value can only vary in this limit, that is, the actual case has to be one of these four values \citep[Section~2.7]{MuellerLehrbuch1}. If
@@ -1021,7 +1021,7 @@ actual models have to be maximal, it is ensured that actual instantiations of th
 the lexicon are either verb-initial or verb-final verbs. (\mex{1}) shows the two AVMs that result if
 information from the subtypes is filled in.
 \eal
-\ex \locv of the verb-final version of \emph{kennen} `to know':
+\ex \locv of the verb-final version of \emph{kennen} `to know':\\
 \ms{ cat & \ms{ head   & \ms[verb]{ vform  & fin \\
                                     subcat & \sliste{ \ibox{1} NP[\type{nom}]\ind{2}, \ibox{3} NP[\type{acc}]\ind{4} }\\
                                   } \\
@@ -1175,7 +1175,7 @@ classified as `improbable' by the statistical component will be computed last.\f
 
 Crysmann argues that his analysis ``leads to a more general grammar, if the
 formalism does not support empty categories.'' He reduced the number of grammar rules which were needed for the
-implementation of the LKB"=system \citep{Copestake2002a-unlinked} for verb movement (see Section~\ref{sec-verb-movement-LKB}) from 24 to 6.
+implementation of the LKB"=system \citep{Copestake2002a} for verb movement (see Section~\ref{sec-verb-movement-LKB}) from 24 to 6.
 The 24 rules were needed in the grammar for the exact reasons that empty elements were not allowed. The decision
 to outlaw empty elements is, in that sense, a conscious decision on the part of the developer of the system and
 is not necessarily driven by linguistic or computational necessities. As the implementation of the
@@ -1221,9 +1221,210 @@ an optional variant of simple verb movement, which forms a complex. The details 
 discussed in Chapter~\ref{chapter-mult-front}.
 
 
+\section{Structure deletion}
+\label{sec-freezing}
+
+G.\,\citet{GMueller2018a} deals with complex prefields and aims to develop an analysis that can deal
+with phenomena that are subsumed under the term of \emph{freezing}\is{freezing} in Mainstream
+Generative Grammar\footnote{%
+  I follow \citet[\page 3]{CJ2005a} in using the term \emph{Mainstream Generative Grammar} (MGG) to
+  refer to work in Government \& Binding or Minimalism.%
+}.
+The claim is that constituents may not move out of constituents that have been moved \citep{Ross67a}. G.\,Müller
+illustrates the phenomenon with reference to the example in (\mex{1}):
+\ea[*]{
+\gll Was$_1$ denkst du  [\sub{VP$_2$} t$_1$ gelesen] hat keiner t$_2$?\\
+     what    think  you {}           {}    read    has no.one\\
+\glt Intended: `What do you think nobody has read?'
+}
+\z
+A verb phrase like \emph{das Buch gelesen} `the book read' can be moved resulting in (\mex{1}):
+\ea
+\gll Das Buch gelesen hat keiner.\\
+     the book read    has no.one\\
+\glt `Nobody read the book.'
+\z
+But extraction of the object out of the fronted phrase is impossible as (\mex{-1}) shows. I have
+discussed some cases of freezing in Section~\ref{sec-v2}: In HPSG, the extraction out of extracted elements can be
+blocked by requiring the filler daughter to have an empty \slashl. Note that the general claim that
+things that are moved are islands is not correct. Ross discussed examples with extraction out of
+extraposed PPs and theses are indeed marked. But German allows extraction out of extraposed
+infinitival clauses and these are perfectly fine:
+\eal
+\ex {}[Über dieses Thema]$_i$ [\sub{S} hatte Fritz Peter \_$_j$ gebeten], [[einen Vortrag \_$_i$]
+	zu halten]$_j$.\footnote{
+        \citep*[\page 21]{HN89b}\iafdata{Hinrichs}\iafdata{Nakazawa}
+}
+\ex Anruf"|beantworter dienen längst nicht mehr dazu, wichtige Nachrichten auf"|zuzeichnen, wenn
+        man gerade mal nicht da ist, oder sich denen zu verweigern, [mit denen]$_i$ man [keine Lust \_$_j$]
+        hat\iw{Lust haben} [ \_$_i$ zu sprechen]$_j$.\footnote{
+        taz, 29.05.1995, p.\,20, "`Anruf"|beantworter als Visitenkarten"'
+        }
+\ex Es ist eine juristische Zwickmühle, [aus der]$_i$ Clinton nur [eine kleine Chance \_$_j$]
+      hat [ \_$_i$ herauszukommen]$_j$.\footnote{
+        Spiegel, 32/1998, p.\,101
+      }\label{bsp-chance-hat-herauszukommen}
+\zl
+
+In comparison to HPSG, many more
+phenomena involve movement in MGG. For example, some theories assume that the subject is licensed as part
+of the VP and then moves to the specifier of IP (for instance to get case or to agree with the
+finite verb). These approaches predict that subjects are extraction islands \citep[\page 12]{Corver2017a-u}, which is a wrong
+prediction. \citet[\page 1094]{HPP2002a-u} provide the following example:
+\ea
+The eight dancers and their caller, Laurie Schmidt, make up the Farmall Promenade of nearby Nemaha,
+a town that [[to describe \trace as tiny] would be to overstate its size].\footnote{%
+\citep[\page 1094]{HPP2002a-u}
+}
+\z
+\citet{Chaves2013a-u} provides further examples of extractions out of subjects. 
+
+
+G.\,\citet{GMueller2018a} discusses the examples in (\mex{1}). The first example is probably an
+attested example (no source given but it is stated on p.\,105 that some examples are from German sports
+broadcasts). The third example is claimed to be grammatical and the second one ungrammatical. The
+difference between these two examples is that (\mex{1}c) contains the participle \emph{gratuliert}
+`congratulated' in the prefield while (\mex{1}b) just has a verb trace there.
+
+\eal
+\ex[]{
+\gll [\sub{CP} [\sub{DP$_1$} Dem        Team] [\sub{PP$_2$} zum    Erfolg] [\sub{C$'$} gratulierte Bernard Hinault]]\\
+     {}        {}            the.\dat{} team  {}           to.the success  {}          congratulated Bernard Hinault.\nom\\
+}
+\ex[*]{
+\gll [\sub{CP} Da$_3$ [\sub{DP$_1$} dem         Team] [\sub{PP$_2$} t$_3$ zu] [\sub{C$'$} gratulierte Bernard Hinault]]\\ 
+     {}        there  {}      the.\dat{} team   {}           {}    to  {}          congratulated Bernard Hinault.\nom\\
+}
+\ex[]{
+\gll [\sub{CP} Da$_3$ [\sub{DP$_1$} dem         Team] [\sub{PP$_2$} t$_3$ zu] gratuliert    [\sub{C$'$} hat Bernard Hinault]]\\ 
+     {}        there  {}      the.\dat{} team   {}           {}    to        congratulated {}  has Bernard Hinault.\nom\\
+}
+\zl
+G.\,Müller wants to explain the ungrammaticality of (\mex{0}b) as a freezing effect, but if \emph{da dem
+  Team zu} is one phrase with an empty head one would expect that it behaves like (\mex{0}c) since
+it is structurally parallel. Müller concludes that additional mechanisms are needed and I will
+discuss these additional mechanism below. Before doing so, I want to say that preposition stranding
+as in (\mex{0}b--c) does occur in German but it is special. Multiple fronting does occur in German
+but I never saw a combination of the two phenomena so far. This does not mean that these
+constructions are impossible, but it does mean that we have to be very careful what kind of
+conclusions we draw from such examples. As for (\mex{0}c) I do not share Müller's judgment that
+(\mex{0}c) is completely unmarked. If Müller wants to challenge existing analyses it would be his
+job to get the empirical base right (and the job of reviewers to point this out to the author in a
+reviewing process).
+
+For the sake of the argument, let us assume that the judgments are correct. Given that freezing does
+not hold up to scrutiny, freezing cannot be an explanation of the differences in (\mex{0}). Of
+course one could state that movement is ruled out in the configurations in (\mex{0}) but this would
+be mere stipulation.
+
+
+\if0
 
 
 
+
+Anne Abeilie
+
+
+Grosu (1981) claims that adverbial (where, when) is  better than nominal exctraction (which, that). This has not been tested
+
+ (29) (a) The ‘Hunan’ Restaurant is a place where having dinner -  promises to be most enjoyable.
+
+(b) The pre-midnight hours are the time when sleeping soundly -  is most beneficial to one’s health.
+
+> Le 27 août 2019 à 19:47, Anne Abeillé <abeille@linguist.univ-paris-diderot.fr> a écrit :
+>
+> Very good
+> Maybe you can say that PP extraction is better than NP extraction (as for English NP subject)
+> The same was said by Grosu for infinitival subjects in English
+> But Culicover & Winkler have NP extraction out of gerund subjects
+>
+> Maybe you can cite our Quasy paper?
+
+
+
+Dear Stefan
+In fact Corver agues that freezing is what blocks extraction out of the subject
+(Since the subject is moved from internal VP)
+So we have counterexamples 
+of good examples of extraction out of the subject (as well as Chaves 2013, Chaves & Dery 2019)
+
+Culicover & Winkler 2018 Freezing and processing  
+also have an experiment on German
+
+(Müller 2010: 61(36)) says the DP has been moved in 7 (scrambling in the mittel feld)
+
+ (7) *Was haben [DP - für Bücher] [DP den Fritz] beeindruckt?
+
+What have [DP t for books.NOM] [DP the Fritz.ACC] impressed
+
+‘What kind of books impressed Fritz?’
+
+*Was haben [DP - für Ärzte] [DP den Minister] kritisiert?
+
+What have [DP t for doctors.NOM] [DP the secretary.ACC] criticized
+
+‘What kind of doctors criticized the secretary?’
+
+(8) Was haben [DP den Fritz]j [DP - für Bücher] tj beeindruckt
+
+what have [DP the Fritz.ACC] [DP t for books.NOM] t impressed
+
+‘What kind of books impressed Fritz?’
+
+Culicover & Winkler (2018) argue that you can extract out of a focal subject
+
+Bayer’s (2004) generalization in (39); see also Erteschik-Shir (2007).
+
+(39) In a topic/focus structure [[TOP X] [FOC Y]], A′-movement is not allowed to
+
+affect X.
+
+No difference beteween the conditions with a context
+
+Dass den Minister Journalisten kritisiert haben, weiß ich schon, aber
+
+(‘I know already that journalists criticized the minister, but ’)
+
+a. Was haben denn [für Ärzte]CF den Minister kritisiert?
+
+b. Was haben den Minister denn [für Ärzte]CF kritisiert?
+
+c. Was haben [für Ärzte]CF denn den Minister kritisiert?
+
+‘what have for doctors.NOM then the minister.ACC criticized’
+
+CF= contrastive focus
+
+denn marks the boundary between topic and focus
+
+> Le 27 août 2019 à 20:02, Stefan Müller <St.Mueller@hu-berlin.de> a écrit :
+>
+> Great!
+>
+> By the way, does anybody of you know counter examples to freezing? That
+> is scrambling and then extraction out of the scrambled constituent?
+>
+> Best
+>
+>     Stefan
+
+
+Also from Chaves 2013 Journal of ling an expectation based account of subject islands and parasitism
+
+Syntactic accounts like the ones above predict that extraction from an extracted phrase is banned in general, as a FREEZING effect (Wexler & Culicover 1980). A conclusion that may be excessive, as the acceptable FREEZING violations in (6) suggest.
+
+(6) (a) ThisisthehandoutithatIcan’tremember[howmanycopiesof__i]j we have to print __ j.
+
+(b) [How many videos __ i] j are there __ j on the web [of Mitt Romney gettingbooed]i ? 
+
+
+
+Torr Email:
+
+Ernst 2001 rightward movement
+
+\fi
 
 
 %      <!-- Local IspellDict: en_US-w_accents -->

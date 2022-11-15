@@ -96,6 +96,8 @@ $%
 }%
 }
 
+%\let\phonlist\phonliste
+
 \newcommand{\relliste}[1]{%
 \mbox{%
 $%
@@ -112,7 +114,7 @@ $%
 \mbox{%
 $%
 \left\{%
-\ignorespaces#1%
+\begin{tabular}{@{}l@{}}\ignorespaces#1\end{tabular}%
 \right\}%
 $%
 %\\[-1.5mm]
@@ -185,6 +187,7 @@ $%
 \newlength{\MyetagLength}
 \settowidth{\MyetagLength}{{$\scriptstyle 1$}}
 
+% empty box
 \newcommand{\etag}{\ibox{\rule{0ex}{1.1ex}\hspace{\MyetagLength}}\xspace}
 
 %\newcommand{\tbox}[1]{{\tiny\fbox{#1}}}
@@ -206,3 +209,9 @@ $%
 \adjustbox{valign=c}{%
 \xxms{#1}%
 }}
+
+
+
+\newcommand{\qeq}{$=_q$\xspace}
+
+\newcommand{\impl}{$\Rightarrow$\xspace}
